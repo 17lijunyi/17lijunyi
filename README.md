@@ -3,11 +3,10 @@
 
 # 👋 我是17lijunyi，一名ai产品经理
 
-我对从前端、后端、以及数据处理的整个生命周期都感兴趣。
-我不只写代码，还亲手做架构、构建 API、和性能优化。
-我会把复杂的业务逻辑，翻译成用户直观的功能。
-技术不是我的目的，它是我的工具、方法、和手段。
-
+我曾经训练模型，现在开始设计模型应该解决什么问题。
+从AI数据、模型效果，到用户需求、产品方案和原型验证。
+我关注的不只是“AI能不能做”，更是“用户为什么需要它”。
+把技术能力转化成产品价值，是我正在长期做的事情。
 ---
 
 ### 🛠️ 我的开发流程
@@ -18,8 +17,7 @@
 
 ### 🔗 保持联系
 
-[🏠 个人网站]· [🐙 GitHub](https://github.com/17lijunyi) · [✉️ 邮件]lijunyi2026setoff@gmail.com
-
+[🏠 个人网站]· [🐙 GitHub](https://github.com/17lijunyi) · [✉️ 邮件]lijunyi2026setoff@gmail.com· [📕小红书]https://xhslink.cn/m/9vyP7vC8cPU
 <!-- 这里是注释：复制到这里结束 -->
 <!--
 **17lijunyi/17lijunyi** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
