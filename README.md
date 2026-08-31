@@ -11,4 +11,12 @@
 
 ---
 
+## 🧩 Open-source Skill
+
+### [Product Evidence Deconstruction](skills/product-evidence-deconstruction/SKILL.md)
+
+一个证据优先的产品拆解 Skill：先识别产品类型并检查证据是否完整，再按用户层、技术层、模型层、数据层逐层分析，最终输出可审计的 HTML 报告。
+
+---
+
 🌐 [个人网站](你的个人网站链接) · 💻 [GitHub](https://github.com/17lijunyi) · 📕 [小红书](https://xhslink.cn/m/9vyP7vC8cPU) · ✉️ [邮箱](mailto:lijunyi2026setoff@gmail.com)
