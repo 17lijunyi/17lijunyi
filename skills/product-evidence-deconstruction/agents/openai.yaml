@@ -1,0 +1,7 @@
+interface:
+  display_name: "产品证据拆解"
+  short_description: "基于真实证据，按用户、技术、模型、数据四层拆解数字产品"
+  default_prompt: "使用 $product-evidence-deconstruction 基于我提供的截图、网址或代码拆解这个产品，并输出 HTML 报告。"
+
+policy:
+  allow_implicit_invocation: true
