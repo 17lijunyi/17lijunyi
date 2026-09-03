@@ -19,4 +19,4 @@
 
 ---
 
-🌐 [个人网站](你的个人网站链接) · 💻 [GitHub](https://github.com/17lijunyi) · 📕 [小红书](https://xhslink.cn/m/9vyP7vC8cPU) · ✉️ [邮箱](mailto:lijunyi2026setoff@gmail.com)
+🌐 [个人网站](https://17lijunyi.github.io/) · 💻 [GitHub](https://github.com/17lijunyi) · 📕 [小红书](https://xhslink.cn/m/9vyP7vC8cPU) · ✉️ [邮箱](mailto:lijunyi2026setoff@gmail.com)
