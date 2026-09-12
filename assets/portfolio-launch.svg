@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc" xml:space="preserve">
-  <title id="title">李俊祎 · lijunyi OS Clear Light 启动终端</title>
-  <desc id="desc">浅色终端依次展示 AI 产品、Agent 与 RAG，出现 SYSTEM READY 后提示打开李俊祎的个人网站。点击终端即可打开个人网站。</desc>
+  <title id="title">Junyi Li · LJY OS Clear Light launch terminal</title>
+  <desc id="desc">An animated terminal introducing AI products, agents, and RAG. Click to explore Junyi Li's personal website.</desc>
   <style>
     :root { color-scheme: light; }
     .window { fill: #f8fafb; stroke: #d8e0e7; stroke-width: 2; }
@@ -58,13 +58,13 @@
 
   <text class="mono title line l1" x="54" y="93">lijunyi OS v2.0.0 — Clear Light</text>
 
-  <text class="mono body line l2" x="54" y="126">[ <tspan class="ok">OK</tspan> ] 加载产品内核 product-thinking.ai</text>
-  <text class="mono body line l3" x="54" y="157">[ <tspan class="ok">OK</tspan> ] 挂载 /products    AI 产品</text>
-  <text class="mono body line l4" x="54" y="188">[ <tspan class="ok">OK</tspan> ] 挂载 /agents      智能体</text>
-  <text class="mono body line l5" x="54" y="219">[ <tspan class="ok">OK</tspan> ] 挂载 /knowledge   RAG</text>
+  <text class="mono body line l2" x="54" y="126">[ <tspan class="ok">OK</tspan> ] Load product kernel product-thinking.ai</text>
+  <text class="mono body line l3" x="54" y="157">[ <tspan class="ok">OK</tspan> ] Mount /products    AI products</text>
+  <text class="mono body line l4" x="54" y="188">[ <tspan class="ok">OK</tspan> ] Mount /agents      Agent workflows</text>
+  <text class="mono body line l5" x="54" y="219">[ <tspan class="ok">OK</tspan> ] Mount /knowledge   RAG</text>
 
   <text class="mono prompt line l6" x="54" y="267">lijunyi@ljy-mac ~ % <tspan class="body">whoami</tspan></text>
-  <text class="mono body line l7" x="54" y="298">李俊祎 · AI Product Manager</text>
+  <text class="mono body line l7" x="54" y="298">Junyi Li · AI Product Manager</text>
 
   <text class="mono prompt line l8" x="54" y="346">lijunyi@ljy-mac ~ % <tspan class="body">open lijunyi.os</tspan></text>
 
