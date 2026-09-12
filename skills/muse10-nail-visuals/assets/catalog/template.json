@@ -1,0 +1,136 @@
+{
+  "name": "Muse10款式生成 · 固定陈列模板",
+  "canvas": {
+    "width": 1200,
+    "height": 1500
+  },
+  "background": {
+    "path": "background.png",
+    "policy": "reuse the same asset; do not independently regenerate or recolor",
+    "provenance": "Extracted from the catalog reference specified by the user; previously occluded areas filled from clean pixels at the same height."
+  },
+  "coordinate_scope": "Pixel placement and plate-size references for this catalog image; inspect plate bodies separately from protruding accessories. Not physical sizing in millimetres.",
+  "background_check_padding": 12,
+  "nails": [
+    {
+      "id": "L1",
+      "hand": "left",
+      "finger": "thumb",
+      "label": "左手拇指",
+      "row": 1,
+      "column": 1,
+      "x": 274,
+      "y": 279,
+      "width": 154,
+      "height": 455
+    },
+    {
+      "id": "L2",
+      "hand": "left",
+      "finger": "index",
+      "label": "左手食指",
+      "row": 1,
+      "column": 2,
+      "x": 440,
+      "y": 313,
+      "width": 112,
+      "height": 422
+    },
+    {
+      "id": "L3",
+      "hand": "left",
+      "finger": "middle",
+      "label": "左手中指",
+      "row": 1,
+      "column": 3,
+      "x": 570,
+      "y": 301,
+      "width": 117,
+      "height": 434
+    },
+    {
+      "id": "L4",
+      "hand": "left",
+      "finger": "ring",
+      "label": "左手无名指",
+      "row": 1,
+      "column": 4,
+      "x": 701,
+      "y": 315,
+      "width": 110,
+      "height": 421
+    },
+    {
+      "id": "L5",
+      "hand": "left",
+      "finger": "little",
+      "label": "左手小指",
+      "row": 1,
+      "column": 5,
+      "x": 830,
+      "y": 335,
+      "width": 98,
+      "height": 402
+    },
+    {
+      "id": "R1",
+      "hand": "right",
+      "finger": "thumb",
+      "label": "右手拇指",
+      "row": 2,
+      "column": 1,
+      "x": 282,
+      "y": 774,
+      "width": 151,
+      "height": 447
+    },
+    {
+      "id": "R2",
+      "hand": "right",
+      "finger": "index",
+      "label": "右手食指",
+      "row": 2,
+      "column": 2,
+      "x": 447,
+      "y": 804,
+      "width": 111,
+      "height": 416
+    },
+    {
+      "id": "R3",
+      "hand": "right",
+      "finger": "middle",
+      "label": "右手中指",
+      "row": 2,
+      "column": 3,
+      "x": 575,
+      "y": 793,
+      "width": 118,
+      "height": 428
+    },
+    {
+      "id": "R4",
+      "hand": "right",
+      "finger": "ring",
+      "label": "右手无名指",
+      "row": 2,
+      "column": 4,
+      "x": 706,
+      "y": 805,
+      "width": 109,
+      "height": 416
+    },
+    {
+      "id": "R5",
+      "hand": "right",
+      "finger": "little",
+      "label": "右手小指",
+      "row": 2,
+      "column": 5,
+      "x": 829,
+      "y": 825,
+      "width": 90,
+      "height": 396
+    }
+  ]
+}
