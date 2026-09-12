@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="480" viewBox="0 0 1000 480" fill="none" role="img" aria-labelledby="title description" xml:space="preserve">
+  <title id="title">17lijunyi · AI 产品经理 · 暮色车票</title>
+  <desc id="description">从 AI 训练师出发，关注数据、SFT 与模型评测。点击进入我的个人网站「暮色车票」：https://17lijunyi.github.io/。旅途不必匆忙，在这里坐一会儿。</desc>
+  <defs>
+    <linearGradient id="dusk" x1="28" y1="302" x2="974" y2="458" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF6E9"/>
+      <stop offset="0.52" stop-color="#FBF8F3"/>
+      <stop offset="1" stop-color="#EEF3FA"/>
+    </linearGradient>
+    <linearGradient id="horizon" x1="40" y1="302" x2="960" y2="302" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D4A065"/>
+      <stop offset="0.48" stop-color="#DECBB4"/>
+      <stop offset="1" stop-color="#91ADC9"/>
+    </linearGradient>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", "PingFang SC", "Microsoft YaHei", monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
+      .intro { animation: arrive 900ms ease-out both; }
+      .skills { animation: arrive 900ms 650ms ease-out both; }
+      .launch { animation: arrive 900ms 1300ms ease-out both; }
+      .cursor { animation: cursor 1500ms ease-in-out infinite; }
+      .arrow { animation: invitation 8s ease-in-out infinite; }
+      @keyframes arrive {
+        from { opacity: .72; transform: translateY(3px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes cursor {
+        0%, 100% { opacity: .35; }
+        50% { opacity: .9; }
+      }
+      @keyframes invitation {
+        0%, 65%, 100% { transform: translateX(0); }
+        74%, 86% { transform: translateX(4px); }
+        80%, 92% { transform: translateX(0); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .intro, .skills, .launch, .cursor, .arrow { animation: none; }
+      }
+    </style>
+  </defs>
+
+  <!-- A self-contained terminal window: all copy and the link invitation are visible at rest. -->
+  <rect x="1" y="1" width="998" height="478" rx="20" fill="#FFFFFF" stroke="#D8DEE6" stroke-width="2"/>
+  <path d="M21 2H979C989.493 2 998 10.5066 998 21V57H2V21C2 10.5066 10.5066 2 21 2Z" fill="#F6F8FA"/>
+  <path d="M2 57H998" stroke="#E4E8ED"/>
+  <circle cx="31" cy="30" r="6.5" fill="#EB938C"/>
+  <circle cx="54" cy="30" r="6.5" fill="#E7C37A"/>
+  <circle cx="77" cy="30" r="6.5" fill="#94B99A"/>
+  <text x="500" y="36" text-anchor="middle" class="mono" font-size="17" fill="#697484">17lijunyi — profile</text>
+  <path d="M949 25L954 30L949 35M961 35H969" stroke="#8A96A5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g class="intro">
+    <text x="40" y="104" class="mono" font-size="22"><tspan fill="#8B6740">~/profile</tspan><tspan fill="#90A0B2"> $ </tspan><tspan fill="#364457">whoami</tspan></text>
+    <text x="40" y="148" class="sans" font-size="36" font-weight="650" letter-spacing="-.5" fill="#253448">17lijunyi<tspan dx="18" font-size="28" font-weight="500" letter-spacing="0" fill="#52677E">AI 产品经理</tspan></text>
+    <text x="40" y="185" class="sans" font-size="23" fill="#5A6675">从 AI 训练师出发，把模型能力带进真实的产品体验。</text>
+  </g>
+
+  <g class="skills">
+    <text x="40" y="232" class="mono" font-size="22"><tspan fill="#8B6740">~/profile</tspan><tspan fill="#90A0B2"> $ </tspan><tspan fill="#364457">cat focus.txt</tspan></text>
+    <text x="40" y="268" class="sans" font-size="26" fill="#35465B">数据构建<tspan dx="19" fill="#A4AFBD">/</tspan><tspan dx="19">SFT</tspan><tspan dx="19" fill="#A4AFBD">/</tspan><tspan dx="19">模型评测</tspan><tspan dx="19" fill="#A4AFBD">/</tspan><tspan dx="19">AI 产品</tspan></text>
+  </g>
+
+  <rect x="18" y="297" width="964" height="165" rx="13" fill="url(#dusk)"/>
+  <path d="M40 298H960" stroke="url(#horizon)" stroke-width="2" stroke-linecap="round"/>
+  <g class="launch">
+    <text x="40" y="338" class="mono" font-size="22"><tspan fill="#8B6740">~/profile</tspan><tspan fill="#90A0B2"> $ </tspan><tspan fill="#364457">open </tspan><tspan fill="#4E7297">https://17lijunyi.github.io/</tspan><tspan class="cursor" dx="8" fill="#8EABC6">▍</tspan></text>
+    <text x="40" y="391" class="sans" font-size="31" font-weight="600" letter-spacing="2" fill="#725333">暮色车票<tspan dx="17" font-size="20" font-weight="400" letter-spacing="0" fill="#967C61">下一站，我的个人网站</tspan></text>
+    <text x="40" y="431" class="sans" font-size="23" fill="#776B60">旅途不必匆忙，在这里坐一会儿。</text>
+  </g>
+
+  <!-- The entire SVG is linked by the profile README. This invitation never fades. -->
+  <rect x="637" y="377" width="323" height="59" rx="11" fill="#FFFFFF" fill-opacity=".9" stroke="#C6D3E0"/>
+  <text x="658" y="414" class="sans" font-size="24" font-weight="500" fill="#365A7D">点击进入我的个人网站</text>
+  <g class="arrow" stroke="#365A7D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M917 407H937M930 400L937 407L930 414"/>
+  </g>
+</svg>
