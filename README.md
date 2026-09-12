@@ -21,6 +21,10 @@ Products, tools, and reusable methods built around real user needs.
 A product analysis skill that starts with evidence.  
 Examine the user, technology, model, and data layers, then produce an auditable HTML report.
 
+💅 [**Muse10款式生成**](https://github.com/17lijunyi/17lijunyi/tree/main/skills/muse10-nail-visuals)\
+A nail design skill built around real ten-finger proportions and one fixed catalog background.\
+Create matching display, hand-wear, and detail images, with an interactive product preview.
+
 📚 [**Kanshan KB — Content Creation Knowledge Base**](https://github.com/17lijunyi/kanshan-kb)  
 A knowledge base for Zhihu creators, with 10 modules of practical methods, case studies, and primary sources.  
 Supports document search and citation.
