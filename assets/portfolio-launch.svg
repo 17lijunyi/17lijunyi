@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc" xml:space="preserve">
   <title id="title">Junyi Li · LJY OS Clear Light launch terminal</title>
-  <desc id="desc">An animated terminal introducing AI products, agents, and RAG. Click to explore Junyi Li's personal website.</desc>
+  <desc id="desc">An animated terminal introducing AI products, agents, and knowledge bases. Click to explore Junyi Li's personal website.</desc>
   <style>
     :root { color-scheme: light; }
     .window { fill: #f8fafb; stroke: #d8e0e7; stroke-width: 2; }
@@ -61,7 +61,7 @@
   <text class="mono body line l2" x="54" y="126">[ <tspan class="ok">OK</tspan> ] Load product kernel product-thinking.ai</text>
   <text class="mono body line l3" x="54" y="157">[ <tspan class="ok">OK</tspan> ] Mount /products    AI products</text>
   <text class="mono body line l4" x="54" y="188">[ <tspan class="ok">OK</tspan> ] Mount /agents      Agent workflows</text>
-  <text class="mono body line l5" x="54" y="219">[ <tspan class="ok">OK</tspan> ] Mount /knowledge   RAG</text>
+  <text class="mono body line l5" x="54" y="219">[ <tspan class="ok">OK</tspan> ] Mount /knowledge   Knowledge bases</text>
 
   <text class="mono prompt line l6" x="54" y="267">lijunyi@ljy-mac ~ % <tspan class="body">whoami</tspan></text>
   <text class="mono body line l7" x="54" y="298">Junyi Li · AI Product Manager</text>

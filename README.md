@@ -33,7 +33,7 @@ Supports document search and citation.
 
 ## ✍️ Writing
 
-I write about AI products, agents, RAG, and model evaluation on WeChat.  
+I write about AI products, agents, knowledge bases, and model evaluation on WeChat.  
 Recent posts are listed newest first. The original articles are in Chinese.
 
 - [Musk Gave Grok Bot a Computer. Is the Workday About to Change?](https://mp.weixin.qq.com/s/e67L4DW5NmBlgGzrlwAU0g) · 2026-09-11
@@ -50,7 +50,7 @@ Recent posts are listed newest first. The original articles are in Chinese.
 - AI Product Manager
 - Former AI Trainer
 - Practical experience with data, SFT, and model evaluation
-- Exploring agents, RAG, and AI product design
+- Exploring agents, knowledge bases, and AI product design
 - Author of the WeChat publication *Less Play, More AI Learning*
 
 `BUILD` Turn ideas into working products · `TEST` Validate them in real situations · `SHIP` Deliver to users · `LEARN` Iterate on feedback
