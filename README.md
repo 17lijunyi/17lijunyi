@@ -17,10 +17,6 @@ My goal is to turn AI capabilities into products people actually use.
 
 Products, tools, and reusable methods built around real user needs.
 
-🎬 [**Realm of Imagination**](https://huanxiangzhijing.store/#worlds)  
-An AI-assisted storytelling experience with 20 original story worlds and character companions.  
-Choose an opening, explore branching continuations, and shape how your story unfolds.
-
 🧩 [**Product Evidence Deconstruction**](https://github.com/17lijunyi/17lijunyi/tree/main/skills/product-evidence-deconstruction)  
 A product analysis skill that starts with evidence.  
 Examine the user, technology, model, and data layers, then produce an auditable HTML report.
