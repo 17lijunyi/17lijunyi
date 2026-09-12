@@ -9,7 +9,7 @@ My experience includes data work, supervised fine-tuning (SFT), and model evalua
 I'm exploring prototyping, agents, and AI product design through hands-on experiments.  
 My goal is to turn AI capabilities into products people actually use.
 
-🌐 [Website](https://17lijunyi.github.io/) · ✍️ WeChat: Less Play, More AI Learning · ✉️ [Email](mailto:lijunyi2026setoff@gmail.com)
+🌐 [Website](https://17lijunyi.github.io/) · ✍️ [WeChat: Less Play, More AI Learning](https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzcwOTQzMTkzNg==&scene=124#wechat_redirect "Open in WeChat") · ✉️ [Email](mailto:lijunyi2026setoff@gmail.com)
 
 ---
 
