@@ -1,0 +1,20 @@
+{
+  "brand": "Muse10",
+  "title": "作品展示",
+  "products": [
+    {
+      "name": "花园款示例",
+      "note": "10片 · AI效果预览",
+      "images": [
+        "master.jpg",
+        "wear.jpg",
+        "detail.jpg"
+      ],
+      "labels": [
+        "十片陈列",
+        "双手佩戴",
+        "局部特写"
+      ]
+    }
+  ]
+}

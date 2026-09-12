@@ -1,0 +1,154 @@
+<div id="__M10_ROOT_ID__" data-count="__M10_PRODUCT_COUNT__">
+  <style>
+    #__M10_ROOT_ID__ { color-scheme: light; color: #171717; font-family: "Times New Roman", "Songti SC", "SimSun", serif; background: #fafafa; width: 100%; }
+    #__M10_ROOT_ID__ * { box-sizing: border-box; }
+    #__M10_ROOT_ID__ [hidden] { display: none !important; }
+    #__M10_ROOT_ID__ button { font: inherit; color: inherit; cursor: pointer; border: 0; border-radius: 0; background: transparent; margin: 0; }
+    #__M10_ROOT_ID__ .m10-bar { min-height: 64px; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    #__M10_ROOT_ID__ .m10-heading { font-size: 17px; font-weight: 400; margin: 0; }
+    #__M10_ROOT_ID__ .m10-wordmark { font-size: 27px; font-style: italic; font-weight: 400; }
+    #__M10_ROOT_ID__ .m10-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: #dedede; }
+    #__M10_ROOT_ID__[data-count="1"] .m10-grid { grid-template-columns: minmax(0, 1fr); max-width: 480px; margin: 0 auto; }
+    #__M10_ROOT_ID__[data-count="2"] .m10-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    #__M10_ROOT_ID__ .m10-work { min-width: 0; background: #fafafa; }
+    #__M10_ROOT_ID__ .m10-media { position: relative; aspect-ratio: 4 / 5; background: #9aa6ba; overflow: hidden; touch-action: pan-y; }
+    #__M10_ROOT_ID__ .m10-track { width: 100%; height: 100%; display: flex; transform: translateX(0); transition: transform 280ms cubic-bezier(.22,.61,.36,1); will-change: transform; }
+    #__M10_ROOT_ID__ .m10-image { display: block; flex: 0 0 100%; width: 100%; height: 100%; object-fit: cover; user-select: none; pointer-events: none; }
+    #__M10_ROOT_ID__ .m10-open { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; }
+    #__M10_ROOT_ID__ .m10-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 38px; height: 50px; display: flex; align-items: center; justify-content: center; padding: 0; color: #1a1a1a; opacity: 0; transition: opacity 160ms; }
+    #__M10_ROOT_ID__ .m10-arrow svg { width: 19px; height: 19px; stroke-width: 1; filter: drop-shadow(0 0 2px #fff); }
+    #__M10_ROOT_ID__ .m10-prev { left: 0; }
+    #__M10_ROOT_ID__ .m10-next { right: 0; }
+    #__M10_ROOT_ID__ .m10-media:hover .m10-arrow, #__M10_ROOT_ID__ .m10-media:focus-within .m10-arrow, #__M10_ROOT_ID__ .m10-detail .m10-arrow { opacity: 1; }
+    #__M10_ROOT_ID__ .m10-info { text-align: center; padding: 13px 6px 17px; }
+    #__M10_ROOT_ID__ .m10-name { font-size: 16px; line-height: 1.4; padding: 3px 2px; }
+    #__M10_ROOT_ID__ .m10-name:hover { text-decoration: underline; text-underline-offset: 5px; }
+    #__M10_ROOT_ID__ .m10-note { color: #686868; font-family: "PingFang SC", sans-serif; font-size: 11px; line-height: 1.5; margin: 4px 0 0; }
+    #__M10_ROOT_ID__ .m10-detail { padding: 0 20px 20px; }
+    #__M10_ROOT_ID__ .m10-detail .m10-media { width: min(100%, 510px); margin: 0 auto; }
+    #__M10_ROOT_ID__ .m10-back { display: inline-flex; gap: 7px; align-items: center; padding: 7px 0; font-size: 14px; }
+    #__M10_ROOT_ID__ .m10-back svg { width: 17px; height: 17px; }
+    #__M10_ROOT_ID__ .m10-detail-title { margin: 0; font-size: 18px; font-weight: 400; }
+    #__M10_ROOT_ID__ .m10-picker { display: flex; justify-content: center; flex-wrap: wrap; gap: 18px; margin-top: 14px; }
+    #__M10_ROOT_ID__ .m10-view { font-size: 14px; padding: 8px 1px; text-decoration: none; text-underline-offset: 6px; }
+    #__M10_ROOT_ID__ .m10-view[aria-pressed="true"] { text-decoration: underline; }
+    #__M10_ROOT_ID__ .m10-live { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    @media (hover: none), (pointer: coarse) { #__M10_ROOT_ID__ .m10-arrow { opacity: 1; width: 44px; height: 52px; } #__M10_ROOT_ID__ .m10-view, #__M10_ROOT_ID__ .m10-back, #__M10_ROOT_ID__ .m10-name { min-height: 44px; } }
+    @media (max-width: 480px) { #__M10_ROOT_ID__ .m10-bar { padding: 12px; min-height: 56px; } #__M10_ROOT_ID__ .m10-name { font-size: 13px; } #__M10_ROOT_ID__ .m10-info { padding: 8px 3px 12px; } #__M10_ROOT_ID__ .m10-detail { padding: 0 0 16px; } #__M10_ROOT_ID__ .m10-heading { font-size: 15px; } #__M10_ROOT_ID__ .m10-wordmark { font-size: 24px; } #__M10_ROOT_ID__ .m10-note { font-size: 11px; } }
+    @media (prefers-reduced-motion: reduce) { #__M10_ROOT_ID__ .m10-track, #__M10_ROOT_ID__ .m10-arrow { transition: none; } }
+  </style>
+  <div class="m10-bar" data-grid-bar><h2 class="m10-heading">__M10_TITLE__</h2><span class="m10-wordmark">__M10_BRAND__</span></div>
+  <div class="m10-grid" data-grid></div>
+  <div data-detail-section hidden>
+    <div class="m10-bar"><button class="m10-back" type="button" data-back><i data-lucide="arrow-left" aria-hidden="true"></i>返回作品</button><h2 class="m10-detail-title" data-detail-title></h2></div>
+    <div class="m10-detail" data-detail></div>
+  </div>
+  <div class="m10-live" aria-live="polite" data-live></div>
+  <script type="application/json" data-images>__M10_IMAGE_DATA__</script>
+  <script>
+    (() => {
+      const root = document.getElementById('__M10_ROOT_ID__');
+      const data = JSON.parse(root.querySelector('[data-images]').textContent);
+      const grid = root.querySelector('[data-grid]');
+      const detail = root.querySelector('[data-detail]');
+      const detailSection = root.querySelector('[data-detail-section]');
+      const live = root.querySelector('[data-live]');
+      let returnButton = null;
+      const redrawIcons = () => { if (typeof lucide !== 'undefined') lucide.createIcons({ attrs: { width: 18, height: 18 } }); };
+
+      function gallery(item, isDetail = false, startAt = 0) {
+        let index = startAt;
+        let manuallyChanged = isDetail;
+        let startX = null;
+        let startY = null;
+        let swallowClickUntil = 0;
+        const fragment = document.createElement('div');
+        const media = document.createElement('div');
+        media.className = 'm10-media';
+        media.setAttribute('role', 'group');
+        media.setAttribute('aria-label', item.name + '图片展示');
+        const track = document.createElement('div');
+        track.className = 'm10-track';
+        item.images.forEach((src, i) => {
+          const img = document.createElement('img');
+          img.className = 'm10-image'; img.src = src;
+          img.alt = item.name + ' · ' + item.labels[i]; img.draggable = false;
+          img.width = 800; img.height = 1000;
+          track.append(img);
+        });
+        media.append(track);
+        const open = document.createElement('button');
+        open.className = 'm10-open'; open.type = 'button';
+        open.setAttribute('aria-label', isDetail ? '查看下一张图片' : '打开' + item.name + '大图');
+        media.append(open);
+        const picker = document.createElement('div'); picker.className = 'm10-picker';
+        const update = (announce = false) => {
+          track.style.transform = 'translateX(' + (-index * 100) + '%)';
+          [...track.children].forEach((img, i) => img.setAttribute('aria-hidden', String(i !== index)));
+          [...picker.children].forEach((button, i) => button.setAttribute('aria-pressed', String(i === index)));
+          if (announce) live.textContent = item.name + '，' + item.labels[index] + '，第' + (index + 1) + '张，共' + item.images.length + '张';
+        };
+        const select = i => { manuallyChanged = true; index = (i + item.images.length) % item.images.length; update(true); };
+        [-1, 1].forEach(direction => {
+          const button = document.createElement('button'); button.type = 'button';
+          button.className = 'm10-arrow ' + (direction < 0 ? 'm10-prev' : 'm10-next');
+          button.setAttribute('aria-label', direction < 0 ? '上一张' : '下一张');
+          const icon = document.createElement('i'); icon.dataset.lucide = direction < 0 ? 'arrow-left' : 'arrow-right'; icon.setAttribute('aria-hidden', 'true'); button.append(icon);
+          button.addEventListener('click', event => { event.stopPropagation(); select(index + direction); });
+          media.append(button);
+        });
+        if (!isDetail) {
+          media.addEventListener('pointerenter', event => { if (event.pointerType === 'mouse' && !manuallyChanged && index === 0) { index = 1; update(); } });
+          media.addEventListener('pointerleave', event => { if (event.pointerType === 'mouse' && !manuallyChanged) { index = 0; update(); } });
+        }
+        media.addEventListener('pointerdown', event => { if (event.target.closest('.m10-arrow')) return; startX = event.clientX; startY = event.clientY; });
+        media.addEventListener('pointerup', event => {
+          if (startX === null) return;
+          const dx = event.clientX - startX, dy = event.clientY - startY;
+          if (Math.abs(dx) > 30 && Math.abs(dx) > Math.abs(dy)) { select(index + (dx < 0 ? 1 : -1)); swallowClickUntil = Date.now() + 400; }
+          startX = null; startY = null;
+        });
+        media.addEventListener('pointercancel', () => { startX = null; startY = null; });
+        media.addEventListener('keydown', event => {
+          if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') { event.preventDefault(); select(index + (event.key === 'ArrowRight' ? 1 : -1)); }
+        });
+        open.addEventListener('click', () => { if (Date.now() < swallowClickUntil) return; if (isDetail) select(index + 1); else showDetail(item, index, open); });
+        fragment.append(media);
+        if (isDetail) {
+          item.labels.forEach((label, i) => {
+            const button = document.createElement('button'); button.type = 'button'; button.className = 'm10-view'; button.textContent = label;
+            button.addEventListener('click', () => select(i)); picker.append(button);
+          });
+          fragment.append(picker);
+        }
+        update();
+        return fragment;
+      }
+      function showDetail(item, index, trigger) {
+        returnButton = trigger;
+        grid.hidden = true; root.querySelector('[data-grid-bar]').hidden = true;
+        detailSection.hidden = false;
+        root.querySelector('[data-detail-title]').textContent = item.name;
+        detail.replaceChildren(gallery(item, true, index));
+        redrawIcons();
+        root.querySelector('[data-back]').focus({preventScroll:true});
+      }
+      function goBack() {
+        detailSection.hidden = true; grid.hidden = false; root.querySelector('[data-grid-bar]').hidden = false;
+        detail.replaceChildren(); if (returnButton) returnButton.focus({preventScroll:true});
+      }
+      root.querySelector('[data-back]').addEventListener('click', goBack);
+      root.addEventListener('keydown', event => { if (event.key === 'Escape' && !detailSection.hidden) goBack(); });
+      data.forEach(item => {
+        const article = document.createElement('article'); article.className = 'm10-work';
+        article.append(gallery(item));
+        const info = document.createElement('div'); info.className = 'm10-info';
+        const name = document.createElement('button'); name.type = 'button'; name.className = 'm10-name'; name.textContent = item.name;
+        name.addEventListener('click', () => showDetail(item, 0, name));
+        const note = document.createElement('p'); note.className = 'm10-note'; note.textContent = item.note;
+        info.append(name, note); article.append(info); grid.append(article);
+      });
+      redrawIcons();
+    })();
+  </script>
+</div>
