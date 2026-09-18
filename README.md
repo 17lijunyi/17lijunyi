@@ -1,58 +1,57 @@
-# Hi, I'm 李俊祎 👋
+# 你好，我是李俊祎 👋
 
-[![李俊祎 · Personal Website · LJY OS](https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/portfolio-launch.svg)](https://17lijunyi.github.io/)
+[![李俊祎 · 个人网站 · LJY OS](https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/portfolio-launch.svg)](https://17lijunyi.github.io/)
 
-<p align="center"><sub>Click the terminal above to explore my personal website · 17lijunyi.github.io</sub></p>
+<p align="center"><sub>点击上方终端，探索我的个人网站 · 17lijunyi.github.io</sub></p>
 
-I moved from AI training into AI product management.  
-My experience includes data work, supervised fine-tuning (SFT), and model evaluation.  
-I'm exploring prototyping, agents, and AI product design through hands-on experiments.  
-My goal is to turn AI capabilities into products people actually use.
+我从 AI 训练师转向 AI 产品经理，积累了数据处理、监督微调（SFT）和模型评测经验。\
+正在通过动手实践，探索原型开发、智能体与 AI 产品设计。\
+希望把 AI 能力做成真正有人使用的产品。
 
-🌐 [Website](https://17lijunyi.github.io/) · ✍️ [微信公众号](https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzcwOTQzMTkzNg==&scene=124#wechat_redirect "Open in WeChat") · ✉️ [Email](mailto:lijunyi2026setoff@gmail.com)
-
----
-
-## ⭐ Featured projects
-
-Products, tools, and reusable methods built around real user needs.
-
-🧩 [**Product Evidence Deconstruction**](https://github.com/17lijunyi/17lijunyi/tree/main/skills/product-evidence-deconstruction)  
-A product analysis skill that starts with evidence.  
-Examine the user, technology, model, and data layers, then produce an auditable HTML report.
-
-💅 [**Muse10款式生成**](https://github.com/17lijunyi/17lijunyi/tree/main/skills/muse10-nail-visuals)\
-A nail design skill built around real ten-finger proportions and one fixed catalog background.\
-Create matching display, hand-wear, and detail images, with an interactive product preview.
-
-📚 [**Kanshan KB — Content Creation Knowledge Base**](https://github.com/17lijunyi/kanshan-kb)  
-A knowledge base for Zhihu creators, with 10 modules of practical methods, case studies, and primary sources.  
-Supports document search and citation.
+🌐 [个人网站](https://17lijunyi.github.io/) · ✍️ [微信公众号](https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzcwOTQzMTkzNg==&scene=124#wechat_redirect "在微信中打开") · ✉️ [邮箱](mailto:lijunyi2026setoff@gmail.com)
 
 ---
 
-## ✍️ Writing
+## ⭐ 精选项目
 
-I write about AI products, agents, knowledge bases, and model evaluation for the WeChat public account **少玩多学AI**.  
-Recent posts are listed newest first. The original articles are in Chinese.
+围绕真实用户需求，做产品、工具和可复用的方法。
 
-- [Musk Gave Grok Bot a Computer. Is the Workday About to Change?](https://mp.weixin.qq.com/s/e67L4DW5NmBlgGzrlwAU0g) · 2026-09-11
-- [Why Does GPT-6 at Low Effort Outperform 5.6 at High Effort?](https://mp.weixin.qq.com/s/e7vnDgcA9oXrec8YquB6eA) · 2026-09-10
-- [OpenAI Is Calling It AGI. Does GPT-6 Deserve the Label?](https://mp.weixin.qq.com/s/LYRakFpD6b0FThw7EDVdnQ) · 2026-09-09
-- [From Choosing Models by Instinct to Making Decisions with Data](https://mp.weixin.qq.com/s/uOE2XZh7eQPFw-mmheuOHQ) · 2026-09-07
+🧩 [**产品证据拆解**](https://github.com/17lijunyi/17lijunyi/tree/main/skills/product-evidence-deconstruction)\
+从真实证据出发的产品分析技能。\
+按用户、技术、模型、数据四层拆解产品，生成可核查的 HTML 报告。
 
-[More writing and projects →](https://17lijunyi.github.io/)
+💅 [**Muse10 款式生成**](https://github.com/17lijunyi/17lijunyi/tree/main/skills/muse10-nail-visuals)\
+基于真实双手十指比例和固定陈列背景的美甲设计技能。\
+生成同款甲片陈列图、上手图与细节特写，并提供可交互的商品预览。
+
+📚 [**Kanshan KB · 内容创作知识库**](https://github.com/17lijunyi/kanshan-kb)\
+面向知乎创作者的知识库，包含 10 个模块的实用方法、案例与一手资料。\
+支持文档检索与来源引用。
 
 ---
 
-## About
+## ✍️ 写作
 
-- AI Product Manager
-- Former AI Trainer
-- Practical experience with data, SFT, and model evaluation
-- Exploring agents, knowledge bases, and AI product design
+我在微信公众号 **少玩多学AI** 分享 AI 产品、智能体、知识库和模型评测方面的思考与实践。\
+以下是近期文章，按发布时间倒序排列。
+
+- [马斯克给Grok Bot配了台电脑，打工人的日常要变了？](https://mp.weixin.qq.com/s/e67L4DW5NmBlgGzrlwAU0g) · 2026-09-11
+- [GPT-6开低档，凭什么比5.6开高档还强？](https://mp.weixin.qq.com/s/e7vnDgcA9oXrec8YquB6eA) · 2026-09-10
+- [OpenAI喊出AGI，GPT-6到底配不配？](https://mp.weixin.qq.com/s/LYRakFpD6b0FThw7EDVdnQ) · 2026-09-09
+- [从凭感觉选模型，到用数据做决策](https://mp.weixin.qq.com/s/uOE2XZh7eQPFw-mmheuOHQ) · 2026-09-07
+
+[查看更多文章与项目 →](https://17lijunyi.github.io/)
+
+---
+
+## 关于我
+
+- AI 产品经理
+- 曾任 AI 训练师
+- 有数据处理、监督微调（SFT）和模型评测的实践经验
+- 持续探索智能体、知识库与 AI 产品设计
 - 微信公众号「少玩多学AI」作者
 
-`BUILD` Turn ideas into working products · `TEST` Validate them in real situations · `SHIP` Deliver to users · `LEARN` Iterate on feedback
+`构建` 把想法做成产品 · `验证` 在真实场景中测试 · `交付` 让用户用起来 · `学习` 根据反馈持续改进
 
-Stay optimistic until you succeed.
+保持乐观，直到成功。

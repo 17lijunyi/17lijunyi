@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc" xml:space="preserve">
-  <title id="title">李俊祎 · LJY OS Clear Light launch terminal</title>
-  <desc id="desc">An animated terminal introducing AI products, agents, and knowledge bases. Click to visit the personal website of 李俊祎.</desc>
+  <title id="title">李俊祎 · LJY OS 个人网站启动终端</title>
+  <desc id="desc">用终端动画介绍 AI 产品、智能体与知识库。点击访问李俊祎的个人网站。</desc>
   <style>
     :root { color-scheme: light; }
     .window { fill: #f8fafb; stroke: #d8e0e7; stroke-width: 2; }
@@ -56,19 +56,19 @@
   <circle cx="70" cy="27" r="7" fill="#55b96f"/>
   <text class="mono meta" x="500" y="31" text-anchor="middle">lijunyi@ljy-mac — 17lijunyi — 100×30</text>
 
-  <text class="mono title line l1" x="54" y="93">lijunyi OS v2.0.0 — Clear Light</text>
+  <text class="mono title line l1" x="54" y="93">李俊祎 OS v2.0.0 — 清透浅色</text>
 
-  <text class="mono body line l2" x="54" y="126">[ <tspan class="ok">OK</tspan> ] Load product kernel product-thinking.ai</text>
-  <text class="mono body line l3" x="54" y="157">[ <tspan class="ok">OK</tspan> ] Mount /products    AI products</text>
-  <text class="mono body line l4" x="54" y="188">[ <tspan class="ok">OK</tspan> ] Mount /agents      Agent workflows</text>
-  <text class="mono body line l5" x="54" y="219">[ <tspan class="ok">OK</tspan> ] Mount /knowledge   Knowledge bases</text>
+  <text class="mono body line l2" x="54" y="126">[ <tspan class="ok">就绪</tspan> ] 加载产品思维内核 product-thinking.ai</text>
+  <text class="mono body line l3" x="54" y="157">[ <tspan class="ok">就绪</tspan> ] 挂载 /products    AI 产品实践</text>
+  <text class="mono body line l4" x="54" y="188">[ <tspan class="ok">就绪</tspan> ] 挂载 /agents      智能体工作流</text>
+  <text class="mono body line l5" x="54" y="219">[ <tspan class="ok">就绪</tspan> ] 挂载 /knowledge   知识库</text>
 
   <text class="mono prompt line l6" x="54" y="267">lijunyi@ljy-mac ~ % <tspan class="body">whoami</tspan></text>
-  <text class="mono body line l7" x="54" y="298">李俊祎 · AI Product Manager</text>
+  <text class="mono body line l7" x="54" y="298">李俊祎 · AI 产品经理</text>
 
   <text class="mono prompt line l8" x="54" y="346">lijunyi@ljy-mac ~ % <tspan class="body">open lijunyi.os</tspan></text>
 
-  <text class="mono ready" x="54" y="389">SYSTEM READY</text>
-  <text class="mono cta" x="500" y="448" text-anchor="middle">CLICK TO LAUNCH · 17lijunyi</text>
+  <text class="mono ready" x="54" y="389">系统已就绪</text>
+  <text class="mono cta" x="500" y="448" text-anchor="middle">点击访问个人网站 · 17lijunyi</text>
   <text class="mono arrow" x="500" y="483" text-anchor="middle">→</text>
 </svg>
