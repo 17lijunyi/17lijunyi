@@ -1,6 +1,6 @@
 # 你好，我是李俊祎 👋
 
-[![李俊祎 · 个人网站 · LJY OS](https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/portfolio-launch.svg)](https://17lijunyi.github.io/)
+[![李俊祎 · 个人网站 · LJY OS](https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/portfolio-launch.svg?v=730c50fc50)](https://17lijunyi.github.io/)
 
 <p align="center"><sub>点击上方终端，探索我的个人网站 · 17lijunyi.github.io</sub></p>
 
