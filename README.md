@@ -16,22 +16,36 @@
 
 围绕真实用户需求，做产品、工具和可复用的方法。
 
-☁️ [**OvO · 免费的 macOS 翻译工具**](https://github.com/17lijunyi/OvO)\
-复刻 Bob 的划词翻译、截图翻译、输入翻译，采用原生柔焦玻璃界面。\
-内置免费的苹果系统翻译，也支持 DeepSeek 与自定义 API；应用免费，第三方 API 按服务商规则计费。\
-[下载 OvO →](https://github.com/17lijunyi/OvO/releases/latest)
-
-🧩 [**产品证据拆解**](https://github.com/17lijunyi/17lijunyi/tree/main/skills/product-evidence-deconstruction)\
-从真实证据出发的产品分析技能。\
-按用户、技术、模型、数据四层拆解产品，生成可核查的 HTML 报告。
-
-💅 [**Muse10 款式生成**](https://github.com/17lijunyi/17lijunyi/tree/main/skills/muse10-nail-visuals)\
-基于真实双手十指比例和固定陈列背景的美甲设计技能。\
-生成同款甲片陈列图、上手图与细节特写，并提供可交互的商品预览。
-
-📚 [**Kanshan KB · 内容创作知识库**](https://github.com/17lijunyi/kanshan-kb)\
-面向知乎创作者的知识库，包含 10 个模块的实用方法、案例与一手资料。\
-支持文档检索与来源引用。
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>☁️ <a href="https://github.com/17lijunyi/OvO">OvO · macOS 翻译工具</a></h3>
+      <p>划词、截图与输入翻译，采用原生柔焦玻璃界面。内置免费的苹果系统翻译，支持 DeepSeek 与自定义 API。</p>
+      <p><sub>应用免费 · 第三方 API 按服务商规则计费</sub></p>
+      <p><a href="https://github.com/17lijunyi/OvO/releases/latest">下载 OvO →</a></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🧩 <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/product-evidence-deconstruction">产品证据拆解</a></h3>
+      <p>从真实证据出发，按用户、技术、模型、数据四层拆解产品，生成可核查的 HTML 报告。</p>
+      <p><sub>产品分析 · 证据核查 · 开源技能</sub></p>
+      <p><a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/product-evidence-deconstruction">查看技能 →</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>💅 <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/muse10-nail-visuals">Muse10 款式生成</a></h3>
+      <p>按真实双手十指比例与固定陈列背景，生成同款甲片陈列图、上手图与细节特写，并制作可交互的商品预览。</p>
+      <p><sub>美甲设计 · 商品预览 · 开源技能</sub></p>
+      <p><a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/muse10-nail-visuals">查看技能 →</a></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>📚 <a href="https://github.com/17lijunyi/kanshan-kb">Kanshan KB · 内容创作知识库</a></h3>
+      <p>面向知乎创作者，包含 10 个模块的实用方法、案例与一手资料，支持文档检索与来源引用。</p>
+      <p><sub>内容创作 · 知识检索 · 来源引用</sub></p>
+      <p><a href="https://github.com/17lijunyi/kanshan-kb">查看知识库 →</a></p>
+    </td>
+  </tr>
+</table>
 
 ---
 
