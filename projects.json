@@ -2,13 +2,26 @@
   "owner": "17lijunyi",
   "profile_repo": "17lijunyi",
   "limit": 6,
-  "exclude": ["17lijunyi", "17lijunyi.github.io"],
-  "featured": ["repo:OvO", "skill:product-evidence-deconstruction", "skill:muse10-nail-visuals", "repo:kanshan-kb"],
+  "exclude": [
+    "17lijunyi",
+    "17lijunyi.github.io"
+  ],
+  "featured": [
+    "repo:OvO",
+    "skill:product-evidence-deconstruction",
+    "skill:muse10-nail-visuals",
+    "repo:kanshan-kb"
+  ],
   "overrides": {
-    "repo:OvO": {"title": "OvO · macOS 翻译工具"},
+    "repo:OvO": {
+      "title": "OvO · macOS 翻译工具"
+    },
     "repo:kanshan-kb": {
       "title": "Kanshan KB · 内容创作知识库",
       "description": "面向知乎创作者的知识库：10 个模块的实用方法、案例与一手资料，支持文档检索与来源引用。"
+    },
+    "skill:muse10-nail-visuals": {
+      "title": "Muse10 款式生成"
     }
   }
 }
