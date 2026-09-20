@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="210" viewBox="0 0 620 210" role="img" aria-labelledby="title desc">
+<title id="title">Muse10款式生成</title><desc id="desc">按真实双手十指比例与固定背景模板制作美甲款式、上手图和交互预览</desc>
+<rect x=".75" y=".75" width="598.5" height="208.5" rx="9" fill="#ffffff" stroke="#d1d9e0" stroke-width="1.5"/>
+<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Noto Sans CJK SC,PingFang SC,Microsoft YaHei,sans-serif">
+<g transform="translate(24 24)" fill="none" stroke="#59636e" stroke-width="1.7"><path d="M3 2h15v20H3a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm-2 15h17M5 17v7l3-2 3 2v-7"/></g>
+<text x="56" y="43" fill="#0969da" font-size="22" font-weight="600">Muse10款式生成</text>
+<rect x="512" y="23" width="64" height="26" rx="13" fill="none" stroke="#d1d9e0"/>
+<text x="544" y="41" text-anchor="middle" fill="#59636e" font-size="15">Skill</text>
+<text x="24" y="81" fill="#59636e" font-size="19">按真实双手十指比例与固定背景模板制作美甲款式、上手图和交</text>
+<text x="24" y="108" fill="#59636e" font-size="19">互预览</text>
+<circle cx="31" cy="177" r="7" fill="#8250df"/>
+<text x="47" y="183" fill="#59636e" font-size="17">技能目录</text>
+</g></svg>

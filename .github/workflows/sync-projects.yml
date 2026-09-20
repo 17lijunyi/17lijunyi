@@ -1,0 +1,48 @@
+name: Sync project cards
+
+on:
+  schedule:
+    - cron: '23 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - projects.json
+      - scripts/sync_projects.py
+      - tests/test_sync_projects.py
+      - skills/**
+      - .github/workflows/sync-projects.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-project-cards
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+      - name: Verify generator
+        run: python3 -m unittest discover -s tests -v
+      - name: Update public project cards
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/sync_projects.py
+      - name: Commit updated cards
+        run: |
+          git add README.md PROJECTS.md assets/projects
+          if git diff --cached --quiet; then
+            echo "Project cards are already up to date."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'docs: sync project cards'
+          git pull --rebase origin main
+          git push origin HEAD:main

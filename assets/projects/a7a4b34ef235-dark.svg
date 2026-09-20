@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="210" viewBox="0 0 620 210" role="img" aria-labelledby="title desc">
+<title id="title">产品证据拆解</title><desc id="desc">基于真实证据，按用户、技术、模型、数据四层拆解数字产品</desc>
+<rect x=".75" y=".75" width="598.5" height="208.5" rx="9" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Noto Sans CJK SC,PingFang SC,Microsoft YaHei,sans-serif">
+<g transform="translate(24 24)" fill="none" stroke="#9198a1" stroke-width="1.7"><path d="M3 2h15v20H3a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm-2 15h17M5 17v7l3-2 3 2v-7"/></g>
+<text x="56" y="43" fill="#4493f8" font-size="22" font-weight="600">产品证据拆解</text>
+<rect x="512" y="23" width="64" height="26" rx="13" fill="none" stroke="#30363d"/>
+<text x="544" y="41" text-anchor="middle" fill="#9198a1" font-size="15">Skill</text>
+<text x="24" y="81" fill="#9198a1" font-size="19">基于真实证据，按用户、技术、模型、数据四层拆解数字产品</text>
+<circle cx="31" cy="177" r="7" fill="#8250df"/>
+<text x="47" y="183" fill="#9198a1" font-size="17">技能目录</text>
+</g></svg>
