@@ -16,6 +16,11 @@
 
 围绕真实用户需求，做产品、工具和可复用的方法。
 
+☁️ [**OvO · 免费的 macOS 翻译工具**](https://github.com/17lijunyi/OvO)\
+复刻 Bob 的划词翻译、截图翻译、输入翻译，采用原生柔焦玻璃界面。\
+内置免费的苹果系统翻译，也支持 DeepSeek 与自定义 API；应用免费，第三方 API 按服务商规则计费。\
+[下载 OvO →](https://github.com/17lijunyi/OvO/releases/latest)
+
 🧩 [**产品证据拆解**](https://github.com/17lijunyi/17lijunyi/tree/main/skills/product-evidence-deconstruction)\
 从真实证据出发的产品分析技能。\
 按用户、技术、模型、数据四层拆解产品，生成可核查的 HTML 报告。
