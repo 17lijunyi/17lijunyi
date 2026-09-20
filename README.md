@@ -37,14 +37,18 @@
 ## ✍️ 写作
 
 我在微信公众号 **少玩多学AI** 分享 AI 产品、智能体、知识库和模型评测方面的思考与实践。\
-以下是近期文章，按发布时间倒序排列。
+以下是最近 6 篇文章，按发布时间倒序排列。
 
-- [马斯克给Grok Bot配了台电脑，打工人的日常要变了？](https://mp.weixin.qq.com/s/e67L4DW5NmBlgGzrlwAU0g) · 2026-09-11
-- [GPT-6开低档，凭什么比5.6开高档还强？](https://mp.weixin.qq.com/s/e7vnDgcA9oXrec8YquB6eA) · 2026-09-10
-- [OpenAI喊出AGI，GPT-6到底配不配？](https://mp.weixin.qq.com/s/LYRakFpD6b0FThw7EDVdnQ) · 2026-09-09
-- [从凭感觉选模型，到用数据做决策](https://mp.weixin.qq.com/s/uOE2XZh7eQPFw-mmheuOHQ) · 2026-09-07
+<!-- ARTICLES:START -->
+- [MiMo Code 这 3 个设计，值得写进你的下一份 AI 产品 PRD](https://mp.weixin.qq.com/s/J7YrMqDSJFvzq1Ere7Lmrw) · 2026-09-20
+- [Gemini 4 Pro 真能打赢 Astra 和 Fable？那张疯传的跑分图可信吗？](https://mp.weixin.qq.com/s/p6oMmFX8XHEazCdEIyo0dA) · 2026-09-18
+- [Claude Code、Codex 都能干活，DeepSeek Harness 还值得折腾吗？](https://mp.weixin.qq.com/s/yhQMwUilV4C3qWbaVIosSA) · 2026-09-17
+- [豆包手机又来了，这次能放心把事情交给它吗？](https://mp.weixin.qq.com/s/oEzwISEJlwJoG7lLD6_M6w) · 2026-09-15
+- [老板在微信里派活，你转手派给 WorkBuddy](https://mp.weixin.qq.com/s/h2nrYveCTMO8O9_1WfOHYA) · 2026-09-15
+- [每秒上千Token，OpenAI这款模型却要下架了](https://mp.weixin.qq.com/s/zviKiUifW-IkmaHY7LrQIA) · 2026-09-12
+<!-- ARTICLES:END -->
 
-[查看更多文章与项目 →](https://17lijunyi.github.io/)
+[查看全部 18 篇文章 →](./ARTICLES.md) · [个人网站 →](https://17lijunyi.github.io/)
 
 ---
 
