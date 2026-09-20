@@ -23,7 +23,7 @@
 </p>
 
 <p>
-  <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/muse10-nail-visuals"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/79d74b826c55-dark.svg?v=f8ea2f13d1a1"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/79d74b826c55-light.svg?v=3cd8b78a029d" alt="Muse10款式生成：按真实双手十指比例与固定背景模板制作美甲款式、上手图和交互预览"></picture></a>
+  <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/muse10-nail-visuals"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/79d74b826c55-dark.svg?v=0051341dfef3"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/79d74b826c55-light.svg?v=bf2b0b32e5b3" alt="Muse10 款式生成：按真实双手十指比例与固定背景模板制作美甲款式、上手图和交互预览"></picture></a>
   <a href="https://github.com/17lijunyi/kanshan-kb"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/ee13cc6bb409-dark.svg?v=2d8b2b9077d3"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/ee13cc6bb409-light.svg?v=640f56a3389c" alt="Kanshan KB · 内容创作知识库：面向知乎创作者的知识库：10 个模块的实用方法、案例与一手资料，支持文档检索与来源引用。"></picture></a>
 </p>
 

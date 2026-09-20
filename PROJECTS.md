@@ -16,7 +16,7 @@
 
 <p><sub>技能目录</sub></p>
 
-<h2><a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/muse10-nail-visuals">Muse10款式生成</a></h2>
+<h2><a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/muse10-nail-visuals">Muse10 款式生成</a></h2>
 
 <p>按真实双手十指比例与固定背景模板制作美甲款式、上手图和交互预览</p>
 
