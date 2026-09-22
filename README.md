@@ -18,12 +18,16 @@
 
 <!-- PROJECTS:START -->
 <p>
+  <a href="https://github.com/17lijunyi/xuanfudao"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/70dcdf37eff2-dark.svg?v=882947a7eefc"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/70dcdf37eff2-light.svg?v=a37305df1f6b" alt="悬浮岛 · Mac 顶部工作台：悬浮岛：把工作台藏进 Mac 顶部。AI 任务、待办、笔记、项目抽屉与专注计时，柔焦玻璃界面，本地优先。"></picture></a>
   <a href="https://github.com/17lijunyi/OvO"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/d9dd3ca1adf7-dark.svg?v=5a447be07735"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/d9dd3ca1adf7-light.svg?v=52a442ab1861" alt="OvO · macOS 翻译工具：免费的原生 macOS 翻译工具：划词、截图、输入翻译，苹果系统翻译与自定义 API，柔焦玻璃界面。"></picture></a>
-  <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/product-evidence-deconstruction"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/a7a4b34ef235-dark.svg?v=c9c64e127004"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/a7a4b34ef235-light.svg?v=02604478c0f4" alt="产品证据拆解：基于真实证据，按用户、技术、模型、数据四层拆解数字产品"></picture></a>
 </p>
 
 <p>
+  <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/product-evidence-deconstruction"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/a7a4b34ef235-dark.svg?v=c9c64e127004"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/a7a4b34ef235-light.svg?v=02604478c0f4" alt="产品证据拆解：基于真实证据，按用户、技术、模型、数据四层拆解数字产品"></picture></a>
   <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/muse10-nail-visuals"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/79d74b826c55-dark.svg?v=0051341dfef3"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/79d74b826c55-light.svg?v=bf2b0b32e5b3" alt="Muse10 款式生成：按真实双手十指比例与固定背景模板制作美甲款式、上手图和交互预览"></picture></a>
+</p>
+
+<p>
   <a href="https://github.com/17lijunyi/kanshan-kb"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/ee13cc6bb409-dark.svg?v=2d8b2b9077d3"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/ee13cc6bb409-light.svg?v=640f56a3389c" alt="Kanshan KB · 内容创作知识库：面向知乎创作者的知识库：10 个模块的实用方法、案例与一手资料，支持文档检索与来源引用。"></picture></a>
 </p>
 

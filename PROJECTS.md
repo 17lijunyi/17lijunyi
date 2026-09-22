@@ -4,6 +4,12 @@
 
 [返回主页](https://github.com/17lijunyi) · [个人网站](https://17lijunyi.github.io/) · [所有公开仓库](https://github.com/17lijunyi?tab=repositories)
 
+<h2><a href="https://github.com/17lijunyi/xuanfudao">悬浮岛 · Mac 顶部工作台</a></h2>
+
+<p>悬浮岛：把工作台藏进 Mac 顶部。AI 任务、待办、笔记、项目抽屉与专注计时，柔焦玻璃界面，本地优先。</p>
+
+<p><sub>JavaScript · Star 0 · Fork 0</sub></p>
+
 <h2><a href="https://github.com/17lijunyi/OvO">OvO · macOS 翻译工具</a></h2>
 
 <p>免费的原生 macOS 翻译工具：划词、截图、输入翻译，苹果系统翻译与自定义 API，柔焦玻璃界面。</p>

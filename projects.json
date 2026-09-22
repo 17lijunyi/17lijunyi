@@ -7,6 +7,7 @@
     "17lijunyi.github.io"
   ],
   "featured": [
+    "repo:xuanfudao",
     "repo:OvO",
     "skill:product-evidence-deconstruction",
     "skill:muse10-nail-visuals",
@@ -22,6 +23,9 @@
     },
     "skill:muse10-nail-visuals": {
       "title": "Muse10 款式生成"
+    },
+    "repo:xuanfudao": {
+      "title": "悬浮岛 · Mac 顶部工作台"
     }
   }
 }
