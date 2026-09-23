@@ -11,7 +11,7 @@
 <circle cx="31" cy="177" r="7" fill="#f1e05a"/>
 <text x="47" y="183" fill="#9198a1" font-size="17">JavaScript</text>
 <g transform="translate(230 166)" fill="none" stroke="#9198a1" stroke-width="1.6"><path d="m10 1 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L1 7.6l6.2-.9Z"/></g>
-<text x="258" y="183" fill="#9198a1" font-size="17">0</text>
+<text x="258" y="183" fill="#9198a1" font-size="17">1</text>
 <g transform="translate(350 166)" fill="none" stroke="#9198a1" stroke-width="1.6"><circle cx="5" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="10" cy="17" r="2.5"/><path d="M5 5.5V8c0 3 10 3 10 0V5.5M10 10v4.5"/></g>
 <text x="378" y="183" fill="#9198a1" font-size="17">0</text>
 </g></svg>

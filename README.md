@@ -18,7 +18,7 @@
 
 <!-- PROJECTS:START -->
 <p>
-  <a href="https://github.com/17lijunyi/xuanfudao"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/70dcdf37eff2-dark.svg?v=882947a7eefc"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/70dcdf37eff2-light.svg?v=a37305df1f6b" alt="悬浮岛 · Mac 顶部工作台：悬浮岛：把工作台藏进 Mac 顶部。AI 任务、待办、笔记、项目抽屉与专注计时，柔焦玻璃界面，本地优先。"></picture></a>
+  <a href="https://github.com/17lijunyi/xuanfudao"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/70dcdf37eff2-dark.svg?v=4f42ea68826a"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/70dcdf37eff2-light.svg?v=748db17a6ccc" alt="悬浮岛 · Mac 顶部工作台：悬浮岛：把工作台藏进 Mac 顶部。AI 任务、待办、笔记、项目抽屉与专注计时，柔焦玻璃界面，本地优先。"></picture></a>
   <a href="https://github.com/17lijunyi/OvO"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/d9dd3ca1adf7-dark.svg?v=5a447be07735"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/d9dd3ca1adf7-light.svg?v=52a442ab1861" alt="OvO · macOS 翻译工具：免费的原生 macOS 翻译工具：划词、截图、输入翻译，苹果系统翻译与自定义 API，柔焦玻璃界面。"></picture></a>
 </p>
 

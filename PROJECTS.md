@@ -8,7 +8,7 @@
 
 <p>悬浮岛：把工作台藏进 Mac 顶部。AI 任务、待办、笔记、项目抽屉与专注计时，柔焦玻璃界面，本地优先。</p>
 
-<p><sub>JavaScript · Star 0 · Fork 0</sub></p>
+<p><sub>JavaScript · Star 1 · Fork 0</sub></p>
 
 <h2><a href="https://github.com/17lijunyi/OvO">OvO · macOS 翻译工具</a></h2>
 
