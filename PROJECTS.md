@@ -6,7 +6,7 @@
 
 <h2><a href="https://github.com/17lijunyi/jianli">简励 · Mac 简历工作台</a></h2>
 
-<p>原生玻璃窗口与悬浮控件，中文简历编辑、模板预览、PDF 导出和 AI 辅助。本地保存，基于 Magic Resume，限个人非商业使用。</p>
+<p>我的个人项目：中文 Mac 简历应用，支持简历编辑、模板预览、PDF 导出与 AI 辅助。玻璃质感窗口、悬浮控件，本地保存。</p>
 
 <p><sub>TypeScript · Star 0 · Fork 0</sub></p>
 
