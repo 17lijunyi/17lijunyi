@@ -18,7 +18,7 @@
 
 <!-- PROJECTS:START -->
 <p>
-  <a href="https://github.com/17lijunyi/jianli"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/c87766161096-dark.svg?v=2704d48640e0"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/c87766161096-light.svg?v=36561d85e4d2" alt="简励 · Mac 简历工作台：我的个人项目：中文 Mac 简历应用，支持简历编辑、模板预览、PDF 导出与 AI 辅助。玻璃质感窗口、悬浮控件，本地保存。"></picture></a>
+  <a href="https://github.com/17lijunyi/jianli"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/c87766161096-dark.svg?v=38c4a21b10fd"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/c87766161096-light.svg?v=881572181a68" alt="简励 · Mac 简历工作台：中文 Mac 简历应用，支持简历编辑、模板预览、PDF 导出与 AI 辅助。玻璃质感窗口、悬浮控件，本地保存。"></picture></a>
   <a href="https://github.com/17lijunyi/xuanfudao"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/70dcdf37eff2-dark.svg?v=4f42ea68826a"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/70dcdf37eff2-light.svg?v=748db17a6ccc" alt="悬浮岛 · Mac 顶部工作台：悬浮岛：把工作台藏进 Mac 顶部。AI 任务、待办、笔记、项目抽屉与专注计时，柔焦玻璃界面，本地优先。"></picture></a>
 </p>
 
