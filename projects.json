@@ -7,6 +7,7 @@
     "17lijunyi.github.io"
   ],
   "featured": [
+    "repo:jianli",
     "repo:xuanfudao",
     "repo:OvO",
     "skill:product-evidence-deconstruction",
@@ -26,6 +27,10 @@
     },
     "repo:xuanfudao": {
       "title": "悬浮岛 · Mac 顶部工作台"
+    },
+    "repo:jianli": {
+      "title": "简励 · Mac 简历工作台",
+      "description": "原生玻璃窗口与悬浮控件，中文简历编辑、模板预览、PDF 导出和 AI 辅助。本地保存，基于 Magic Resume，限个人非商业使用。"
     }
   }
 }

@@ -4,6 +4,12 @@
 
 [返回主页](https://github.com/17lijunyi) · [个人网站](https://17lijunyi.github.io/) · [所有公开仓库](https://github.com/17lijunyi?tab=repositories)
 
+<h2><a href="https://github.com/17lijunyi/jianli">简励 · Mac 简历工作台</a></h2>
+
+<p>原生玻璃窗口与悬浮控件，中文简历编辑、模板预览、PDF 导出和 AI 辅助。本地保存，基于 Magic Resume，限个人非商业使用。</p>
+
+<p><sub>未标注语言 · Star 0 · Fork 0</sub></p>
+
 <h2><a href="https://github.com/17lijunyi/xuanfudao">悬浮岛 · Mac 顶部工作台</a></h2>
 
 <p>悬浮岛：把工作台藏进 Mac 顶部。AI 任务、待办、笔记、项目抽屉与专注计时，柔焦玻璃界面，本地优先。</p>
