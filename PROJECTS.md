@@ -8,7 +8,7 @@
 
 <p>原生玻璃窗口与悬浮控件，中文简历编辑、模板预览、PDF 导出和 AI 辅助。本地保存，基于 Magic Resume，限个人非商业使用。</p>
 
-<p><sub>未标注语言 · Star 0 · Fork 0</sub></p>
+<p><sub>TypeScript · Star 0 · Fork 0</sub></p>
 
 <h2><a href="https://github.com/17lijunyi/xuanfudao">悬浮岛 · Mac 顶部工作台</a></h2>
 

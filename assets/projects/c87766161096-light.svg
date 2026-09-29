@@ -9,6 +9,8 @@
 <text x="24" y="81" fill="#59636e" font-size="19">原生玻璃窗口与悬浮控件，中文简历编辑、模板预览、PDF 导</text>
 <text x="24" y="108" fill="#59636e" font-size="19">出和 AI 辅助。本地保存，基于 Magic Resume，限个人非</text>
 <text x="24" y="135" fill="#59636e" font-size="19">商业使用。</text>
+<circle cx="31" cy="177" r="7" fill="#3178c6"/>
+<text x="47" y="183" fill="#59636e" font-size="17">TypeScript</text>
 <g transform="translate(230 166)" fill="none" stroke="#59636e" stroke-width="1.6"><path d="m10 1 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L1 7.6l6.2-.9Z"/></g>
 <text x="258" y="183" fill="#59636e" font-size="17">0</text>
 <g transform="translate(350 166)" fill="none" stroke="#59636e" stroke-width="1.6"><circle cx="5" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="10" cy="17" r="2.5"/><path d="M5 5.5V8c0 3 10 3 10 0V5.5M10 10v4.5"/></g>
