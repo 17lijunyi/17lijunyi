@@ -39,3 +39,9 @@
 <p>面向知乎创作者的知识库：10 个模块的实用方法、案例与一手资料，支持文档检索与来源引用。</p>
 
 <p><sub>Python · Star 0 · Fork 0</sub></p>
+
+<h2><a href="https://github.com/17lijunyi/orbi">orbi</a></h2>
+
+<p>Orbi：中文 macOS AI 工作台，悬浮玻璃界面、智能体协作与本地运行。基于 Lorca 开发。</p>
+
+<p><sub>Rust · Star 0 · Fork 0</sub></p>
