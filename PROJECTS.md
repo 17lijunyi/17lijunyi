@@ -4,6 +4,12 @@
 
 [返回主页](https://github.com/17lijunyi) · [个人网站](https://17lijunyi.github.io/) · [所有公开仓库](https://github.com/17lijunyi?tab=repositories)
 
+<h2><a href="https://github.com/17lijunyi/orbi">Orbi · macOS AI 工作台</a></h2>
+
+<p>Orbi：原生 macOS AI 工作台，支持智能体协作、七款窗口背景与毛绒星球 DIY。本地运行，通过端到端加密同步设备数据。基于 Lorca 开发。</p>
+
+<p><sub>Rust · Star 0 · Fork 0</sub></p>
+
 <h2><a href="https://github.com/17lijunyi/jianli">简励 · Mac 简历工作台</a></h2>
 
 <p>中文 Mac 简历应用，支持简历编辑、模板预览、PDF 导出与 AI 辅助。玻璃质感窗口、悬浮控件，本地保存。</p>
@@ -39,9 +45,3 @@
 <p>面向知乎创作者的知识库：10 个模块的实用方法、案例与一手资料，支持文档检索与来源引用。</p>
 
 <p><sub>Python · Star 0 · Fork 0</sub></p>
-
-<h2><a href="https://github.com/17lijunyi/orbi">orbi</a></h2>
-
-<p>Orbi：中文 macOS AI 工作台，悬浮玻璃界面、智能体协作与本地运行。基于 Lorca 开发。</p>
-
-<p><sub>Rust · Star 0 · Fork 0</sub></p>
