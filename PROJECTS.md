@@ -45,3 +45,9 @@
 <p>面向知乎创作者的知识库：10 个模块的实用方法、案例与一手资料，支持文档检索与来源引用。</p>
 
 <p><sub>Python · Star 0 · Fork 0</sub></p>
+
+<h2><a href="https://github.com/17lijunyi/Foundry">Foundry</a></h2>
+
+<p>Foundry：面向产品经理的 AI 桌面工作台，原生玻璃界面、文件协作与模型对比。基于 Product Manager Workbench、AionUi 和 AionCore。</p>
+
+<p><sub>Rust · Star 0 · Fork 0</sub></p>
