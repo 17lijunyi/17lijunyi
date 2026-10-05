@@ -46,6 +46,12 @@
 
 <p><sub>Python · Star 0 · Fork 0</sub></p>
 
+<h2><a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/ai-product-resume-edit">AI 产品简历修改</a></h2>
+
+<p>面向 AI 产品经理、FDE 与转型求职者，在已有简历上修改表达、数据与排版</p>
+
+<p><sub>技能目录</sub></p>
+
 <h2><a href="https://github.com/17lijunyi/Foundry">Foundry</a></h2>
 
 <p>Foundry：面向产品经理的 AI 桌面工作台，原生玻璃界面、文件协作与模型对比。基于 Product Manager Workbench、AionUi 和 AionCore。</p>
