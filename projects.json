@@ -34,7 +34,8 @@
       "description": "中文 Mac 简历应用，支持简历编辑、模板预览、PDF 导出与 AI 辅助。玻璃质感窗口、悬浮控件，本地保存。"
     },
     "repo:orbi": {
-      "title": "Orbi · macOS AI 工作台"
+      "title": "Orbi · macOS AI 工作台",
+      "description": "Orbi：李俊祎维护的个人 macOS AI 工作台。原生悬浮界面，支持智能体协作、悬浮聊天、便笺待办、毛绒星球 DIY 与七款窗口背景。"
     }
   }
 }

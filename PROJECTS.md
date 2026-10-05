@@ -6,7 +6,7 @@
 
 <h2><a href="https://github.com/17lijunyi/orbi">Orbi · macOS AI 工作台</a></h2>
 
-<p>Orbi：原生 macOS AI 工作台，支持智能体协作、七款窗口背景与毛绒星球 DIY。本地运行，通过端到端加密同步设备数据。基于 Lorca 开发。</p>
+<p>Orbi：李俊祎维护的个人 macOS AI 工作台。原生悬浮界面，支持智能体协作、悬浮聊天、便笺待办、毛绒星球 DIY 与七款窗口背景。</p>
 
 <p><sub>Rust · Star 0 · Fork 0</sub></p>
 
