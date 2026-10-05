@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI 产品简历修改"
+  short_description: "面向 AI 产品经理、FDE 与转型求职者，在已有简历上修改表达、数据与排版"
+  default_prompt: "请使用 $ai-product-resume-edit，在我已有简历上修改内容、数据表达和排版，保留真实经历与贡献边界，并给出可直接使用的修改稿。"
