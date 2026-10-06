@@ -18,6 +18,11 @@
 
 <!-- PROJECTS:START -->
 <p>
+  <a href="https://github.com/17lijunyi/Foundry"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/8462ac817f56-dark.svg?v=be4783787b1f"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/8462ac817f56-light.svg?v=ec0aece8b182" alt="Foundry：Foundry：面向产品经理的 AI 桌面工作台，原生玻璃界面、文件协作与模型对比。基于 Product Manager Workbench、AionUi 和 AionCore。"></picture></a>
+  <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/ai-product-resume-edit"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/b582cac81996-dark.svg?v=c3c25bc7b84e"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/b582cac81996-light.svg?v=256667cc2441" alt="AI 产品简历修改：面向 AI 产品经理、FDE 与转型求职者，在已有简历上修改表达、数据与排版"></picture></a>
+</p>
+
+<p>
   <a href="https://github.com/17lijunyi/orbi"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/792db9a614d2-dark.svg?v=aa1e1b1c60b9"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/792db9a614d2-light.svg?v=a542de8f1c3e" alt="Orbi · macOS AI 工作台：李俊祎的个人 macOS AI 工作台，支持智能体协作、群聊、悬浮聊天与待办，提供毛绒星球 DIY 和七款窗口背景。"></picture></a>
   <a href="https://github.com/17lijunyi/jianli"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/c87766161096-dark.svg?v=38c4a21b10fd"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/c87766161096-light.svg?v=881572181a68" alt="简励 · Mac 简历工作台：中文 Mac 简历应用，支持简历编辑、模板预览、PDF 导出与 AI 辅助。玻璃质感窗口、悬浮控件，本地保存。"></picture></a>
 </p>
@@ -25,11 +30,6 @@
 <p>
   <a href="https://github.com/17lijunyi/xuanfudao"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/70dcdf37eff2-dark.svg?v=4f42ea68826a"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/70dcdf37eff2-light.svg?v=748db17a6ccc" alt="悬浮岛 · Mac 顶部工作台：悬浮岛：把工作台藏进 Mac 顶部。AI 任务、待办、笔记、项目抽屉与专注计时，柔焦玻璃界面，本地优先。"></picture></a>
   <a href="https://github.com/17lijunyi/OvO"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/d9dd3ca1adf7-dark.svg?v=5a447be07735"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/d9dd3ca1adf7-light.svg?v=52a442ab1861" alt="OvO · macOS 翻译工具：免费的原生 macOS 翻译工具：划词、截图、输入翻译，苹果系统翻译与自定义 API，柔焦玻璃界面。"></picture></a>
-</p>
-
-<p>
-  <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/product-evidence-deconstruction"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/a7a4b34ef235-dark.svg?v=c9c64e127004"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/a7a4b34ef235-light.svg?v=02604478c0f4" alt="产品证据拆解：基于真实证据，按用户、技术、模型、数据四层拆解数字产品"></picture></a>
-  <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/muse10-nail-visuals"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/79d74b826c55-dark.svg?v=0051341dfef3"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/79d74b826c55-light.svg?v=bf2b0b32e5b3" alt="Muse10 款式生成：按真实双手十指比例与固定背景模板制作美甲款式、上手图和交互预览"></picture></a>
 </p>
 
 [查看全部项目 →](./PROJECTS.md) · [下载 OvO →](https://github.com/17lijunyi/OvO/releases/latest)
