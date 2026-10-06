@@ -18,7 +18,7 @@
 
 <!-- PROJECTS:START -->
 <p>
-  <a href="https://github.com/17lijunyi/orbi"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/792db9a614d2-dark.svg?v=221330c5b963"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/792db9a614d2-light.svg?v=70e7ecfa09f6" alt="Orbi · macOS AI 工作台：Orbi：李俊祎的个人 macOS AI 工作台，独立负责产品设计、中文体验与新增功能开发。支持智能体协作、悬浮聊天、便笺待办、毛绒星球 DIY 与七款窗口背景。"></picture></a>
+  <a href="https://github.com/17lijunyi/orbi"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/792db9a614d2-dark.svg?v=aa1e1b1c60b9"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/792db9a614d2-light.svg?v=a542de8f1c3e" alt="Orbi · macOS AI 工作台：李俊祎的个人 macOS AI 工作台，支持智能体协作、群聊、悬浮聊天与待办，提供毛绒星球 DIY 和七款窗口背景。"></picture></a>
   <a href="https://github.com/17lijunyi/jianli"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/c87766161096-dark.svg?v=38c4a21b10fd"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/c87766161096-light.svg?v=881572181a68" alt="简励 · Mac 简历工作台：中文 Mac 简历应用，支持简历编辑、模板预览、PDF 导出与 AI 辅助。玻璃质感窗口、悬浮控件，本地保存。"></picture></a>
 </p>
 
