@@ -57,3 +57,9 @@
 <p>面向知乎创作者的知识库：10 个模块的实用方法、案例与一手资料，支持文档检索与来源引用。</p>
 
 <p><sub>Python · Star 0 · Fork 0</sub></p>
+
+<h2><a href="https://github.com/17lijunyi/daily-ai-news">daily-ai-news</a></h2>
+
+<p>每日 AI 事件：每天精选 10 条 AI 新闻</p>
+
+<p><sub>Python · Star 0 · Fork 0</sub></p>
