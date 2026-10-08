@@ -8,7 +8,7 @@
 
 <p>Foundry：面向产品经理的 AI 桌面工作台，原生玻璃界面、文件协作与模型对比。基于 Product Manager Workbench、AionUi 和 AionCore。</p>
 
-<p><sub>Rust · Star 0 · Fork 0</sub></p>
+<p><sub>Rust · Star 2 · Fork 0</sub></p>
 
 <h2><a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/ai-product-resume-edit">AI 产品简历修改</a></h2>
 
@@ -20,25 +20,25 @@
 
 <p>李俊祎的个人 macOS AI 工作台，支持智能体协作、群聊、悬浮聊天与待办，提供毛绒星球 DIY 和七款窗口背景。</p>
 
-<p><sub>Rust · Star 0 · Fork 0</sub></p>
+<p><sub>Rust · Star 1 · Fork 0</sub></p>
 
 <h2><a href="https://github.com/17lijunyi/jianli">简励 · Mac 简历工作台</a></h2>
 
 <p>中文 Mac 简历应用，支持简历编辑、模板预览、PDF 导出与 AI 辅助。玻璃质感窗口、悬浮控件，本地保存。</p>
 
-<p><sub>TypeScript · Star 0 · Fork 0</sub></p>
+<p><sub>TypeScript · Star 1 · Fork 0</sub></p>
 
 <h2><a href="https://github.com/17lijunyi/xuanfudao">悬浮岛 · Mac 顶部工作台</a></h2>
 
 <p>悬浮岛：把工作台藏进 Mac 顶部。AI 任务、待办、笔记、项目抽屉与专注计时，柔焦玻璃界面，本地优先。</p>
 
-<p><sub>JavaScript · Star 1 · Fork 0</sub></p>
+<p><sub>JavaScript · Star 2 · Fork 0</sub></p>
 
 <h2><a href="https://github.com/17lijunyi/OvO">OvO · macOS 翻译工具</a></h2>
 
 <p>免费的原生 macOS 翻译工具：划词、截图、输入翻译，苹果系统翻译与自定义 API，柔焦玻璃界面。</p>
 
-<p><sub>Swift · Star 0 · Fork 0</sub></p>
+<p><sub>Swift · Star 1 · Fork 0</sub></p>
 
 <h2><a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/product-evidence-deconstruction">产品证据拆解</a></h2>
 
@@ -56,10 +56,10 @@
 
 <p>面向知乎创作者的知识库：10 个模块的实用方法、案例与一手资料，支持文档检索与来源引用。</p>
 
-<p><sub>Python · Star 0 · Fork 0</sub></p>
+<p><sub>Python · Star 1 · Fork 0</sub></p>
 
 <h2><a href="https://github.com/17lijunyi/daily-ai-news">daily-ai-news</a></h2>
 
 <p>每日 AI 事件：每天精选 10 条 AI 新闻</p>
 
-<p><sub>Python · Star 0 · Fork 0</sub></p>
+<p><sub>Python · Star 1 · Fork 0</sub></p>
