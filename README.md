@@ -23,8 +23,8 @@
 </p>
 
 <p>
-  <a href="https://github.com/17lijunyi/orbi"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/792db9a614d2-dark.svg?v=a07452a10c83"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/792db9a614d2-light.svg?v=5cc7c8f6ec69" alt="Orbi · macOS AI 工作台：李俊祎的个人 macOS AI 工作台，支持智能体协作、群聊、悬浮聊天与待办，提供毛绒星球 DIY 和七款窗口背景。"></picture></a>
-  <a href="https://github.com/17lijunyi/jianli"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/c87766161096-dark.svg?v=7a4bebfcd3ca"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/c87766161096-light.svg?v=8243f6c7959e" alt="简励 · Mac 简历工作台：中文 Mac 简历应用，支持简历编辑、模板预览、PDF 导出与 AI 辅助。玻璃质感窗口、悬浮控件，本地保存。"></picture></a>
+  <a href="https://github.com/17lijunyi/orbi"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/792db9a614d2-dark.svg?v=b187c2c07a66"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/792db9a614d2-light.svg?v=f4b091e2f845" alt="Orbi · macOS AI 工作台：李俊祎的个人 macOS AI 工作台，支持智能体协作、群聊、悬浮聊天与待办，提供毛绒星球 DIY 和七款窗口背景。"></picture></a>
+  <a href="https://github.com/17lijunyi/jianli"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/c87766161096-dark.svg?v=c045d31b523b"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/c87766161096-light.svg?v=a5533c348870" alt="简励 · Mac 简历工作台：中文 Mac 简历应用，支持简历编辑、模板预览、PDF 导出与 AI 辅助。玻璃质感窗口、悬浮控件，本地保存。"></picture></a>
 </p>
 
 <p>

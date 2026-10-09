@@ -20,13 +20,13 @@
 
 <p>李俊祎的个人 macOS AI 工作台，支持智能体协作、群聊、悬浮聊天与待办，提供毛绒星球 DIY 和七款窗口背景。</p>
 
-<p><sub>Rust · Star 1 · Fork 0</sub></p>
+<p><sub>Rust · Star 2 · Fork 0</sub></p>
 
 <h2><a href="https://github.com/17lijunyi/jianli">简励 · Mac 简历工作台</a></h2>
 
 <p>中文 Mac 简历应用，支持简历编辑、模板预览、PDF 导出与 AI 辅助。玻璃质感窗口、悬浮控件，本地保存。</p>
 
-<p><sub>TypeScript · Star 1 · Fork 0</sub></p>
+<p><sub>TypeScript · Star 2 · Fork 0</sub></p>
 
 <h2><a href="https://github.com/17lijunyi/xuanfudao">悬浮岛 · Mac 顶部工作台</a></h2>
 
