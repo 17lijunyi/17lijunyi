@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-13",
+  "mode": "built-in image_gen",
+  "layout": "All 11 projects in two-column grids on both README and PROJECTS: products, Skills, repositories.",
+  "changes": "Correct Orbi anatomy, add explicit Skills/Repository types, add five omitted covers.",
+  "assets": [
+    {
+      "slug": "orbi-v2",
+      "prompt": "Precise-object-edit of Image 1, the existing finished Orbi 3:1 banner. User identified malformed legs in the seated character. Replace ONLY the right-side character pose and its interaction: make the same grayscale IP STAND next to the pink plush planet with both feet planted naturally on the ivory studio ground. One hand rests on and gently pushes the planet's plush ring, the other hand waves. A simple anatomically coherent standing stance: exactly two hips/thighs, two knees, two calves and two matching sneakers, each leg visibly and continuously connected to its own hip and foot; no crossed limbs, hidden overlapping thighs, fused knees, twisted ankles or dangling impossible soles. Both feet fully inside the frame. Use ordinary relaxed knees, not a riding/sitting pose. Keep Image 2's exact IP identity: white spiky tied hair, white luminous eyes, gray skin, white mask, silver earring, gray hoodie/pants/shoes; no colors on IP. Keep Image 3's original pink plush planet app icon: same ring, star-highlight eyes and satellite, fully visible. Preserve Image 1's LEFT typography verbatim “Orbi”, underline and “macOS AI 工作台”, all colors and cream background, thin rounded black border, ultra-wide 3:1 canvas, and premium 3D material style. Other right-side tiny colorful space props may shift only to leave clear space for two normal feet. Do not change title, palette, or add more objects. Clear complete character anatomy is the primary correction."
+    },
+    {
+      "slug": "ai-product-resume-edit-v2",
+      "prompt": "Text-localization edit of the supplied finished 3:1 AI resume skill cover. Change ONLY the small bottom-left subtitle. Replace “把真实经历，写清楚” with the exact text “Skills · 把真实经历写清楚”. This “Skills” category word must be clearly visible and correctly spelled S-k-i-l-l-s at thumbnail size. Keep the huge Chinese title “AI 产品” / “简历修改”, orange underline and accent strokes, the right grayscale white-haired masked IP, orange pencil, sage-green skill toolbox and resume cards, the cream background and thin rounded black border, all poses/colors/materials and 3:1 canvas EXACTLY unchanged. Adjust the subtitle font modestly if needed to fit the left half cleanly without touching any other text. No badges, extra words, or redesign."
+    },
+    {
+      "slug": "product-evidence-deconstruction"
+    },
+    {
+      "slug": "muse10-nail-visuals"
+    },
+    {
+      "slug": "kanshan-kb"
+    },
+    {
+      "slug": "daily-ai-news"
+    },
+    {
+      "slug": "frameflow"
+    }
+  ]
+}

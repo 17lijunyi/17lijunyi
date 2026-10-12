@@ -37,6 +37,12 @@ class ProjectCardsTest(unittest.TestCase):
         path.write_bytes(base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+a0ioAAAAASUVORK5CYII='))
         return path
 
+    def skill(self, name):
+        folder = self.root / 'skills' / name / 'agents'
+        folder.mkdir(parents=True)
+        (folder.parent / 'SKILL.md').write_text('not executed')
+        (folder / 'openai.yaml').write_text(f'interface:\n  display_name: "{name}"\n  short_description: "Skill description"\n')
+
     def test_selects_priority_then_recent_and_excludes_nonpublic_forks_archives(self):
         items = [repo('priority')]
         for i in range(1, 9):
@@ -170,6 +176,111 @@ class ProjectCardsTest(unittest.TestCase):
         sync.generate(self.config, items, self.root)
         after = {p.relative_to(self.root): p.read_bytes() for p in self.root.rglob('*') if p.is_file()}
         self.assertEqual(before, after)
+
+    def test_category_grouping_preserves_featured_and_recent_order_within_groups(self):
+        self.skill('featured-skill')
+        self.skill('other-skill')
+        self.config['group_by_category'] = True
+        self.config['featured'] = ['repo:featured-repository', 'skill:featured-skill', 'repo:featured-product']
+        self.config['overrides'] = {
+            'repo:featured-product': {'category': 'product'},
+            'repo:recent-product': {'category': 'product'},
+            'skill:featured-skill': {'category': 'product'},
+        }
+        repositories = [repo('featured-repository'), repo('featured-product'), repo('recent-product'),
+                        repo('old-repository'), repo('recent-repository')]
+        repositories[2]['updated_at'] = repositories[4]['updated_at'] = '2026-10-10T00:00:00Z'
+        with patch.object(sync.subprocess, 'check_output', return_value='2026-09-20T00:00:00+00:00\n'):
+            projects = sync.collect_projects(self.config, repositories, self.root)
+            self.assertEqual([project['id'] for project in projects], [
+                'repo:featured-product', 'repo:recent-product', 'skill:featured-skill', 'skill:other-skill',
+                'repo:featured-repository', 'repo:recent-repository', 'repo:old-repository',
+            ])
+            self.assertEqual([project['category'] for project in projects],
+                             ['product', 'product', 'skill', 'skill', 'repository', 'repository', 'repository'])
+            self.config['group_by_category'] = False
+            legacy = sync.collect_projects(self.config, repositories, self.root)
+        self.assertEqual([project['id'] for project in legacy[:3]], self.config['featured'])
+
+    def test_all_eleven_projects_use_grouped_covers_on_home_and_catalogue(self):
+        self.config.update(show_all=True, group_by_category=True)
+        self.cover()
+        repositories = [repo(f'project-{i}') for i in range(8)]
+        for index in range(3):
+            self.skill(f'skill-{index}')
+            self.config['overrides'][f'skill:skill-{index}'] = {'cover': 'assets/project-covers/priority.png'}
+        for index in range(8):
+            self.config['overrides'][f'repo:project-{index}'] = {
+                'category': 'product' if index < 5 else 'repository',
+                'cover': 'assets/project-covers/priority.png',
+            }
+        with patch.object(sync.subprocess, 'check_output', return_value='2026-09-20T00:00:00+00:00\n'):
+            projects = sync.collect_projects(self.config, repositories, self.root)
+        sync.generate(self.config, projects, self.root)
+        for filename in ('README.md', 'PROJECTS.md'):
+            markup = (self.root / filename).read_text()
+            self.assertEqual(markup.count('<img width="49%"'), 11)
+            self.assertLess(markup.index('### 产品'), markup.index('### Skills'))
+            self.assertLess(markup.index('### Skills'), markup.index('### 其他仓库'))
+            groups = re.split(r'### (?:产品|Skills|其他仓库)\n\n', markup)[1:]
+            self.assertEqual([group.count('<picture>') for group in groups], [5, 3, 3])
+            self.assertEqual(markup.count(' · Product'), 5)
+            self.assertEqual(markup.count(' · Skills'), 3)
+            self.assertEqual(markup.count(' · Repository'), 3)
+            rows = re.findall(r'<p>\n(.*?)\n</p>', markup, re.S)
+            self.assertEqual([row.count('<img width="49%"') for row in rows], [2, 2, 1, 2, 1, 2, 1])
+            for project in projects:
+                self.assertIn(f'<a href="{project["url"]}"><picture>', markup)
+                self.assertIn(f'alt="{project["title"]}：{project["description"]}"', markup)
+            self.assertNotIn('<h2>', markup)
+            self.assertNotIn('<p>A project</p>', markup)
+        readme = (self.root / 'README.md').read_text()
+        self.assertTrue(readme.startswith('Personal website\n'))
+        self.assertTrue(readme.endswith('\nArticles remain here\n'))
+
+    def test_show_all_has_no_twelve_card_cap_and_keeps_every_fallback_asset(self):
+        self.config.update(show_all=True, group_by_category=True, limit=99)
+        sync.validate_config(self.config)
+        projects = sync.collect_projects(self.config, [repo(f'project-{i}') for i in range(16)], self.root)
+        sync.generate(self.config, projects, self.root)
+        self.assertEqual((self.root / 'README.md').read_text().count('<picture>'), 16)
+        self.assertEqual((self.root / 'PROJECTS.md').read_text().count('<picture>'), 16)
+        self.assertEqual(len(list((self.root / 'assets/projects').glob('*.svg'))), 32)
+        (self.root / 'assets/projects/obsolete.svg').write_text('old')
+        sync.generate(self.config, projects, self.root)
+        self.assertFalse((self.root / 'assets/projects/obsolete.svg').exists())
+        self.assertEqual(len(list((self.root / 'assets/projects').glob('*.svg'))), 32)
+
+    def test_new_repository_without_a_cover_stays_visible_in_repository_group(self):
+        self.config.update(show_all=True, group_by_category=True)
+        self.cover()
+        self.config['overrides']['repo:priority'] = {'category': 'product', 'cover': 'assets/project-covers/priority.png'}
+        projects = sync.collect_projects(self.config, [repo('priority'), repo('new-repository')], self.root)
+        sync.generate(self.config, projects, self.root)
+        for filename in ('README.md', 'PROJECTS.md'):
+            markup = (self.root / filename).read_text()
+            repositories = markup.split('### 其他仓库\n\n')[1]
+            self.assertIn('href="https://github.com/owner/new-repository"><picture>', repositories)
+            self.assertIn(' · Repository', repositories)
+            self.assertIn('<source media="(prefers-color-scheme: dark)"', repositories)
+        self.assertEqual(len(list((self.root / 'assets/projects').glob('*.svg'))), 2)
+
+    def test_invalid_category_and_mode_flags_fail_without_changing_previous_output(self):
+        self.config['overrides']['repo:priority'] = {'category': 'unknown'}
+        with self.assertRaisesRegex(ValueError, 'Invalid repository category'):
+            sync.collect_projects(self.config, [repo('priority')], self.root)
+        self.config['overrides'] = {}
+        projects = sync.collect_projects(self.config, [repo('priority')], self.root)
+        for flag in ('show_all', 'group_by_category'):
+            with self.subTest(flag=flag):
+                config = dict(self.config, **{flag: 'true'})
+                with self.assertRaisesRegex(ValueError, 'must be a boolean'):
+                    sync.generate(config, projects, self.root)
+        projects[0]['category'] = 'unknown'
+        with self.assertRaisesRegex(ValueError, 'Invalid project category'):
+            sync.generate(dict(self.config, group_by_category=True), projects, self.root)
+        self.assertEqual((self.root / 'README.md').read_text(), self.readme)
+        self.assertFalse((self.root / 'PROJECTS.md').exists())
 
     def test_missing_markers_or_empty_result_preserves_previous_output(self):
         with self.assertRaises(ValueError): sync.generate(self.config, [], self.root)

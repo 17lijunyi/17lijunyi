@@ -8,46 +8,72 @@
   ],
   "featured": [
     "repo:Foundry",
-    "skill:ai-product-resume-edit",
     "repo:orbi",
     "repo:jianli",
     "repo:xuanfudao",
     "repo:OvO",
+    "repo:FrameFlow",
+    "skill:ai-product-resume-edit",
     "skill:product-evidence-deconstruction",
     "skill:muse10-nail-visuals",
-    "repo:kanshan-kb"
+    "repo:kanshan-kb",
+    "repo:daily-ai-news"
   ],
   "overrides": {
     "repo:OvO": {
       "title": "OvO · macOS 翻译工具",
-      "cover": "assets/project-covers/ovo.png"
+      "cover": "assets/project-covers/ovo.png",
+      "category": "product"
     },
     "repo:kanshan-kb": {
       "title": "Kanshan KB · 内容创作知识库",
-      "description": "面向知乎创作者的知识库：10 个模块的实用方法、案例与一手资料，支持文档检索与来源引用。"
+      "description": "面向知乎创作者的知识库：10 个模块的实用方法、案例与一手资料，支持文档检索与来源引用。",
+      "cover": "assets/project-covers/kanshan-kb.png",
+      "category": "repository"
     },
     "skill:muse10-nail-visuals": {
-      "title": "Muse10 款式生成"
+      "title": "Muse10 款式生成",
+      "cover": "assets/project-covers/muse10-nail-visuals.png"
     },
     "repo:xuanfudao": {
       "title": "悬浮岛 · Mac 顶部工作台",
-      "cover": "assets/project-covers/xuanfudao.png"
+      "cover": "assets/project-covers/xuanfudao.png",
+      "category": "product"
     },
     "repo:jianli": {
       "title": "简励 · Mac 简历工作台",
       "description": "中文 Mac 简历应用，支持简历编辑、模板预览、PDF 导出与 AI 辅助。玻璃质感窗口、悬浮控件，本地保存。",
-      "cover": "assets/project-covers/jianli.png"
+      "cover": "assets/project-covers/jianli.png",
+      "category": "product"
     },
     "repo:orbi": {
       "title": "Orbi · macOS AI 工作台",
       "description": "李俊祎的个人 macOS AI 工作台，支持智能体协作、群聊、悬浮聊天与待办，提供毛绒星球 DIY 和七款窗口背景。",
-      "cover": "assets/project-covers/orbi.png"
+      "cover": "assets/project-covers/orbi.png",
+      "category": "product"
     },
     "repo:Foundry": {
-      "cover": "assets/project-covers/foundry.png"
+      "cover": "assets/project-covers/foundry.png",
+      "category": "product"
     },
     "skill:ai-product-resume-edit": {
       "cover": "assets/project-covers/ai-product-resume-edit.png"
+    },
+    "repo:FrameFlow": {
+      "category": "product",
+      "title": "FrameFlow · AI 视频创作工作室",
+      "cover": "assets/project-covers/frameflow.png"
+    },
+    "skill:product-evidence-deconstruction": {
+      "cover": "assets/project-covers/product-evidence-deconstruction.png"
+    },
+    "repo:daily-ai-news": {
+      "title": "每日 AI 新闻",
+      "description": "每天精选 5 条 AI 新闻，提供中文摘要与原文链接。",
+      "cover": "assets/project-covers/daily-ai-news.png",
+      "category": "repository"
     }
-  }
+  },
+  "show_all": true,
+  "group_by_category": true
 }

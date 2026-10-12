@@ -15,6 +15,7 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 START = '<!-- PROJECTS:START -->'
 END = '<!-- PROJECTS:END -->'
+CATEGORIES = (('product', '产品'), ('skill', 'Skills'), ('repository', '其他仓库'))
 COLORS = {'Swift': '#f05138', 'Python': '#3572A5', 'HTML': '#e34c26',
           'JavaScript': '#f1e05a', 'TypeScript': '#3178c6', 'CSS': '#663399',
           'Go': '#00ADD8', 'Rust': '#dea584', 'Shell': '#89e051'}
@@ -61,7 +62,7 @@ def collect_projects(config, repositories, root=ROOT):
                 or repo['name'] in config['exclude']
                 or repo.get('owner', {}).get('login', '').lower() != owner.lower()):
             continue
-        projects.append({'id': 'repo:' + repo['name'], 'kind': 'repo',
+        projects.append({'id': 'repo:' + repo['name'], 'kind': 'repo', 'category': 'repository',
                          'title': repo['name'], 'description': repo.get('description') or '查看项目介绍、代码与使用说明。',
                          'url': f'https://github.com/{owner}/{quote(repo["name"], safe="")}',
                          'language': repo.get('language'), 'stars': repo['stargazers_count'],
@@ -77,7 +78,7 @@ def collect_projects(config, repositories, root=ROOT):
             continue
         relative = directory.relative_to(root).as_posix()
         updated = subprocess.check_output(['git', 'log', '-1', '--format=%cI', '--', relative], cwd=root, text=True).strip()
-        projects.append({'id': 'skill:' + directory.name, 'kind': 'skill', 'title': title,
+        projects.append({'id': 'skill:' + directory.name, 'kind': 'skill', 'category': 'skill', 'title': title,
                          'description': description, 'url': f'https://github.com/{owner}/{config["profile_repo"]}/tree/main/{quote(relative)}',
                          'updated': updated})
     for item in projects:
@@ -87,9 +88,16 @@ def collect_projects(config, repositories, root=ROOT):
                 item[key] = overrides[key]
         if 'cover' in overrides:
             item['cover'] = overrides['cover']
+        if item['kind'] == 'repo' and 'category' in overrides:
+            if overrides['category'] not in ('product', 'repository'):
+                raise ValueError(f'Invalid repository category for {item["id"]}: {overrides["category"]}')
+            item['category'] = overrides['category']
     featured = {key: rank for rank, key in enumerate(config['featured'])}
     projects.sort(key=lambda p: (p['updated'], p['id']), reverse=True)
     projects.sort(key=lambda p: featured.get(p['id'], len(featured)))
+    if config.get('group_by_category', False):
+        categories = {key: rank for rank, (key, _) in enumerate(CATEGORIES)}
+        projects.sort(key=lambda p: categories[p['category']])
     return projects
 
 
@@ -178,43 +186,98 @@ def cover_image(cover, root):
     return quote(path.as_posix(), safe='/') + '?v=' + digest
 
 
+def validate_config(config):
+    for flag in ('show_all', 'group_by_category'):
+        if flag in config and not isinstance(config[flag], bool):
+            raise ValueError(f'{flag} must be a boolean')
+    if not config.get('show_all', False):
+        limit = config.get('limit')
+        if type(limit) is not int or not 1 <= limit <= 12:
+            raise ValueError('Card limit must be between 1 and 12')
+
+
+def project_category(project):
+    category = project.get('category', 'skill' if project['kind'] == 'skill' else 'repository')
+    if category not in dict(CATEGORIES):
+        raise ValueError(f'Invalid project category for {project["id"]}: {category}')
+    return category
+
+
+def card_markup(project, base, root, files):
+    alt = html.escape(project['title'] + '：' + project['description'], quote=True)
+    if 'cover' in project:
+        image = base + cover_image(project['cover'], root)
+        picture = f'<picture><img width="49%" src="{image}" alt="{alt}"></picture>'
+    else:
+        key = hashlib.sha256(project['id'].encode()).hexdigest()[:12]
+        images = {}
+        for theme in ('light', 'dark'):
+            path = f'assets/projects/{key}-{theme}.svg'
+            content = svg_card(project, theme == 'dark')
+            files[path] = content
+            images[theme] = base + path + '?v=' + hashlib.sha256(content.encode()).hexdigest()[:12]
+        picture = f'<picture><source media="(prefers-color-scheme: dark)" srcset="{images["dark"]}"><img width="49%" src="{images["light"]}" alt="{alt}"></picture>'
+    return f'  <a href="{html.escape(project["url"], quote=True)}">{picture}</a>'
+
+
+def card_grid(projects, cards, labels=False):
+    rows = []
+    for index in range(0, len(projects), 2):
+        pair = projects[index:index + 2]
+        content = '\n'.join(cards[project['id']] for project in pair)
+        if labels:
+            captions = []
+            for project in pair:
+                label = {'product': 'Product', 'skill': 'Skills', 'repository': 'Repository'}[project_category(project)]
+                captions.append(f'<a href="{html.escape(project["url"], quote=True)}">{html.escape(project["title"])}</a> · {label}')
+            content += '\n<br>\n<sub>' + ' &nbsp; | &nbsp; '.join(captions) + '</sub>'
+        rows.append('<p>\n' + content + '\n</p>')
+    return rows
+
+
+def grouped_cards(projects, cards):
+    # Validate categories before filtering so an unknown category never disappears.
+    for project in projects:
+        project_category(project)
+    rows = []
+    for category, title in CATEGORIES:
+        group = [project for project in projects if project_category(project) == category]
+        if group:
+            rows += ['### ' + title] + card_grid(group, cards, labels=True)
+    return rows
+
+
 def generate(config, projects, root=ROOT):
+    validate_config(config)
     if not projects:
         raise ValueError('No projects returned; keeping existing cards')
-    chosen = projects[:config['limit']]
-    files, cards = {}, []
+    chosen = projects if config.get('show_all', False) else projects[:config['limit']]
+    grouped = config.get('group_by_category', False)
+    files = {}
     base = f'https://raw.githubusercontent.com/{config["owner"]}/{config["profile_repo"]}/main/'
-    for project in chosen:
-        alt = html.escape(project['title'] + '：' + project['description'], quote=True)
-        if 'cover' in project:
-            image = base + cover_image(project['cover'], root)
-            picture = f'<picture><img width="49%" src="{image}" alt="{alt}"></picture>'
-        else:
-            key = hashlib.sha256(project['id'].encode()).hexdigest()[:12]
-            images = {}
-            for theme in ('light', 'dark'):
-                path = f'assets/projects/{key}-{theme}.svg'
-                content = svg_card(project, theme == 'dark')
-                files[path] = content
-                images[theme] = base + path + '?v=' + hashlib.sha256(content.encode()).hexdigest()[:12]
-            picture = f'<picture><source media="(prefers-color-scheme: dark)" srcset="{images["dark"]}"><img width="49%" src="{images["light"]}" alt="{alt}"></picture>'
-        cards.append(f'  <a href="{html.escape(project["url"], quote=True)}">{picture}</a>')
-    rows = ['<p>\n' + '\n'.join(cards[i:i + 2]) + '\n</p>' for i in range(0, len(cards), 2)]
+    rendered = projects if grouped else chosen
+    cards = {project['id']: card_markup(project, base, root, files) for project in rendered}
+    rows = grouped_cards(chosen, cards) if grouped else card_grid(chosen, cards)
     rows += ['[查看全部项目 →](./PROJECTS.md) · [下载 OvO →](https://github.com/17lijunyi/OvO/releases/latest)']
     if any(p['id'] == 'repo:OvO' for p in chosen):
         rows += ['<sub>OvO 应用免费；第三方 API 按服务商规则计费。</sub>']
     files['README.md'] = replace_section((root / 'README.md').read_text(), '\n\n'.join(rows))
-    catalogue = ['# 全部项目', '', '重点项目优先，其余按最近更新时间排列。', '',
+    introduction = ('产品、Skills 与其他仓库分类展示；同类重点项目优先，其余按最近更新时间排列。'
+                    if grouped else '重点项目优先，其余按最近更新时间排列。')
+    catalogue = ['# 全部项目', '', introduction, '',
                  f'[返回主页](https://github.com/{config["owner"]}) · [个人网站](https://{config["owner"]}.github.io/) · [所有公开仓库](https://github.com/{config["owner"]}?tab=repositories)', '']
-    for p in projects:
-        # HTML escapes keep remote metadata inert in Markdown rendering.
-        catalogue += [f'<h2><a href="{html.escape(p["url"], quote=True)}">{html.escape(p["title"])}</a></h2>',
-                      '', f'<p>{html.escape(p["description"])}</p>', '']
-        if p['kind'] == 'repo':
-            stats = f'{p["language"] or "未标注语言"} · Star {p["stars"]} · Fork {p["forks"]}'
-        else:
-            stats = '技能目录'
-        catalogue += [f'<p><sub>{html.escape(stats)}</sub></p>', '']
+    if grouped:
+        catalogue += ['\n\n'.join(grouped_cards(projects, cards))]
+    else:
+        for p in projects:
+            # HTML escapes keep remote metadata inert in Markdown rendering.
+            catalogue += [f'<h2><a href="{html.escape(p["url"], quote=True)}">{html.escape(p["title"])}</a></h2>',
+                          '', f'<p>{html.escape(p["description"])}</p>', '']
+            if p['kind'] == 'repo':
+                stats = f'{p["language"] or "未标注语言"} · Star {p["stars"]} · Fork {p["forks"]}'
+            else:
+                stats = '技能目录'
+            catalogue += [f'<p><sub>{html.escape(stats)}</sub></p>', '']
     files['PROJECTS.md'] = '\n'.join(catalogue)
     # Validate everything in memory before changing any generated file.
     for path, content in files.items():
@@ -232,8 +295,7 @@ def main():
     parser.add_argument('--repos-json', type=Path, help='Use a local API fixture instead of a network request')
     args = parser.parse_args()
     config = json.loads((ROOT / 'projects.json').read_text())
-    if not isinstance(config['limit'], int) or not 1 <= config['limit'] <= 12:
-        raise ValueError('Card limit must be between 1 and 12')
+    validate_config(config)
     repos = json.loads(args.repos_json.read_text()) if args.repos_json else fetch_repositories(config['owner'])
     generate(config, collect_projects(config, repos))
 
