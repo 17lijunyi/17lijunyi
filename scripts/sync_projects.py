@@ -5,7 +5,7 @@ import hashlib
 import html
 import json
 import os
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import re
 import subprocess
 import unicodedata
@@ -85,6 +85,8 @@ def collect_projects(config, repositories, root=ROOT):
         for key in ('title', 'description'):
             if overrides.get(key):
                 item[key] = overrides[key]
+        if 'cover' in overrides:
+            item['cover'] = overrides['cover']
     featured = {key: rank for rank, key in enumerate(config['featured'])}
     projects.sort(key=lambda p: (p['updated'], p['id']), reverse=True)
     projects.sort(key=lambda p: featured.get(p['id'], len(featured)))
@@ -153,6 +155,29 @@ def replace_section(readme, content):
     return before + START + '\n' + content + '\n' + END + after
 
 
+def cover_image(cover, root):
+    """Use only existing images inside the repository's cover directory."""
+    if not isinstance(cover, str) or not cover or '\\' in cover:
+        raise ValueError('Project cover must be a repository-relative image path')
+    path = PurePosixPath(cover)
+    if (path.is_absolute() or any(part in ('', '.', '..') for part in cover.split('/'))
+            or path.parts[:2] != ('assets', 'project-covers')
+            or path.suffix.lower() not in ('.png', '.jpg', '.jpeg', '.webp')):
+        raise ValueError(f'Invalid project cover path: {cover}')
+    try:
+        resolved_root = root.resolve()
+        directory = (root / 'assets/project-covers').resolve(strict=True)
+        directory.relative_to(resolved_root)
+        image = (root / path).resolve(strict=True)
+        image.relative_to(directory)
+        if not image.is_file():
+            raise ValueError('Cover is not a file')
+        digest = hashlib.sha256(image.read_bytes()).hexdigest()[:12]
+    except (OSError, ValueError) as error:
+        raise ValueError(f'Project cover is missing or outside assets/project-covers: {cover}') from error
+    return quote(path.as_posix(), safe='/') + '?v=' + digest
+
+
 def generate(config, projects, root=ROOT):
     if not projects:
         raise ValueError('No projects returned; keeping existing cards')
@@ -160,15 +185,20 @@ def generate(config, projects, root=ROOT):
     files, cards = {}, []
     base = f'https://raw.githubusercontent.com/{config["owner"]}/{config["profile_repo"]}/main/'
     for project in chosen:
-        key = hashlib.sha256(project['id'].encode()).hexdigest()[:12]
-        images = {}
-        for theme in ('light', 'dark'):
-            path = f'assets/projects/{key}-{theme}.svg'
-            content = svg_card(project, theme == 'dark')
-            files[path] = content
-            images[theme] = base + path + '?v=' + hashlib.sha256(content.encode()).hexdigest()[:12]
         alt = html.escape(project['title'] + '：' + project['description'], quote=True)
-        cards.append(f'  <a href="{html.escape(project["url"], quote=True)}"><picture><source media="(prefers-color-scheme: dark)" srcset="{images["dark"]}"><img width="49%" src="{images["light"]}" alt="{alt}"></picture></a>')
+        if 'cover' in project:
+            image = base + cover_image(project['cover'], root)
+            picture = f'<picture><img width="49%" src="{image}" alt="{alt}"></picture>'
+        else:
+            key = hashlib.sha256(project['id'].encode()).hexdigest()[:12]
+            images = {}
+            for theme in ('light', 'dark'):
+                path = f'assets/projects/{key}-{theme}.svg'
+                content = svg_card(project, theme == 'dark')
+                files[path] = content
+                images[theme] = base + path + '?v=' + hashlib.sha256(content.encode()).hexdigest()[:12]
+            picture = f'<picture><source media="(prefers-color-scheme: dark)" srcset="{images["dark"]}"><img width="49%" src="{images["light"]}" alt="{alt}"></picture>'
+        cards.append(f'  <a href="{html.escape(project["url"], quote=True)}">{picture}</a>')
     rows = ['<p>\n' + '\n'.join(cards[i:i + 2]) + '\n</p>' for i in range(0, len(cards), 2)]
     rows += ['[查看全部项目 →](./PROJECTS.md) · [下载 OvO →](https://github.com/17lijunyi/OvO/releases/latest)']
     if any(p['id'] == 'repo:OvO' for p in chosen):

@@ -18,18 +18,18 @@
 
 <!-- PROJECTS:START -->
 <p>
-  <a href="https://github.com/17lijunyi/Foundry"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/8462ac817f56-dark.svg?v=67acb45ca1ed"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/8462ac817f56-light.svg?v=9c7836137567" alt="Foundry：Foundry：面向产品经理的 AI 桌面工作台，原生玻璃界面、文件协作与模型对比。基于 Product Manager Workbench、AionUi 和 AionCore。"></picture></a>
-  <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/ai-product-resume-edit"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/b582cac81996-dark.svg?v=c3c25bc7b84e"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/b582cac81996-light.svg?v=256667cc2441" alt="AI 产品简历修改：面向 AI 产品经理、FDE 与转型求职者，在已有简历上修改表达、数据与排版"></picture></a>
+  <a href="https://github.com/17lijunyi/Foundry"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/foundry.png?v=c990141d76c0" alt="Foundry：Foundry：面向产品经理的 AI 桌面工作台，原生玻璃界面、文件协作与模型对比。基于 Product Manager Workbench、AionUi 和 AionCore。"></picture></a>
+  <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/ai-product-resume-edit"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/ai-product-resume-edit.png?v=21d8ec1dc27a" alt="AI 产品简历修改：面向 AI 产品经理、FDE 与转型求职者，在已有简历上修改表达、数据与排版"></picture></a>
 </p>
 
 <p>
-  <a href="https://github.com/17lijunyi/orbi"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/792db9a614d2-dark.svg?v=b187c2c07a66"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/792db9a614d2-light.svg?v=f4b091e2f845" alt="Orbi · macOS AI 工作台：李俊祎的个人 macOS AI 工作台，支持智能体协作、群聊、悬浮聊天与待办，提供毛绒星球 DIY 和七款窗口背景。"></picture></a>
-  <a href="https://github.com/17lijunyi/jianli"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/c87766161096-dark.svg?v=c045d31b523b"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/c87766161096-light.svg?v=a5533c348870" alt="简励 · Mac 简历工作台：中文 Mac 简历应用，支持简历编辑、模板预览、PDF 导出与 AI 辅助。玻璃质感窗口、悬浮控件，本地保存。"></picture></a>
+  <a href="https://github.com/17lijunyi/orbi"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/orbi.png?v=e1f58309be45" alt="Orbi · macOS AI 工作台：李俊祎的个人 macOS AI 工作台，支持智能体协作、群聊、悬浮聊天与待办，提供毛绒星球 DIY 和七款窗口背景。"></picture></a>
+  <a href="https://github.com/17lijunyi/jianli"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/jianli.png?v=94307b45cf2f" alt="简励 · Mac 简历工作台：中文 Mac 简历应用，支持简历编辑、模板预览、PDF 导出与 AI 辅助。玻璃质感窗口、悬浮控件，本地保存。"></picture></a>
 </p>
 
 <p>
-  <a href="https://github.com/17lijunyi/xuanfudao"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/70dcdf37eff2-dark.svg?v=38f7fde7d6e3"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/70dcdf37eff2-light.svg?v=1c145d4a34a3" alt="悬浮岛 · Mac 顶部工作台：悬浮岛：把工作台藏进 Mac 顶部。AI 任务、待办、笔记、项目抽屉与专注计时，柔焦玻璃界面，本地优先。"></picture></a>
-  <a href="https://github.com/17lijunyi/OvO"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/d9dd3ca1adf7-dark.svg?v=e862b786c040"><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/projects/d9dd3ca1adf7-light.svg?v=d18abad0d181" alt="OvO · macOS 翻译工具：免费的原生 macOS 翻译工具：划词、截图、输入翻译，苹果系统翻译与自定义 API，柔焦玻璃界面。"></picture></a>
+  <a href="https://github.com/17lijunyi/xuanfudao"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/xuanfudao.png?v=c5d597721945" alt="悬浮岛 · Mac 顶部工作台：悬浮岛：把工作台藏进 Mac 顶部。AI 任务、待办、笔记、项目抽屉与专注计时，柔焦玻璃界面，本地优先。"></picture></a>
+  <a href="https://github.com/17lijunyi/OvO"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/ovo.png?v=6628be8b7ad1" alt="OvO · macOS 翻译工具：免费的原生 macOS 翻译工具：划词、截图、输入翻译，苹果系统翻译与自定义 API，柔焦玻璃界面。"></picture></a>
 </p>
 
 [查看全部项目 →](./PROJECTS.md) · [下载 OvO →](https://github.com/17lijunyi/OvO/releases/latest)

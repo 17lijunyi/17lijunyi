@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - projects.json
+      - assets/project-covers/**
       - scripts/sync_projects.py
       - tests/test_sync_projects.py
       - skills/**
