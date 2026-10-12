@@ -63,3 +63,9 @@
 <p>每日 AI 事件：每天精选 10 条 AI 新闻</p>
 
 <p><sub>Python · Star 1 · Fork 0</sub></p>
+
+<h2><a href="https://github.com/17lijunyi/FrameFlow">FrameFlow</a></h2>
+
+<p>中文 AI 视频创作工作室，将创作对话、剧本与分镜、逐镜生成和已有视频的 Agent 剪辑连接起来。</p>
+
+<p><sub>Python · Star 0 · Fork 0</sub></p>
