@@ -39,6 +39,22 @@
 
 ---
 
+## 📰 今日 AI 事件
+
+<!-- AI-NEWS:START -->
+<sub>📅 2026-10-11 · 每天 10:00 自动更新</sub>
+
+1. [微软 CEO 纳德拉呼吁为先进 AI 模型装上“紧急刹车”](https://github.com/17lijunyi/daily-ai-news/blob/main/2026/10/2026-10-11/morning.md)
+2. [小米发布 MiMo-V2.6 技术报告：强化学习上下文突破 100 万 Token](https://github.com/17lijunyi/daily-ai-news/blob/main/2026/10/2026-10-11/morning.md)
+3. [LeCun 创办的 AMI 开源分层世界模型 H-JEPA](https://github.com/17lijunyi/daily-ai-news/blob/main/2026/10/2026-10-11/morning.md)
+4. [谷歌推出 Playground：用自然语言提示词做电子游戏](https://github.com/17lijunyi/daily-ai-news/blob/main/2026/10/2026-10-11/morning.md)
+5. [谷歌 AI Futures Fund 投资无代码智能体开发平台 Emergent](https://github.com/17lijunyi/daily-ai-news/blob/main/2026/10/2026-10-11/morning.md)
+
+[查看全部 →](https://github.com/17lijunyi/daily-ai-news)
+<!-- AI-NEWS:END -->
+
+---
+
 ## 📝 AI 产品简历修改 Skill
 
 给**已有简历的 AI 产品经理、FDE 和转型求职者**使用：从九份成功简历提炼方法，在真实经历上修改定位、项目表达、数据口径和排版，交付可直接使用的修改稿。
