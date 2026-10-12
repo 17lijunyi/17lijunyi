@@ -38,7 +38,7 @@
 
 <p>免费的原生 macOS 翻译工具：划词、截图、输入翻译，苹果系统翻译与自定义 API，柔焦玻璃界面。</p>
 
-<p><sub>Swift · Star 1 · Fork 0</sub></p>
+<p><sub>Swift · Star 1 · Fork 1</sub></p>
 
 <h2><a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/product-evidence-deconstruction">产品证据拆解</a></h2>
 
