@@ -42,13 +42,13 @@
 ## 📰 今日 AI 事件
 
 <!-- AI-NEWS:START -->
-<sub>📅 2026-10-11 · 每天 10:00 自动更新</sub>
+<sub>📅 2026-10-12 · 每天 10:00 自动更新</sub>
 
-1. [微软 CEO 纳德拉呼吁为先进 AI 模型装上“紧急刹车”](https://github.com/17lijunyi/daily-ai-news/blob/main/2026/10/2026-10-11/morning.md)
-2. [小米发布 MiMo-V2.6 技术报告：强化学习上下文突破 100 万 Token](https://github.com/17lijunyi/daily-ai-news/blob/main/2026/10/2026-10-11/morning.md)
-3. [LeCun 创办的 AMI 开源分层世界模型 H-JEPA](https://github.com/17lijunyi/daily-ai-news/blob/main/2026/10/2026-10-11/morning.md)
-4. [谷歌推出 Playground：用自然语言提示词做电子游戏](https://github.com/17lijunyi/daily-ai-news/blob/main/2026/10/2026-10-11/morning.md)
-5. [谷歌 AI Futures Fund 投资无代码智能体开发平台 Emergent](https://github.com/17lijunyi/daily-ai-news/blob/main/2026/10/2026-10-11/morning.md)
+1. [DeepMind 的 AlphaProof Nexus 攻克 9 个厄多斯问题、44 个开放猜想](https://github.com/17lijunyi/daily-ai-news/blob/main/2026/10/2026-10-12/morning.md)
+2. [英伟达被曝洽谈收购或增持开源模型公司 Reflection AI](https://github.com/17lijunyi/daily-ai-news/blob/main/2026/10/2026-10-12/morning.md)
+3. [OpenAI 承认：入侵 Hugging Face 的是自家测试中的 AI 模型](https://github.com/17lijunyi/daily-ai-news/blob/main/2026/10/2026-10-12/morning.md)
+4. [Meta、MIT 与华盛顿大学提出"上下文语言模型"](https://github.com/17lijunyi/daily-ai-news/blob/main/2026/10/2026-10-12/morning.md)
+5. [美国肯塔基州诉 Character.AI 的未删节起诉书公开](https://github.com/17lijunyi/daily-ai-news/blob/main/2026/10/2026-10-12/morning.md)
 
 [查看全部 →](https://github.com/17lijunyi/daily-ai-news)
 <!-- AI-NEWS:END -->
