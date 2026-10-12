@@ -251,6 +251,91 @@ class ProjectCardsTest(unittest.TestCase):
         self.assertFalse((self.root / 'assets/projects/obsolete.svg').exists())
         self.assertEqual(len(list((self.root / 'assets/projects').glob('*.svg'))), 32)
 
+    def test_compact_eleven_card_wall_crosses_category_boundaries_without_blank_cells(self):
+        self.config.update(show_all=True, group_by_category=True, compact_cards=True)
+        cover = self.cover('priority-window.png')
+        original = cover.read_bytes()
+        repositories = [repo(f'product-{i}') for i in range(6)] + [repo('knowledge'), repo('daily-news')]
+        for index in range(3):
+            self.skill(f'skill-{index}')
+            self.config['overrides'][f'skill:skill-{index}'] = {'cover': 'assets/project-covers/priority-window.png'}
+        for index in range(6):
+            self.config['overrides'][f'repo:product-{index}'] = {
+                'category': 'product', 'cover': 'assets/project-covers/priority-window.png',
+            }
+        self.config['overrides']['repo:knowledge'] = {
+            'category': 'document', 'cover': 'assets/project-covers/priority-window.png',
+        }
+        self.config['overrides']['repo:daily-news'] = {'cover': 'assets/project-covers/priority-window.png'}
+        # Feature the last category first to verify category order still wins.
+        self.config['featured'] = ['repo:daily-news', 'repo:product-0', 'skill:skill-0']
+        with patch.object(sync.subprocess, 'check_output', return_value='2026-09-20T00:00:00+00:00\n'):
+            projects = sync.collect_projects(self.config, repositories, self.root)
+        self.assertEqual([project['category'] for project in projects],
+                         ['product'] * 6 + ['skill'] * 3 + ['document', 'repository'])
+        sync.generate(self.config, projects, self.root)
+        for filename in ('README.md', 'PROJECTS.md'):
+            markup = (self.root / filename).read_text()
+            rows = re.findall(r'<p>\n(.*?)\n</p>', markup, re.S)
+            self.assertEqual([row.count('<img width="49%"') for row in rows], [2, 2, 2, 2, 2, 1])
+            image_targets = [re.findall(r'<a href="([^"]+)"><picture>', row) for row in rows]
+            self.assertEqual([url for pair in image_targets for url in pair], [project['url'] for project in projects])
+            self.assertEqual(image_targets[4], [projects[8]['url'], projects[9]['url']])
+            self.assertEqual(image_targets[5], [projects[10]['url']])
+            self.assertNotIn('### ', markup)
+            self.assertNotIn('<sub>', markup)
+            self.assertNotIn('<br>', markup)
+            self.assertNotIn('<table', markup)
+            digest = hashlib.sha256(original).hexdigest()[:12]
+            self.assertEqual(markup.count(f'priority-window.png?v={digest}'), 11)
+            for project in projects:
+                self.assertIn(f'alt="{project["title"]}：{project["description"]}"', markup)
+        self.assertEqual(cover.read_bytes(), original)
+
+    def test_document_category_sorts_after_skills_and_before_other_repositories(self):
+        self.config.update(show_all=True, group_by_category=True)
+        self.skill('example')
+        self.config['featured'] = ['repo:other', 'repo:older-document']
+        self.config['overrides'] = {
+            'repo:product': {'category': 'product'},
+            'repo:older-document': {'category': 'document'},
+            'repo:newer-document': {'category': 'document'},
+        }
+        repositories = [repo('product'), repo('older-document'), repo('newer-document'), repo('other')]
+        repositories[2]['updated_at'] = '2026-10-10T00:00:00Z'
+        with patch.object(sync.subprocess, 'check_output', return_value='2026-09-20T00:00:00+00:00\n'):
+            projects = sync.collect_projects(self.config, repositories, self.root)
+        self.assertEqual([project['id'] for project in projects],
+                         ['repo:product', 'skill:example', 'repo:older-document', 'repo:newer-document', 'repo:other'])
+        sync.generate(self.config, projects, self.root)
+        for filename in ('README.md', 'PROJECTS.md'):
+            markup = (self.root / filename).read_text()
+            self.assertLess(markup.index('### Skills'), markup.index('### 文档'))
+            self.assertLess(markup.index('### 文档'), markup.index('### 其他仓库'))
+            self.assertEqual(markup.count(' · Document'), 2)
+
+    def test_compact_new_repository_without_cover_keeps_svg_fallback_and_link(self):
+        self.config.update(show_all=True, group_by_category=True, compact_cards=True)
+        self.cover('priority-window.png')
+        self.config['overrides']['repo:priority'] = {
+            'category': 'product', 'cover': 'assets/project-covers/priority-window.png',
+        }
+        projects = sync.collect_projects(self.config, [repo('priority'), repo('new-repository')], self.root)
+        sync.generate(self.config, projects, self.root)
+        for filename in ('README.md', 'PROJECTS.md'):
+            markup = (self.root / filename).read_text()
+            rows = re.findall(r'<p>\n(.*?)\n</p>', markup, re.S)
+            self.assertEqual(len(rows), 1)
+            self.assertEqual(rows[0].count('<img width="49%"'), 2)
+            self.assertIn('href="https://github.com/owner/new-repository"><picture>', markup)
+            self.assertIn('<source media="(prefers-color-scheme: dark)"', markup)
+            self.assertNotIn('### ', markup)
+        self.assertEqual(len(list((self.root / 'assets/projects').glob('*.svg'))), 2)
+        (self.root / 'assets/projects/obsolete.svg').write_text('old')
+        sync.generate(self.config, projects, self.root)
+        self.assertFalse((self.root / 'assets/projects/obsolete.svg').exists())
+        self.assertEqual(len(list((self.root / 'assets/projects').glob('*.svg'))), 2)
+
     def test_new_repository_without_a_cover_stays_visible_in_repository_group(self):
         self.config.update(show_all=True, group_by_category=True)
         self.cover()
@@ -271,7 +356,7 @@ class ProjectCardsTest(unittest.TestCase):
             sync.collect_projects(self.config, [repo('priority')], self.root)
         self.config['overrides'] = {}
         projects = sync.collect_projects(self.config, [repo('priority')], self.root)
-        for flag in ('show_all', 'group_by_category'):
+        for flag in ('show_all', 'group_by_category', 'compact_cards'):
             with self.subTest(flag=flag):
                 config = dict(self.config, **{flag: 'true'})
                 with self.assertRaisesRegex(ValueError, 'must be a boolean'):

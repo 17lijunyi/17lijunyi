@@ -15,7 +15,7 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 START = '<!-- PROJECTS:START -->'
 END = '<!-- PROJECTS:END -->'
-CATEGORIES = (('product', '产品'), ('skill', 'Skills'), ('repository', '其他仓库'))
+CATEGORIES = (('product', '产品'), ('skill', 'Skills'), ('document', '文档'), ('repository', '其他仓库'))
 COLORS = {'Swift': '#f05138', 'Python': '#3572A5', 'HTML': '#e34c26',
           'JavaScript': '#f1e05a', 'TypeScript': '#3178c6', 'CSS': '#663399',
           'Go': '#00ADD8', 'Rust': '#dea584', 'Shell': '#89e051'}
@@ -89,7 +89,7 @@ def collect_projects(config, repositories, root=ROOT):
         if 'cover' in overrides:
             item['cover'] = overrides['cover']
         if item['kind'] == 'repo' and 'category' in overrides:
-            if overrides['category'] not in ('product', 'repository'):
+            if overrides['category'] not in ('product', 'document', 'repository'):
                 raise ValueError(f'Invalid repository category for {item["id"]}: {overrides["category"]}')
             item['category'] = overrides['category']
     featured = {key: rank for rank, key in enumerate(config['featured'])}
@@ -187,7 +187,7 @@ def cover_image(cover, root):
 
 
 def validate_config(config):
-    for flag in ('show_all', 'group_by_category'):
+    for flag in ('show_all', 'group_by_category', 'compact_cards'):
         if flag in config and not isinstance(config[flag], bool):
             raise ValueError(f'{flag} must be a boolean')
     if not config.get('show_all', False):
@@ -228,7 +228,7 @@ def card_grid(projects, cards, labels=False):
         if labels:
             captions = []
             for project in pair:
-                label = {'product': 'Product', 'skill': 'Skills', 'repository': 'Repository'}[project_category(project)]
+                label = {'product': 'Product', 'skill': 'Skills', 'document': 'Document', 'repository': 'Repository'}[project_category(project)]
                 captions.append(f'<a href="{html.escape(project["url"], quote=True)}">{html.escape(project["title"])}</a> · {label}')
             content += '\n<br>\n<sub>' + ' &nbsp; | &nbsp; '.join(captions) + '</sub>'
         rows.append('<p>\n' + content + '\n</p>')
@@ -253,21 +253,28 @@ def generate(config, projects, root=ROOT):
         raise ValueError('No projects returned; keeping existing cards')
     chosen = projects if config.get('show_all', False) else projects[:config['limit']]
     grouped = config.get('group_by_category', False)
+    compact = config.get('compact_cards', False)
+    if grouped or compact:
+        for project in projects:
+            project_category(project)
     files = {}
     base = f'https://raw.githubusercontent.com/{config["owner"]}/{config["profile_repo"]}/main/'
-    rendered = projects if grouped else chosen
+    rendered = projects if grouped or compact else chosen
     cards = {project['id']: card_markup(project, base, root, files) for project in rendered}
-    rows = grouped_cards(chosen, cards) if grouped else card_grid(chosen, cards)
+    rows = grouped_cards(chosen, cards) if grouped and not compact else card_grid(chosen, cards)
     rows += ['[查看全部项目 →](./PROJECTS.md) · [下载 OvO →](https://github.com/17lijunyi/OvO/releases/latest)']
     if any(p['id'] == 'repo:OvO' for p in chosen):
         rows += ['<sub>OvO 应用免费；第三方 API 按服务商规则计费。</sub>']
     files['README.md'] = replace_section((root / 'README.md').read_text(), '\n\n'.join(rows))
-    introduction = ('产品、Skills 与其他仓库分类展示；同类重点项目优先，其余按最近更新时间排列。'
+    introduction = ('按产品、Skills、文档与其他排列；同类重点项目优先，其余按最近更新时间排列。'
+                    if grouped and compact else
+                    '产品、Skills、文档与其他仓库分类展示；同类重点项目优先，其余按最近更新时间排列。'
                     if grouped else '重点项目优先，其余按最近更新时间排列。')
     catalogue = ['# 全部项目', '', introduction, '',
                  f'[返回主页](https://github.com/{config["owner"]}) · [个人网站](https://{config["owner"]}.github.io/) · [所有公开仓库](https://github.com/{config["owner"]}?tab=repositories)', '']
-    if grouped:
-        catalogue += ['\n\n'.join(grouped_cards(projects, cards))]
+    if grouped or compact:
+        catalogue_rows = grouped_cards(projects, cards) if grouped and not compact else card_grid(projects, cards)
+        catalogue += ['\n\n'.join(catalogue_rows)]
     else:
         for p in projects:
             # HTML escapes keep remote metadata inert in Markdown rendering.
