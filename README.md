@@ -4,11 +4,7 @@
 
 <p align="center"><sub>点击上方终端，探索我的个人网站 · 17lijunyi.github.io</sub></p>
 
-我关注 Agent 如何完成真实的办公任务。\
-参与过本地资料汇总 Agent 的产品建设，负责使用场景、任务流程、授权反馈和结果验收。\
-通过固定任务评测与内部试用，推动产品持续迭代。
-
-🌐 [个人网站](https://17lijunyi.github.io/) · ✍️ [微信公众号](https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzcwOTQzMTkzNg==&scene=124#wechat_redirect "在微信中打开") · ✉️ [邮箱](mailto:lijunyi2026setoff@gmail.com)
+🌐 [个人网站](https://17lijunyi.github.io/) · ✍️ [微信公众号](https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzcwOTQzMTkzNg==&scene=124#wechat_redirect "在微信中打开") · 📕 [小红书](https://xhslink.cn/o/99tuiZpgglS) · ✉️ [邮箱](mailto:lijunyi2026setoff@gmail.com)
 
 ---
 
@@ -45,35 +41,7 @@
 <p>
   <a href="https://github.com/17lijunyi/daily-ai-news"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/daily-ai-news-window.png?v=f09b4300c5d4" alt="每日 AI 新闻：每天精选 5 条 AI 新闻，提供中文摘要与原文链接。"></picture></a>
 </p>
-
-[查看全部项目 →](./PROJECTS.md) · [下载 OvO →](https://github.com/17lijunyi/OvO/releases/latest)
-
-<sub>OvO 应用免费；第三方 API 按服务商规则计费。</sub>
 <!-- PROJECTS:END -->
-
----
-
-## 📰 今日 AI 事件
-
-<!-- AI-NEWS:START -->
-<sub>📅 2026-10-12 · 每天 10:00 自动更新</sub>
-
-1. [DeepMind 的 AlphaProof Nexus 攻克 9 个厄多斯问题、44 个开放猜想](https://github.com/17lijunyi/daily-ai-news/blob/main/2026/10/2026-10-12/morning.md)
-2. [英伟达被曝洽谈收购或增持开源模型公司 Reflection AI](https://github.com/17lijunyi/daily-ai-news/blob/main/2026/10/2026-10-12/morning.md)
-3. [OpenAI 承认：入侵 Hugging Face 的是自家测试中的 AI 模型](https://github.com/17lijunyi/daily-ai-news/blob/main/2026/10/2026-10-12/morning.md)
-4. [Meta、MIT 与华盛顿大学提出"上下文语言模型"](https://github.com/17lijunyi/daily-ai-news/blob/main/2026/10/2026-10-12/morning.md)
-5. [美国肯塔基州诉 Character.AI 的未删节起诉书公开](https://github.com/17lijunyi/daily-ai-news/blob/main/2026/10/2026-10-12/morning.md)
-
-[查看全部 →](https://github.com/17lijunyi/daily-ai-news)
-<!-- AI-NEWS:END -->
-
----
-
-## 📝 AI 产品简历修改 Skill
-
-给**已有简历的 AI 产品经理、FDE 和转型求职者**使用：从九份成功简历提炼方法，在真实经历上修改定位、项目表达、数据口径和排版，交付可直接使用的修改稿。
-
-[了解适用人群、安装与使用 →](./skills/ai-product-resume-edit/README.md)
 
 ---
 
@@ -98,7 +66,7 @@
 ## 关于我
 
 - AI 产品经理
-- 桌面办公 Agent 产品设计与评测
+- 桌面办公智能体产品设计与评测
 - 任务拆解与首版范围规划
 - 工具调用与授权交互设计
 - 任务成功率与失败案例分析

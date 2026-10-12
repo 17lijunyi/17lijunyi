@@ -262,9 +262,10 @@ def generate(config, projects, root=ROOT):
     rendered = projects if grouped or compact else chosen
     cards = {project['id']: card_markup(project, base, root, files) for project in rendered}
     rows = grouped_cards(chosen, cards) if grouped and not compact else card_grid(chosen, cards)
-    rows += ['[查看全部项目 →](./PROJECTS.md) · [下载 OvO →](https://github.com/17lijunyi/OvO/releases/latest)']
-    if any(p['id'] == 'repo:OvO' for p in chosen):
-        rows += ['<sub>OvO 应用免费；第三方 API 按服务商规则计费。</sub>']
+    if not compact:
+        rows += ['[查看全部项目 →](./PROJECTS.md) · [下载 OvO →](https://github.com/17lijunyi/OvO/releases/latest)']
+        if any(p['id'] == 'repo:OvO' for p in chosen):
+            rows += ['<sub>OvO 应用免费；第三方 API 按服务商规则计费。</sub>']
     files['README.md'] = replace_section((root / 'README.md').read_text(), '\n\n'.join(rows))
     introduction = ('按产品、Skills、文档与其他排列；同类重点项目优先，其余按最近更新时间排列。'
                     if grouped and compact else

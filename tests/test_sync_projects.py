@@ -91,7 +91,7 @@ class ProjectCardsTest(unittest.TestCase):
     def test_custom_cover_keeps_two_column_layout_links_and_svg_fallback(self):
         cover = self.cover()
         self.config['overrides']['repo:priority'] = {'cover': 'assets/project-covers/priority.png'}
-        projects = sync.collect_projects(self.config, [repo('priority')] + [repo(f'other-{i}') for i in range(5)], self.root)
+        projects = sync.collect_projects(self.config, [repo('priority'), repo('OvO')] + [repo(f'other-{i}') for i in range(4)], self.root)
         self.assertEqual(projects[0]['cover'], 'assets/project-covers/priority.png')
         sync.generate(self.config, projects, self.root)
         readme = (self.root / 'README.md').read_text()
@@ -104,6 +104,9 @@ class ProjectCardsTest(unittest.TestCase):
         self.assertIn(f'https://raw.githubusercontent.com/owner/owner/main/assets/project-covers/priority.png?v={digest}', rows[0])
         self.assertEqual(readme.count('<source media="(prefers-color-scheme: dark)"'), 5)
         self.assertEqual(len(list((self.root / 'assets/projects').glob('*.svg'))), 10)
+        self.assertIn('[查看全部项目 →](./PROJECTS.md)', readme)
+        self.assertIn('[下载 OvO →]', readme)
+        self.assertIn('OvO 应用免费；第三方 API 按服务商规则计费。', readme)
         self.assertTrue(readme.endswith('\nArticles remain here\n'))
 
     def test_cover_cache_version_tracks_image_bytes_instead_of_metadata(self):
@@ -255,12 +258,12 @@ class ProjectCardsTest(unittest.TestCase):
         self.config.update(show_all=True, group_by_category=True, compact_cards=True)
         cover = self.cover('priority-window.png')
         original = cover.read_bytes()
-        repositories = [repo(f'product-{i}') for i in range(6)] + [repo('knowledge'), repo('daily-news')]
+        repositories = [repo(f'product-{i}') for i in range(5)] + [repo('OvO'), repo('knowledge'), repo('daily-news')]
         for index in range(3):
             self.skill(f'skill-{index}')
             self.config['overrides'][f'skill:skill-{index}'] = {'cover': 'assets/project-covers/priority-window.png'}
-        for index in range(6):
-            self.config['overrides'][f'repo:product-{index}'] = {
+        for product in repositories[:6]:
+            self.config['overrides'][f'repo:{product["name"]}'] = {
                 'category': 'product', 'cover': 'assets/project-covers/priority-window.png',
             }
         self.config['overrides']['repo:knowledge'] = {
@@ -286,6 +289,9 @@ class ProjectCardsTest(unittest.TestCase):
             self.assertNotIn('<sub>', markup)
             self.assertNotIn('<br>', markup)
             self.assertNotIn('<table', markup)
+            self.assertNotIn('[查看全部项目 →]', markup)
+            self.assertNotIn('[下载 OvO →]', markup)
+            self.assertNotIn('OvO 应用免费；第三方 API 按服务商规则计费。', markup)
             digest = hashlib.sha256(original).hexdigest()[:12]
             self.assertEqual(markup.count(f'priority-window.png?v={digest}'), 11)
             for project in projects:
