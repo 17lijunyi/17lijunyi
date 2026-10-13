@@ -1,8 +1,8 @@
 # 贡献绿点维护
 
-主页的个人网站入口下方展示 `assets/contributions.svg`，只更新 `CONTRIBUTIONS:START` / `CONTRIBUTIONS:END` 内的图片链接，保持其他正文和封面不变。
+GitHub 主页使用 `assets/portfolio-launch.svg` 展示个人网站启动终端，右侧是独立的贡献窗口；只更新 `CONTRIBUTIONS:START` / `CONTRIBUTIONS:END` 内的主图链接，保持其他正文和封面不变。
 
-主页贡献图以 360px 宽居中显示；SVG 源图和贡献数据保持原样。
+主图以 1000px 宽居中显示，点击仍访问个人网站。原贡献图 `assets/contributions.svg` 保留为备用；个人网站本身不增加贡献图。
 
 ## 数据与日期
 
@@ -28,4 +28,4 @@ gh workflow run sync-contributions.yml --repo 17lijunyi/17lijunyi
 
 在线抓取使用 GitHub CLI（Actions 运行环境已预装）。本地可通过 `gh auth login` 既有授权读取公开数据；也可使用 `GH_TOKEN`。离线重建可传 `--data-json` 指定保存的 GraphQL 响应或包含 `days` 的数据文件，配合 `--through YYYY-MM-DD` 指定同样的结束日。
 
-原生 SVG 由 `scripts/contributions_card.py` 绘制，沿用个人网站入口的浅色终端、蓝色提示字、窗口三色点和绿色贡献格。无需重新生成插画。
+原生 SVG 由 `scripts/portfolio_launch.py` 和 `scripts/contributions_card.py` 绘制，沿用个人网站入口的浅色终端、蓝色提示字、窗口三色点和绿色贡献格。复合主图的内容哈希写入主页图片地址，数据或主图样式变化时刷新缓存。无需重新生成插画。

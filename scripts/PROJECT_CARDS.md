@@ -1,6 +1,6 @@
 # 项目卡片维护
 
-主页的个人网站横幅与正文手动维护；只有 `PROJECTS:START` / `PROJECTS:END` 之间由脚本更新。备用卡片 SVG 和 `PROJECTS.md` 均自动生成，不要直接编辑；已设计的图片封面保留在 `assets/project-covers/`。
+项目同步只更新 `PROJECTS:START` / `PROJECTS:END` 之间的内容。个人网站入口横幅由[贡献同步](CONTRIBUTIONS.md)维护，其他正文手动维护。备用卡片 SVG 和 `PROJECTS.md` 均自动生成，不要直接编辑；已设计的图片封面保留在 `assets/project-covers/`。
 
 ## 展示规则
 

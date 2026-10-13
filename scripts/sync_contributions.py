@@ -16,6 +16,11 @@ try:
 except ImportError:
     from contributions_card import render_svg
 
+try:
+    from .portfolio_launch import render_launch_svg
+except ImportError:
+    from portfolio_launch import render_launch_svg
+
 ROOT = Path(__file__).resolve().parents[1]
 START = '<!-- CONTRIBUTIONS:START -->'
 END = '<!-- CONTRIBUTIONS:END -->'
@@ -121,17 +126,19 @@ def update(config, days, start, end, root=ROOT):
         raise ValueError('Invalid GitHub account or repository name')
     total = sum(day['count'] for day in days)
     svg = render_svg(days, start, end).rstrip() + '\n'
-    version = hashlib.sha256(svg.encode()).hexdigest()[:12]
-    src = f'https://raw.githubusercontent.com/{owner}/{repo}/main/assets/contributions.svg?v={version}'
-    alt = f'GitHub 贡献记录：{start} 至 {end}，共 {total} 次贡献'
-    markup = (f'<p align="center">\n  <a href="https://github.com/{owner}?tab=overview">'
-              f'<img width="360" src="{src}" alt="{html.escape(alt, quote=True)}"></a>\n</p>')
+    launch_svg = render_launch_svg(days, start, end).rstrip() + '\n'
+    version = hashlib.sha256(launch_svg.encode()).hexdigest()[:12]
+    src = f'https://raw.githubusercontent.com/{owner}/{repo}/main/assets/portfolio-launch.svg?v={version}'
+    alt = f'个人网站启动终端与贡献记录：{start} 至 {end}，共 {total} 次贡献'
+    markup = (f'<p align="center">\n  <a href="https://{owner}.github.io/">'
+              f'<img width="1000" src="{src}" alt="{html.escape(alt, quote=True)}"></a>\n</p>')
     before, remaining = readme.split(START)
     _, after = remaining.split(END)
     updated = before + START + '\n' + markup + '\n' + END + after
     data = {'owner': owner, 'start_date': start.isoformat(), 'end_date': end.isoformat(),
             'total': total, 'source': 'GitHub GraphQL contributionCalendar', 'days': days}
     outputs = {'assets/contributions.svg': svg,
+               'assets/portfolio-launch.svg': launch_svg,
                'assets/contributions-data.json': json.dumps(data, ensure_ascii=False, indent=2) + '\n',
                'README.md': updated}
     changed = []
