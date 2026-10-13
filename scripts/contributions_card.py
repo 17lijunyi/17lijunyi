@@ -99,7 +99,7 @@ def render_svg(days, start, end):
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{height}" viewBox="0 0 {WIDTH} {height}" role="img" aria-labelledby="title desc">',
         '<title id="title">李俊祎 · GitHub 贡献记录</title>',
-        f'<desc id="desc">{esc(span)}，累计 {total} 次贡献。按 UTC 日期显示，每列一周，周日为第一行；空白处不代表贡献日期。</desc>',
+        f'<desc id="desc">{esc(span)}，累计 {total} 次贡献。日期与 GitHub 日历一致，每列一周，周日为第一行；空白处不代表贡献日期。</desc>',
         '<style>',
         ':root { color-scheme: light; }',
         '.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Arial Unicode MS", "PingFang SC", "Microsoft YaHei", monospace; }',
@@ -109,8 +109,8 @@ def render_svg(days, start, end):
         '.heading { fill: #3478c9; font-size: 23px; font-weight: 700; }',
         '.body { fill: #566573; font-size: 14px; }',
         '.meta { fill: #9aa7b3; font-size: 12px; letter-spacing: .8px; }',
-        '.month { fill: #526273; font-size: 13px; }',
-        '.weekday { fill: #9aa7b3; font-size: 12px; }',
+        '.month { fill: #526273; font-size: 14px; }',
+        '.weekday { fill: #6f7e8e; font-size: 14px; }',
         '.day { stroke: #cbd5e1; stroke-width: .55; }',
         '</style>',
         f'<rect class="window" x="1" y="1" width="{WIDTH - 2}" height="{height - 2}" rx="18"/>',
@@ -137,7 +137,7 @@ def render_svg(days, start, end):
         for month_start in _month_starts(first, last):
             x = left + ((month_start.toordinal() - sunday) // 7) * step
             text = f'{month_start.month}月'
-            label_width = 13 * len(text)
+            label_width = 14 * len(text)
             row = next((i for i, right in enumerate(label_ends) if x >= right + 4), len(label_ends))
             if row == len(label_ends):
                 label_ends.append(0)
@@ -157,7 +157,7 @@ def render_svg(days, start, end):
             cursor += timedelta(days=1)
         parts.append('</g>')
     footer_y = height - 27
-    parts += [f'<text class="mono body" x="54" y="{footer_y}">GitHub 贡献记录（UTC 日期）</text>',
+    parts += [f'<text class="mono body" x="54" y="{footer_y}">GitHub 贡献记录 · 自动同步</text>',
               f'<text class="mono body" x="{WIDTH - 218}" y="{footer_y}">少</text>']
     for level, color in enumerate(COLORS):
         parts.append(f'<rect class="legend" x="{WIDTH - 190 + level * 22}" y="{footer_y - 13}" width="16" height="16" rx="3" fill="{color}" data-level="{level}"/>')

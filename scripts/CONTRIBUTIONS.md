@@ -5,7 +5,7 @@
 ## 数据与日期
 
 - `contributions.json` 中的 `start_date` 固定为 **2026-08-01**；结束日期使用 `Asia/Shanghai` 当天，继续按月向后显示。
-- 数据直接读取 [GitHub GraphQL contributionCalendar](https://docs.github.com/en/graphql/reference/users#contributioncalendar)：每天的贡献次数和等级均来自 GitHub，格子日期沿用 GitHub 的 UTC 日期。
+- 数据直接读取 [GitHub GraphQL contributionCalendar](https://docs.github.com/en/graphql/reference/users#contributioncalendar)：每天的贡献次数和等级均来自 GitHub，格子日期沿用 GitHub 日历的日期。
 - 按自然半年排图段，跨年后继续追加，保留八月以来的历史，避免月份越多方块越小。
 - 从现有公开贡献数据读取，不查询私有仓库名称或代码。数据保存在 `assets/contributions-data.json`，不包含令牌。
 - API 错误、总数不符或缺少日期时保留上一张成功图片，不能把抓取失败画成零贡献。
