@@ -6,6 +6,12 @@
 
 🌐 [个人网站](https://17lijunyi.github.io/) · ✍️ [微信公众号](https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzcwOTQzMTkzNg==&scene=124#wechat_redirect "在微信中打开") · 📕 [小红书](https://xhslink.cn/o/99tuiZpgglS) · ✉️ [邮箱](mailto:lijunyi2026setoff@gmail.com)
 
+<!-- CONTRIBUTIONS:START -->
+<p align="center">
+  <a href="https://github.com/17lijunyi?tab=overview"><img width="720" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/contributions.svg?v=335f4a1b945d" alt="GitHub 贡献记录：2026-08-01 至 2026-10-13，共 114 次贡献"></a>
+</p>
+<!-- CONTRIBUTIONS:END -->
+
 ---
 
 ## ⭐ 精选项目
