@@ -8,7 +8,7 @@
 
 <!-- CONTRIBUTIONS:START -->
 <p align="center">
-  <a href="https://github.com/17lijunyi?tab=overview"><img width="720" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/contributions.svg?v=335f4a1b945d" alt="GitHub 贡献记录：2026-08-01 至 2026-10-13，共 114 次贡献"></a>
+  <a href="https://github.com/17lijunyi?tab=overview"><img width="720" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/contributions.svg?v=e5f7820d4d47" alt="GitHub 贡献记录：2026-08-01 至 2026-10-13，共 114 次贡献"></a>
 </p>
 <!-- CONTRIBUTIONS:END -->
 
