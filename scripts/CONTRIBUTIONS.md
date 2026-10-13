@@ -2,6 +2,8 @@
 
 主页的个人网站入口下方展示 `assets/contributions.svg`，只更新 `CONTRIBUTIONS:START` / `CONTRIBUTIONS:END` 内的图片链接，保持其他正文和封面不变。
 
+主页贡献图以 360px 宽居中显示；SVG 源图和贡献数据保持原样。
+
 ## 数据与日期
 
 - `contributions.json` 中的 `start_date` 固定为 **2026-08-01**；结束日期使用 `Asia/Shanghai` 当天，继续按月向后显示。

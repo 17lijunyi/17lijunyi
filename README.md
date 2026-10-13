@@ -4,11 +4,13 @@
 
 <p align="center"><sub>点击上方终端，探索我的个人网站 · 17lijunyi.github.io</sub></p>
 
-🌐 [个人网站](https://17lijunyi.github.io/) · ✍️ [微信公众号](https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzcwOTQzMTkzNg==&scene=124#wechat_redirect "在微信中打开") · 📕 [小红书](https://xhslink.cn/o/99tuiZpgglS) · ✉️ [邮箱](mailto:lijunyi2026setoff@gmail.com)
+<p align="center">
+  🌐 <a href="https://17lijunyi.github.io/">个人网站</a> · ✍️ <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&amp;__biz=MzcwOTQzMTkzNg==&amp;scene=124#wechat_redirect" title="在微信中打开">微信公众号</a> · 📕 <a href="https://xhslink.cn/o/99tuiZpgglS">小红书</a> · ✉️ <a href="mailto:lijunyi2026setoff@gmail.com">邮箱</a>
+</p>
 
 <!-- CONTRIBUTIONS:START -->
 <p align="center">
-  <a href="https://github.com/17lijunyi?tab=overview"><img width="720" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/contributions.svg?v=585c1a2a9c68" alt="GitHub 贡献记录：2026-08-01 至 2026-10-13，共 114 次贡献"></a>
+  <a href="https://github.com/17lijunyi?tab=overview"><img width="360" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/contributions.svg?v=585c1a2a9c68" alt="GitHub 贡献记录：2026-08-01 至 2026-10-13，共 114 次贡献"></a>
 </p>
 <!-- CONTRIBUTIONS:END -->
 

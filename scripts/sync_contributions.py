@@ -125,7 +125,7 @@ def update(config, days, start, end, root=ROOT):
     src = f'https://raw.githubusercontent.com/{owner}/{repo}/main/assets/contributions.svg?v={version}'
     alt = f'GitHub 贡献记录：{start} 至 {end}，共 {total} 次贡献'
     markup = (f'<p align="center">\n  <a href="https://github.com/{owner}?tab=overview">'
-              f'<img width="720" src="{src}" alt="{html.escape(alt, quote=True)}"></a>\n</p>')
+              f'<img width="360" src="{src}" alt="{html.escape(alt, quote=True)}"></a>\n</p>')
     before, remaining = readme.split(START)
     _, after = remaining.split(END)
     updated = before + START + '\n' + markup + '\n' + END + after
