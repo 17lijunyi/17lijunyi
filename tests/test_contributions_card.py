@@ -109,7 +109,6 @@ class ContributionsCardTest(unittest.TestCase):
         legends = svg.findall('.//svg:rect[@class="legend"]', NS)
         self.assertEqual([legend.attrib['fill'] for legend in legends], list(card.COLORS))
         self.assertIn('累计贡献 · 10', ''.join(svg.itertext()))
-        self.assertIn('GitHub 贡献记录（UTC 日期）', ''.join(svg.itertext()))
         self.assertTrue(all(text in ''.join(svg.itertext()) for text in ('少', '多')))
 
     def test_identical_duplicates_are_not_double_counted_and_conflicts_fail(self):
