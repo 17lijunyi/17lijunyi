@@ -41,7 +41,7 @@
 
 <p>
   <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/muse10-nail-visuals"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/muse10-nail-visuals-window.png?v=065ce2417f1e" alt="Muse10 款式生成：按真实双手十指比例与固定背景模板制作美甲款式、上手图和交互预览"></picture></a>
-  <a href="https://github.com/17lijunyi/chaichai"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/chaichai/main/docs/assets/cover.png?v=45ec07a1d535" alt="拆拆 ChaiChai：交给 AI 助手的本地软件拆解技能，支持应用结构、代码与运行行为分析，并通过 CLI 和 MCP 返回可追溯的证据。"></picture></a>
+  <a href="https://github.com/17lijunyi/chaichai"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/chaichai/main/docs/assets/cover.png?v=1c2b246bfcc4" alt="拆拆 ChaiChai：交给 AI 助手的本地软件拆解技能，支持应用结构、代码与运行行为分析，并通过 CLI 和 MCP 返回可追溯的证据。"></picture></a>
 </p>
 
 <p>
