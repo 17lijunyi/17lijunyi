@@ -26,9 +26,10 @@
 
 <p>
   <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/muse10-nail-visuals"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/muse10-nail-visuals-window.png?v=065ce2417f1e" alt="Muse10 款式生成：按真实双手十指比例与固定背景模板制作美甲款式、上手图和交互预览"></picture></a>
-  <a href="https://github.com/17lijunyi/kanshan-kb"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/kanshan-kb-window.png?v=729789d64fd5" alt="Kanshan KB · 内容创作知识库：面向知乎创作者的知识库：10 个模块的实用方法、案例与一手资料，支持文档检索与来源引用。"></picture></a>
+  <a href="https://github.com/17lijunyi/chaichai"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/chaichai/main/docs/assets/cover.png?v=45ec07a1d535" alt="拆拆 ChaiChai：交给 AI 助手的本地软件拆解技能，支持应用结构、代码与运行行为分析，并通过 CLI 和 MCP 返回可追溯的证据。"></picture></a>
 </p>
 
 <p>
+  <a href="https://github.com/17lijunyi/kanshan-kb"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/kanshan-kb-window.png?v=729789d64fd5" alt="Kanshan KB · 内容创作知识库：面向知乎创作者的知识库：10 个模块的实用方法、案例与一手资料，支持文档检索与来源引用。"></picture></a>
   <a href="https://github.com/17lijunyi/daily-ai-news"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/daily-ai-news-window.png?v=f09b4300c5d4" alt="每日 AI 新闻：每天精选 5 条 AI 新闻，提供中文摘要与原文链接。"></picture></a>
 </p>
