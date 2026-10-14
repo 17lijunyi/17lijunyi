@@ -139,6 +139,64 @@ class ProjectCardsTest(unittest.TestCase):
         self.assertIn('alt="测试技能：测试介绍"', readme)
         self.assertNotIn('<source', readme)
 
+    def test_repository_skill_uses_canonical_cover_after_products(self):
+        self.skill('example')
+        self.config.update(show_all=True, group_by_category=True, compact_cards=True)
+        self.config['featured'] = ['repo:chaichai', 'skill:example', 'repo:product']
+        cover = 'https://raw.githubusercontent.com/owner/chaichai/main/docs/assets/cover.png'
+        self.config['overrides'] = {
+            'repo:product': {'category': 'product'},
+            'repo:chaichai': {'category': 'skill', 'cover_url': cover},
+        }
+        with patch.object(sync.subprocess, 'check_output', return_value='2026-09-20T00:00:00+00:00\n'):
+            projects = sync.collect_projects(self.config, [repo('chaichai'), repo('product'), repo('plain')], self.root)
+        self.assertEqual([item['id'] for item in projects],
+                         ['repo:product', 'repo:chaichai', 'skill:example', 'repo:plain'])
+        chaichai = projects[1]
+        self.assertEqual(chaichai['category'], 'skill')
+        self.assertEqual(chaichai['kind'], 'repo')
+        self.assertIn('Skill', sync.svg_card(chaichai))
+        with patch.object(sync, 'urlopen') as network:
+            sync.generate(self.config, projects, self.root)
+            network.assert_not_called()
+        for filename in ('README.md', 'PROJECTS.md'):
+            markup = (self.root / filename).read_text()
+            self.assertIn(f'<a href="https://github.com/owner/chaichai"><picture><img width="49%" src="{cover}?v=', markup)
+            self.assertEqual(markup.count('<img width="49%"'), 4)
+            self.assertLess(markup.index('href="https://github.com/owner/product"'),
+                            markup.index('href="https://github.com/owner/chaichai"'))
+        readme = (self.root / 'README.md').read_text()
+        self.assertTrue(readme.startswith('Personal website\n'))
+        self.assertTrue(readme.endswith('\nArticles remain here\n'))
+        before = sync.remote_cover_image(cover, chaichai)
+        chaichai['updated'] = '2026-10-14T00:00:00Z'
+        self.assertNotEqual(before, sync.remote_cover_image(cover, chaichai))
+
+    def test_remote_cover_must_belong_to_its_repository_and_invalid_input_preserves_output(self):
+        projects = sync.collect_projects(self.config, [repo('priority')], self.root)
+        invalid = [None, 123, 'data:image/png;base64,abc',
+                   'http://raw.githubusercontent.com/owner/priority/main/docs/assets/cover.png',
+                   'https://raw.githubusercontent.com.evil.test/owner/priority/main/docs/assets/cover.png',
+                   'https://raw.githubusercontent.com/other/priority/main/docs/assets/cover.png',
+                   'https://raw.githubusercontent.com/owner/elsewhere/main/docs/assets/cover.png',
+                   'https://raw.githubusercontent.com/owner/priority/main/../cover.png',
+                   'https://raw.githubusercontent.com/owner/priority/main/docs/%2e%2e/cover.png',
+                   'https://raw.githubusercontent.com/owner/priority/main/docs//cover.png',
+                   'https://raw.githubusercontent.com/owner/priority/main/docs/assets/cover.svg',
+                   'https://raw.githubusercontent.com/owner/priority/main/docs/assets/cover.png?token=abc']
+        for cover in invalid:
+            with self.subTest(cover=cover):
+                projects[0]['cover_url'] = cover
+                with self.assertRaises(ValueError):
+                    sync.generate(self.config, projects, self.root)
+                self.assertEqual((self.root / 'README.md').read_text(), self.readme)
+                self.assertFalse((self.root / 'PROJECTS.md').exists())
+        projects[0].update(cover_url='https://raw.githubusercontent.com/owner/priority/main/docs/assets/cover.png',
+                           cover='assets/project-covers/priority.png')
+        with self.assertRaisesRegex(ValueError, 'one cover source'):
+            sync.generate(self.config, projects, self.root)
+        self.assertEqual((self.root / 'README.md').read_text(), self.readme)
+
     def test_missing_cover_preserves_all_previous_generated_files(self):
         projects = sync.collect_projects(self.config, [repo('priority'), repo('other')], self.root)
         sync.generate(self.config, projects, self.root)

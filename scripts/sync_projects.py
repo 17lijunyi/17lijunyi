@@ -9,7 +9,7 @@ from pathlib import Path, PurePosixPath
 import re
 import subprocess
 import unicodedata
-from urllib.parse import quote
+from urllib.parse import quote, urlsplit
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -86,10 +86,11 @@ def collect_projects(config, repositories, root=ROOT):
         for key in ('title', 'description'):
             if overrides.get(key):
                 item[key] = overrides[key]
-        if 'cover' in overrides:
-            item['cover'] = overrides['cover']
+        for key in ('cover', 'cover_url'):
+            if key in overrides:
+                item[key] = overrides[key]
         if item['kind'] == 'repo' and 'category' in overrides:
-            if overrides['category'] not in ('product', 'document', 'repository'):
+            if overrides['category'] not in dict(CATEGORIES):
                 raise ValueError(f'Invalid repository category for {item["id"]}: {overrides["category"]}')
             item['category'] = overrides['category']
     featured = {key: rank for rank, key in enumerate(config['featured'])}
@@ -129,7 +130,7 @@ def svg_card(project, dark=False):
     esc = html.escape
     title = wrap(project['title'], 40, 1)[0]
     desc = wrap(project['description'], 56, 3)
-    badge = 'Skill' if project['kind'] == 'skill' else 'Public'
+    badge = 'Skill' if project.get('category', project['kind']) == 'skill' else 'Public'
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="620" height="210" viewBox="0 0 620 210" role="img" aria-labelledby="title desc">',
              f'<title id="title">{esc(project["title"])}</title><desc id="desc">{esc(project["description"])}</desc>',
              f'<rect x=".75" y=".75" width="598.5" height="208.5" rx="9" fill="{bg}" stroke="{border}" stroke-width="1.5"/>',
@@ -196,6 +197,26 @@ def validate_config(config):
             raise ValueError('Card limit must be between 1 and 12')
 
 
+def remote_cover_image(cover, project):
+    """Allow an explicit cover on the same public GitHub repository as the card."""
+    if not isinstance(cover, str):
+        raise ValueError('Remote project cover must be an HTTPS GitHub image URL')
+    source, target = urlsplit(cover), urlsplit(project['url'])
+    prefix = target.path.rstrip('/') + '/main/'
+    image = PurePosixPath(source.path)
+    if (source.scheme != 'https' or source.netloc != 'raw.githubusercontent.com'
+            or target.scheme != 'https' or target.netloc != 'github.com'
+            or len(target.path.strip('/').split('/')) != 2
+            or not source.path.startswith(prefix) or source.query or source.fragment
+            or '\\' in cover or '%' in source.path
+            or any(part in ('', '.', '..') for part in source.path[1:].split('/'))
+            or image.suffix.lower() not in ('.png', '.jpg', '.jpeg', '.webp')):
+        raise ValueError(f'Invalid remote project cover URL for {project["id"]}')
+    # The repository update time invalidates the image after a cover commit.
+    version = hashlib.sha256(project.get('updated', '').encode()).hexdigest()[:12]
+    return cover + '?v=' + version
+
+
 def project_category(project):
     category = project.get('category', 'skill' if project['kind'] == 'skill' else 'repository')
     if category not in dict(CATEGORIES):
@@ -205,7 +226,12 @@ def project_category(project):
 
 def card_markup(project, base, root, files):
     alt = html.escape(project['title'] + '：' + project['description'], quote=True)
-    if 'cover' in project:
+    if 'cover' in project and 'cover_url' in project:
+        raise ValueError(f'Project must use one cover source: {project["id"]}')
+    if 'cover_url' in project:
+        image = remote_cover_image(project['cover_url'], project)
+        picture = f'<picture><img width="49%" src="{image}" alt="{alt}"></picture>'
+    elif 'cover' in project:
         image = base + cover_image(project['cover'], root)
         picture = f'<picture><img width="49%" src="{image}" alt="{alt}"></picture>'
     else:

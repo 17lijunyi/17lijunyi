@@ -5,13 +5,14 @@
 ## 展示规则
 
 - 当前配置 `show_all: true`，主页和 `PROJECTS.md` 都展示全部符合条件的项目，新增项目会继续向下排。关闭时首页使用 `limit`，项目目录仍展示全部。
-- `group_by_category: true` 按产品 → Skills → 文档 → 其他排序；同类中 `featured` 固定优先，其余按 GitHub `updated_at`（技能按目录最后提交时间）倒序排列。仓库的 `overrides.category` 可为 `product`、`document`、`repository`；技能自动归为 Skills。
+- `group_by_category: true` 按产品 → Skills → 文档 → 其他排序；同类中 `featured` 固定优先，其余按 GitHub `updated_at`（技能按目录最后提交时间）倒序排列。仓库的 `overrides.category` 可为 `product`、`skill`、`document`、`repository`；独立技能仓库需显式设置为 `skill`，本仓库技能目录自动归为 Skills。
 - `compact_cards: true` 使用连续双列图片墙，分类切换不另起一行，不显示外部分组标题或图下说明。整张封面可点击，分类由窗口顶栏显示。
 - 只展示账号自己的公开、非 Fork、未归档仓库；主页仓库和已在顶部展示的个人网站仓库默认排除。
 - 本仓库 `skills/*/SKILL.md` 配合 `agents/openai.yaml` 的 `display_name`、`short_description` 自动形成技能卡片；不会把主页仓库的 Star/Fork 数当作技能数据。
 - 新技能需要提交上述两个元数据字段。技能内容只作为文本读取，不执行。
 - 仓库标题默认使用仓库名，简介、语言、Star、Fork 来自 API。`overrides` 可设置中文标题或固定中文简介；被覆盖的字段以后需在配置中维护。
 - `overrides.cover` 指定窗口封面；窗口绘制配置、原画像素保留方式与重建命令见 [封面维护](../assets/project-covers/README.md)。新增项目没有定制插画时先显示 SVG 备用卡片，不会被遗漏。
+- 独立仓库也可用 `overrides.cover_url` 引用该仓库 `main` 分支上的 HTTPS `raw.githubusercontent.com` 图片，不复制资产。它与 `cover` 不能同时设置；缓存版本随仓库更新时间变化。
 
 ## 更新
 
