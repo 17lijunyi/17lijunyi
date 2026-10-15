@@ -8,6 +8,7 @@
   ],
   "featured": [
     "repo:Foundry",
+    "repo:pe-studio",
     "repo:orbi",
     "repo:jianli",
     "repo:xuanfudao",
@@ -21,6 +22,14 @@
     "repo:daily-ai-news"
   ],
   "overrides": {
+    "repo:pe-studio": {
+      "title": "PE Studio · macOS 提示词专家",
+      "description": "macOS 提示词工作台，支持三模型并行优化、A/B/C 随机盲测、Jev 评审与本地 Agent 接入。",
+      "category": "product",
+      "cover": "assets/project-covers/pe-studio-window.png",
+      "artwork": "assets/project-covers/pe-studio.png",
+      "window_theme": "teal"
+    },
     "repo:OvO": {
       "title": "OvO · macOS 翻译工具",
       "cover": "assets/project-covers/ovo-window.png",

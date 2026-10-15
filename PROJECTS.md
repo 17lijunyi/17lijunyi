@@ -6,30 +6,34 @@
 
 <p>
   <a href="https://github.com/17lijunyi/Foundry"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/foundry-window.png?v=9fbdd1cdf409" alt="Foundry：Foundry：面向产品经理的 AI 桌面工作台，原生玻璃界面、文件协作与模型对比。基于 Product Manager Workbench、AionUi 和 AionCore。"></picture></a>
+  <a href="https://github.com/17lijunyi/pe-studio"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/pe-studio-window.png?v=61027e48952a" alt="PE Studio · macOS 提示词专家：macOS 提示词工作台，支持三模型并行优化、A/B/C 随机盲测、Jev 评审与本地 Agent 接入。"></picture></a>
+</p>
+
+<p>
   <a href="https://github.com/17lijunyi/orbi"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/orbi-window.png?v=a74818bc31ab" alt="Orbi · macOS AI 工作台：李俊祎的个人 macOS AI 工作台，支持智能体协作、群聊、悬浮聊天与待办，提供毛绒星球 DIY 和七款窗口背景。"></picture></a>
-</p>
-
-<p>
   <a href="https://github.com/17lijunyi/jianli"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/jianli-window.png?v=cde8beb8f6fc" alt="简励 · Mac 简历工作台：中文 Mac 简历应用，支持简历编辑、模板预览、PDF 导出与 AI 辅助。玻璃质感窗口、悬浮控件，本地保存。"></picture></a>
+</p>
+
+<p>
   <a href="https://github.com/17lijunyi/xuanfudao"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/xuanfudao-window.png?v=0ffc18f7b293" alt="悬浮岛 · Mac 顶部工作台：悬浮岛：把工作台藏进 Mac 顶部。AI 任务、待办、笔记、项目抽屉与专注计时，柔焦玻璃界面，本地优先。"></picture></a>
-</p>
-
-<p>
   <a href="https://github.com/17lijunyi/OvO"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/ovo-window.png?v=581d2a194540" alt="OvO · macOS 翻译工具：免费的原生 macOS 翻译工具：划词、截图、输入翻译，苹果系统翻译与自定义 API，柔焦玻璃界面。"></picture></a>
+</p>
+
+<p>
   <a href="https://github.com/17lijunyi/FrameFlow"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/frameflow-window.png?v=33e1d2070a72" alt="FrameFlow · AI 视频创作工作室：中文 AI 视频创作工作室，将创作对话、剧本与分镜、逐镜生成和已有视频的 Agent 剪辑连接起来。"></picture></a>
-</p>
-
-<p>
   <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/ai-product-resume-edit"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/ai-product-resume-edit-window.png?v=e096e77509fd" alt="AI 产品简历修改：面向 AI 产品经理、FDE 与转型求职者，在已有简历上修改表达、数据与排版"></picture></a>
+</p>
+
+<p>
   <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/product-evidence-deconstruction"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/product-evidence-deconstruction-window.png?v=ab5191a769fb" alt="产品证据拆解：基于真实证据，按用户、技术、模型、数据四层拆解数字产品"></picture></a>
-</p>
-
-<p>
   <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/muse10-nail-visuals"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/muse10-nail-visuals-window.png?v=065ce2417f1e" alt="Muse10 款式生成：按真实双手十指比例与固定背景模板制作美甲款式、上手图和交互预览"></picture></a>
-  <a href="https://github.com/17lijunyi/chaichai"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/chaichai/main/docs/assets/cover.png?v=1c2b246bfcc4" alt="拆拆 ChaiChai：交给 AI 助手的本地软件拆解技能，支持应用结构、代码与运行行为分析，并通过 CLI 和 MCP 返回可追溯的证据。"></picture></a>
 </p>
 
 <p>
+  <a href="https://github.com/17lijunyi/chaichai"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/chaichai/main/docs/assets/cover.png?v=1c2b246bfcc4" alt="拆拆 ChaiChai：交给 AI 助手的本地软件拆解技能，支持应用结构、代码与运行行为分析，并通过 CLI 和 MCP 返回可追溯的证据。"></picture></a>
   <a href="https://github.com/17lijunyi/kanshan-kb"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/kanshan-kb-window.png?v=729789d64fd5" alt="Kanshan KB · 内容创作知识库：面向知乎创作者的知识库：10 个模块的实用方法、案例与一手资料，支持文档检索与来源引用。"></picture></a>
+</p>
+
+<p>
   <a href="https://github.com/17lijunyi/daily-ai-news"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/daily-ai-news-window.png?v=f09b4300c5d4" alt="每日 AI 新闻：每天精选 5 条 AI 新闻，提供中文摘要与原文链接。"></picture></a>
 </p>

@@ -11,6 +11,7 @@
 ## 产品
 
 - [Foundry](foundry.png)：双手托起玻璃 F 图标。
+- [PE Studio](pe-studio-window.png)：灰白 IP 持橙色笔比较 A/B/C 提示词卡片，与银色 P 图标互动；突出三模型并行优化与随机盲测。2026-10-15 使用内置 image_gen 制作原画，并由统一模板加上青绿色产品窗口顶栏。[生成提示词](pe-studio-generation.json)。
 - [Orbi](orbi-window.png)：保留骑粉色毛绒星球、挥手的坐姿，双腿向右轻摆，腿部连接自然。
 - [简励](jianli.png)：擦亮 JL 图标。
 - [悬浮岛](xuanfudao.png)：在玻璃胶囊上滑行。
