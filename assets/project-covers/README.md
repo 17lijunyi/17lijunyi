@@ -1,6 +1,8 @@
 # 项目图片封面
 
-原始插画使用内置 image_gen 制作于 2026-10-12，2026-10-13 补齐并修正。当前共 11 张原画，尺寸 2172 × 724。
+原始插画使用内置 image_gen 制作于 2026-10-12，2026-10-13 补齐并修正。首批共 11 张原画，尺寸 2172 × 724。
+
+2026-10-15，Orbi 更新为用户从十个腿部修正版中选定的第 10 版：双腿向右轻摆，补全大腿、膝盖与小腿的连接。用户确认的完整窗口图为 1977 × 795，直接保存为 `orbi-window.png`；[生成提示词与版本记录](orbi-selected-20261015.json)。`orbi.png` 保留为早期插画存档，`projects.json` 不再将它配置为 Orbi 的重建输入，避免批量重建窗口时恢复旧腿部。
 
 2026-10-13 添加代码绘制的窗口外框与分类顶栏。主页和全部项目页使用 `*-window.png`（2252 × 906），每张 49% 宽、两列连续排列，顺序为产品 → Skills → 文档 → 其他。分类写在各张卡片的顶栏，移除卡片外的分组标题和图下说明；整张图片保留项目链接。分类切换不另起一行，仅最后一个奇数项目可能单独占一行。
 
@@ -9,7 +11,7 @@
 ## 产品
 
 - [Foundry](foundry.png)：双手托起玻璃 F 图标。
-- [Orbi](orbi.png)：保留原版骑粉色毛绒星球、挥手的坐姿，仅修正裤腿、膝盖、脚踝与鞋的连接。
+- [Orbi](orbi-window.png)：保留骑粉色毛绒星球、挥手的坐姿，双腿向右轻摆，腿部连接自然。
 - [简励](jianli.png)：擦亮 JL 图标。
 - [悬浮岛](xuanfudao.png)：在玻璃胶囊上滑行。
 - [OvO](ovo.png)：坐在图标上交换翻译卡片。
@@ -39,7 +41,7 @@
 node scripts/build_cover_windows.mjs
 ```
 
-可用 `--modules-dir /path/to/node_modules` 指定已有依赖目录，用 `--only repo:orbi` 重建单张。`projects.json` 的 `artwork` 指向原画，`cover` 指向窗口版，`category` 决定顶栏标签，`window_theme` 决定外框淡色。修改原画或这些窗口配置后先重建窗口，再运行 `python3 scripts/sync_projects.py`。
+可用 `--modules-dir /path/to/node_modules` 指定已有依赖目录，用 `--only repo:Foundry` 重建单张。`projects.json` 的 `artwork` 指向原画，`cover` 指向窗口版，`category` 决定顶栏标签，`window_theme` 决定外框淡色。修改原画或这些窗口配置后先重建窗口，再运行 `python3 scripts/sync_projects.py`。已确认的 Orbi 完整窗口图直接使用，批量重建跳过该图。
 
 同步脚本通过 `cover` 使用窗口版图片，缓存版本取自文件内容哈希；定时同步不会重新绘制或覆盖图片设计。
 

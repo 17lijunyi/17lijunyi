@@ -62,7 +62,6 @@
       "description": "李俊祎的个人 macOS AI 工作台，支持智能体协作、群聊、悬浮聊天与待办，提供毛绒星球 DIY 和七款窗口背景。",
       "cover": "assets/project-covers/orbi-window.png",
       "category": "product",
-      "artwork": "assets/project-covers/orbi.png",
       "window_theme": "rose"
     },
     "repo:Foundry": {

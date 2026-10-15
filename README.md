@@ -21,7 +21,7 @@
 <!-- PROJECTS:START -->
 <p>
   <a href="https://github.com/17lijunyi/Foundry"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/foundry-window.png?v=9fbdd1cdf409" alt="Foundry：Foundry：面向产品经理的 AI 桌面工作台，原生玻璃界面、文件协作与模型对比。基于 Product Manager Workbench、AionUi 和 AionCore。"></picture></a>
-  <a href="https://github.com/17lijunyi/orbi"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/orbi-window.png?v=38454e4d5c3c" alt="Orbi · macOS AI 工作台：李俊祎的个人 macOS AI 工作台，支持智能体协作、群聊、悬浮聊天与待办，提供毛绒星球 DIY 和七款窗口背景。"></picture></a>
+  <a href="https://github.com/17lijunyi/orbi"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/orbi-window.png?v=a74818bc31ab" alt="Orbi · macOS AI 工作台：李俊祎的个人 macOS AI 工作台，支持智能体协作、群聊、悬浮聊天与待办，提供毛绒星球 DIY 和七款窗口背景。"></picture></a>
 </p>
 
 <p>
