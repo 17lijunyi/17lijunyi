@@ -97,8 +97,8 @@ __PANEL__
 def render_launch_svg(days, start, end):
     """Render all bounded contribution days inside the existing right-hand space.
 
-    A calendar half-year forms one row. Later rows grow the window vertically,
-    retaining the August start and older days instead of dropping history.
+    Rolling three-month windows stay in one continuous row across years and
+    half-years. Longer explicitly requested ranges can use additional rows.
     """
     start, end = _date(start), _date(end)
     if start > end:

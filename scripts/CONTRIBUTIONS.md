@@ -6,9 +6,9 @@ GitHub 主页使用 `assets/portfolio-launch.svg` 展示个人网站启动终端
 
 ## 数据与日期
 
-- `contributions.json` 中的 `start_date` 固定为 **2026-08-01**；结束日期使用 `Asia/Shanghai` 当天，继续按月向后显示。
+- `contributions.json` 中的 `rolling_months` 为 **3**；结束日期使用 `Asia/Shanghai` 当天，起点从结束日期回溯三个自然月，含首尾两天。例如 **2026-10-15** 显示 **2026-07-15 至 2026-10-15**。目标月份没有对应日期时取该月最后一天，例如 5 月 31 日回溯至 2 月 28 日（闰年为 29 日）。
 - 数据直接读取 [GitHub GraphQL contributionCalendar](https://docs.github.com/en/graphql/reference/users#contributioncalendar)：每天的贡献次数和等级均来自 GitHub，格子日期沿用 GitHub 日历的日期。
-- 按自然半年排图段，跨年后继续追加，保留八月以来的历史，避免月份越多方块越小。
+- 日期范围每天向前滚动，总数只统计窗口内的贡献。最近三个月保持一张连续网格，跨年或跨半年不拆行；首尾都是部分月份时会出现四个月份标签。
 - 从现有公开贡献数据读取，不查询私有仓库名称或代码。数据保存在 `assets/contributions-data.json`，不包含令牌。
 - API 错误、总数不符或缺少日期时保留上一张成功图片，不能把抓取失败画成零贡献。
 

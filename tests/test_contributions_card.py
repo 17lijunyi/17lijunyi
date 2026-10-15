@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import date, timedelta
 import importlib.util
 from pathlib import Path
 import unittest
@@ -101,6 +101,36 @@ class ContributionsCardTest(unittest.TestCase):
         last_bottom = max(int(day.attrib['y']) + int(day.attrib['height']) for day in periods[-1].findall('svg:rect[@class="day"]', NS))
         legend_top = min(int(legend.attrib['y']) for legend in svg.findall('.//svg:rect[@class="legend"]', NS))
         self.assertLess(last_bottom, legend_top)
+
+    def test_rolling_window_remains_one_complete_grid_across_calendar_boundaries(self):
+        for first, last in (
+            ('2026-07-15', '2026-10-15'),
+            ('2026-04-15', '2026-07-15'),
+            ('2026-10-15', '2027-01-15'),
+            ('2026-11-30', '2027-02-28'),
+            ('2028-02-29', '2028-05-31'),
+        ):
+            with self.subTest(first=first, last=last):
+                start, end = date.fromisoformat(first), date.fromisoformat(last)
+                svg = parsed([
+                    {'date': (start - timedelta(days=1)).isoformat(), 'count': 1000, 'level': 4},
+                    {'date': first, 'count': 2, 'level': 1},
+                    {'date': last, 'count': 3, 'level': 2},
+                    {'date': (end + timedelta(days=1)).isoformat(), 'count': 1000, 'level': 4},
+                ], first, last)
+                self.assertEqual(len(svg.findall('.//svg:g[@class="period"]', NS)), 1)
+                days = cells(svg)
+                expected = [(start + timedelta(days=i)).isoformat() for i in range((end - start).days + 1)]
+                self.assertEqual(list(days), expected)
+                self.assertEqual(len(svg.findall('.//svg:rect[@class="day"]', NS)), len(expected))
+                self.assertEqual(sum(int(day.attrib['data-count']) for day in days.values()), 5)
+                self.assertIn('累计贡献 · 5', ''.join(svg.itertext()))
+                labels = svg.findall('.//svg:text[@class="mono month"]', NS)
+                expected_months = list(dict.fromkeys(day[:7] for day in expected))
+                self.assertEqual([label.attrib['data-month'] for label in labels], expected_months)
+                grid_bottom = max(int(day.attrib['y']) + int(day.attrib['height']) for day in days.values())
+                legend_top = min(int(legend.attrib['y']) for legend in svg.findall('.//svg:rect[@class="legend"]', NS))
+                self.assertLess(grid_bottom, legend_top)
 
     def test_all_five_levels_use_palette_and_legend_without_invented_counts(self):
         svg = parsed([{'date': f'2026-08-0{level + 1}', 'count': level, 'level': level} for level in range(5)],

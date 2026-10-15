@@ -1,10 +1,95 @@
 {
   "owner": "17lijunyi",
-  "start_date": "2026-08-01",
+  "start_date": "2026-07-15",
   "end_date": "2026-10-15",
   "total": 118,
   "source": "GitHub GraphQL contributionCalendar",
   "days": [
+    {
+      "date": "2026-07-15",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-07-16",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-07-17",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-07-18",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-07-19",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-07-20",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-07-21",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-07-22",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-07-23",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-07-24",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-07-25",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-07-26",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-07-27",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-07-28",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-07-29",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-07-30",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-07-31",
+      "count": 0,
+      "level": 0
+    },
     {
       "date": "2026-08-01",
       "count": 0,
@@ -172,12 +257,12 @@
     },
     {
       "date": "2026-09-03",
-      "count": 1,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-09-04",
-      "count": 10,
+      "count": 11,
       "level": 4
     },
     {
@@ -302,7 +387,7 @@
     },
     {
       "date": "2026-09-29",
-      "count": 2,
+      "count": 1,
       "level": 1
     },
     {
@@ -312,8 +397,8 @@
     },
     {
       "date": "2026-10-01",
-      "count": 2,
-      "level": 1
+      "count": 3,
+      "level": 2
     },
     {
       "date": "2026-10-02",

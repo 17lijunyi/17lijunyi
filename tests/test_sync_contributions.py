@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from scripts import sync_contributions as sync
 
@@ -27,6 +28,58 @@ class ContributionSyncTest(unittest.TestCase):
         self.days = sync.parse_calendar(calendar(self.first, self.last), self.first, self.last)
         self.original = 'Personal website and social links\n' + sync.START + '\nold chart\n' + sync.END + '\nProject covers and articles\n'
         (self.root / 'README.md').write_text(self.original)
+
+    def test_calendar_month_window_handles_month_ends_leap_year_and_year_rollover(self):
+        cases = (
+            ('2026-10-15', 3, '2026-07-15'),
+            ('2026-05-31', 3, '2026-02-28'),
+            ('2028-05-31', 3, '2028-02-29'),
+            ('2027-01-31', 3, '2026-10-31'),
+            ('2026-12-31', 3, '2026-09-30'),
+            ('2026-11-30', 2, '2026-09-30'),
+            ('2028-02-29', 12, '2027-02-28'),
+        )
+        for end, months, expected in cases:
+            with self.subTest(end=end, months=months):
+                self.assertEqual(sync.rolling_start(date.fromisoformat(end), months),
+                                 date.fromisoformat(expected))
+        for months in (0, 13, -1, 3.0, True, '3', None):
+            with self.subTest(months=months), self.assertRaises(ValueError):
+                sync.rolling_start(date(2026, 10, 15), months)
+
+    def test_main_uses_through_date_and_configured_months_for_saved_data(self):
+        real_update = sync.update
+        for through, months, first in (
+            ('2026-10-15', 3, '2026-07-15'),
+            ('2027-01-31', 3, '2026-10-31'),
+            ('2026-11-30', 2, '2026-09-30'),
+        ):
+            with self.subTest(through=through, months=months):
+                start, end = date.fromisoformat(first), date.fromisoformat(through)
+                config = dict(self.config, rolling_months=months, timezone='Asia/Shanghai')
+                (self.root / 'contributions.json').write_text(json.dumps(config))
+                days = [{'date': (start + timedelta(days=i)).isoformat(), 'count': 1, 'level': 1}
+                        for i in range((end - start).days + 1)]
+                fixture = self.root / 'calendar.json'
+                fixture.write_text(json.dumps({'days': [
+                    {'date': (start - timedelta(days=1)).isoformat(), 'count': 1000, 'level': 4},
+                    *days,
+                    {'date': (end + timedelta(days=1)).isoformat(), 'count': 1000, 'level': 4},
+                ]}))
+                def update_in_temporary_repo(config, days, first, last):
+                    return real_update(config, days, first, last, root=self.root)
+                with patch.object(sync, 'ROOT', self.root), \
+                        patch.object(sync, 'update', side_effect=update_in_temporary_repo), \
+                        patch.object(sync, 'github_token') as token, \
+                        patch('sys.argv', ['sync_contributions.py', '--through', through,
+                                           '--data-json', str(fixture)]), patch('builtins.print'):
+                    sync.main()
+                token.assert_not_called()
+                output = json.loads((self.root / 'assets/contributions-data.json').read_text())
+                self.assertEqual((output['start_date'], output['end_date']), (first, through))
+                self.assertEqual(output['days'], days)
+                self.assertEqual(output['total'], len(days))
+                self.assertIn(f'{first} 至 {through}', (self.root / 'README.md').read_text())
 
     def test_fetch_splits_at_year_boundary_without_duplicate_days(self):
         requests = []

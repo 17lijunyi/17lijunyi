@@ -46,7 +46,11 @@ def _days(days, start, end):
 
 
 def _periods(start, end):
-    """Clip calendar half-years to the requested inclusive date range."""
+    """Keep a three-month window continuous, even across years or half-years."""
+    if (end - start).days <= 93:
+        yield start, end
+        return
+    # Longer explicitly requested ranges still use bounded rows.
     cursor = start
     while True:
         last = date(cursor.year, 6, 30) if cursor.month <= 6 else date(cursor.year, 12, 31)
@@ -127,7 +131,10 @@ def render_svg(days, start, end):
     for first, last, sunday, step, cell, left, top in periods:
         grid_y = top + 58
         half = 1 if first.month <= 6 else 2
-        label = f'{first.year}年 · {"上半年" if half == 1 else "下半年"}'
+        if len(periods) == 1:
+            label = f'{first.year}年' if first.year == last.year else f'{first.year} — {last.year}年'
+        else:
+            label = f'{first.year}年 · {"上半年" if half == 1 else "下半年"}'
         parts += [f'<g class="period" data-period="{first.year}-H{half}" data-step="{step}" data-cell="{cell}">',
                   f'<text class="mono body" x="54" y="{top}">{esc(label)}</text>',
                   f'<text class="mono body" x="{WIDTH - 54}" y="{top}" text-anchor="end">{first.month}月{first.day}日 — {last.month}月{last.day}日</text>']

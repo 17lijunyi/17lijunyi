@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Sync GitHub's real contribution calendar into the profile's SVG card."""
 import argparse
+from calendar import monthrange
 from datetime import date, datetime, timedelta
 import hashlib
 import html
@@ -36,6 +37,15 @@ QUERY = '''query($login: String!, $from: DateTime!, $to: DateTime!) {
     }
   }
 }'''
+
+
+def rolling_start(end, months):
+    """Subtract calendar months, clamping a missing day to the target month end."""
+    if type(months) is not int or not 1 <= months <= 12:
+        raise ValueError('rolling_months must be an integer between 1 and 12')
+    year, month = divmod(end.year * 12 + end.month - 1 - months, 12)
+    month += 1
+    return date(year, month, min(end.day, monthrange(year, month)[1]))
 
 
 def year_ranges(start, end):
@@ -157,10 +167,8 @@ def main():
     parser.add_argument('--through', help='Inclusive end date; defaults to today in the configured timezone')
     args = parser.parse_args()
     config = json.loads((ROOT / 'contributions.json').read_text())
-    first = date.fromisoformat(config['start_date'])
     last = date.fromisoformat(args.through) if args.through else datetime.now(ZoneInfo(config['timezone'])).date()
-    if first > last:
-        raise ValueError('Contribution start date is after the end date')
+    first = rolling_start(last, config['rolling_months'])
     if args.data_json:
         payload = json.loads(args.data_json.read_text())
         days = parse_calendar(payload, first, last) if 'data' in payload or 'errors' in payload else validate_days(payload['days'], first, last)
