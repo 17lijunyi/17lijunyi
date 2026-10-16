@@ -133,6 +133,12 @@
   "group_by_category": true,
   "compact_cards": true,
   "collapsible_categories": true,
+  "category_layout": "featured",
+  "category_preview_counts": {
+    "product": 4,
+    "document": 1,
+    "skill": 1
+  },
   "category_covers": {
     "product": "assets/project-covers/category-products-window.png",
     "document": "assets/project-covers/category-documents-window.png",

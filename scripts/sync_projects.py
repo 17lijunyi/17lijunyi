@@ -17,6 +17,7 @@ START = '<!-- PROJECTS:START -->'
 END = '<!-- PROJECTS:END -->'
 CATEGORIES = (('product', '产品'), ('skill', 'Skills'), ('document', '文档'), ('repository', '其他仓库'))
 COLLAPSIBLE_CATEGORIES = (('product', '⭐ 精选项目'), ('document', '📚 知识文档'), ('skill', '🧰 Skills'))
+FEATURED_PREVIEW_COUNTS = {'product': 4, 'document': 1, 'skill': 1}
 COLORS = {'Swift': '#f05138', 'Python': '#3572A5', 'HTML': '#e34c26',
           'JavaScript': '#f1e05a', 'TypeScript': '#3178c6', 'CSS': '#663399',
           'Go': '#00ADD8', 'Rust': '#dea584', 'Shell': '#89e051'}
@@ -196,9 +197,18 @@ def validate_config(config):
         if flag in config and not isinstance(config[flag], bool):
             raise ValueError(f'{flag} must be a boolean')
     if config.get('collapsible_categories', False):
-        covers = config.get('category_covers')
-        if not isinstance(covers, dict) or set(covers) != dict(COLLAPSIBLE_CATEGORIES).keys():
-            raise ValueError('category_covers must provide product, document and skill covers')
+        layout = config.get('category_layout', 'covers')
+        if layout not in ('covers', 'featured'):
+            raise ValueError('category_layout must be covers or featured')
+        if layout == 'featured':
+            counts = config.get('category_preview_counts', FEATURED_PREVIEW_COUNTS)
+            if (not isinstance(counts, dict) or set(counts) != FEATURED_PREVIEW_COUNTS.keys()
+                    or any(type(value) is not int or not 1 <= value <= 12 for value in counts.values())):
+                raise ValueError('category_preview_counts must provide product, document and skill integers between 1 and 12')
+        else:
+            covers = config.get('category_covers')
+            if not isinstance(covers, dict) or set(covers) != dict(COLLAPSIBLE_CATEGORIES).keys():
+                raise ValueError('category_covers must provide product, document and skill covers')
     if not config.get('show_all', False) and not config.get('collapsible_categories', False):
         limit = config.get('limit')
         if type(limit) is not int or not 1 <= limit <= 12:
@@ -286,6 +296,35 @@ def collapsed_category(project):
     return 'document' if category == 'repository' else category
 
 
+def secondary_columns(sections):
+    """GitHub's native table keeps the two smaller categories side by side."""
+    return ('<table width="100%">\n<tr>\n<td width="50%" valign="top">\n\n'
+            + sections['document'] + '\n\n</td>\n<td width="50%" valign="top">\n\n'
+            + sections['skill'] + '\n\n</td>\n</tr>\n</table>')
+
+
+def featured_cards(projects, cards, counts):
+    """Keep representative work visible and fold only each category's remainder."""
+    groups = {category: [] for category, _ in COLLAPSIBLE_CATEGORIES}
+    for project in projects:
+        groups[collapsed_category(project)].append(project)
+    sections = {}
+    more = {'product': '更多精选项目', 'document': '更多知识文档', 'skill': '更多 Skills'}
+    for category, title in COLLAPSIBLE_CATEGORIES:
+        group = groups[category]
+        preview, remaining = group[:counts[category]], group[counts[category]:]
+        columns = 2 if category == 'product' else 1
+        # Plain bold headings avoid GitHub's large h2 margins inside table cells.
+        heading = '## ' + title if category == 'product' else '<p><strong>' + title + '</strong></p>'
+        parts = [heading]
+        parts += card_grid(preview, cards, columns=columns) if preview else ['<p>暂无项目。</p>']
+        if remaining:
+            parts.append('<details>\n<summary><strong>' + more[category] + '</strong></summary>\n\n'
+                         + '\n\n'.join(card_grid(remaining, cards, columns=columns)) + '\n\n</details>')
+        sections[category] = '\n\n'.join(parts)
+    return [sections['product'], secondary_columns(sections)]
+
+
 def collapsible_cards(projects, cards, category_images):
     """A centered lead cover above two independent native GitHub disclosures."""
     groups = {category: [] for category, _ in COLLAPSIBLE_CATEGORIES}
@@ -306,11 +345,7 @@ def collapsible_cards(projects, cards, category_images):
         content = '\n\n'.join(card_grid(group, cards, columns=columns)) if group else '<p>暂无项目。</p>'
         heading = '## ' + title if category == 'product' else '<h2>' + title + '</h2>'
         sections[category] = heading + '\n\n<details>\n' + summary + '\n\n' + content + '\n\n</details>'
-    # GitHub strips custom layout CSS; an HTML table preserves the lower pair.
-    secondary = ('<table width="100%">\n<tr>\n<td width="50%" valign="top">\n\n'
-                 + sections['document'] + '\n\n</td>\n<td width="50%" valign="top">\n\n'
-                 + sections['skill'] + '\n\n</td>\n</tr>\n</table>')
-    return [sections['product'], secondary]
+    return [sections['product'], secondary_columns(sections)]
 
 
 def generate(config, projects, root=ROOT):
@@ -318,6 +353,7 @@ def generate(config, projects, root=ROOT):
     if not projects:
         raise ValueError('No projects returned; keeping existing cards')
     collapsible = config.get('collapsible_categories', False)
+    featured = collapsible and config.get('category_layout', 'covers') == 'featured'
     chosen = projects if config.get('show_all', False) or collapsible else projects[:config['limit']]
     grouped = config.get('group_by_category', False)
     compact = config.get('compact_cards', False)
@@ -328,19 +364,23 @@ def generate(config, projects, root=ROOT):
     base = f'https://raw.githubusercontent.com/{config["owner"]}/{config["profile_repo"]}/main/'
     # Check all category covers before rendering or writing any generated asset.
     category_images = {category: base + cover_image(config['category_covers'][category], root)
-                       for category, _ in COLLAPSIBLE_CATEGORIES} if collapsible else {}
+                       for category, _ in COLLAPSIBLE_CATEGORIES} if collapsible and not featured else {}
     rendered = projects if grouped or compact or collapsible else chosen
     cards = {project['id']: card_markup(project, base, root, files,
              width='100%' if collapsible and collapsed_category(project) != 'product' else '49%')
              for project in rendered}
-    rows = (collapsible_cards(chosen, cards, category_images) if collapsible else
+    preview_counts = config.get('category_preview_counts', FEATURED_PREVIEW_COUNTS)
+    rows = (featured_cards(chosen, cards, preview_counts) if featured else
+            collapsible_cards(chosen, cards, category_images) if collapsible else
             grouped_cards(chosen, cards) if grouped and not compact else card_grid(chosen, cards))
     if not compact and not collapsible:
         rows += ['[查看全部项目 →](./PROJECTS.md) · [下载 OvO →](https://github.com/17lijunyi/OvO/releases/latest)']
         if any(p['id'] == 'repo:OvO' for p in chosen):
             rows += ['<sub>OvO 应用免费；第三方 API 按服务商规则计费。</sub>']
     files['README.md'] = replace_section((root / 'README.md').read_text(), '\n\n'.join(rows))
-    introduction = ('按精选项目、知识文档、Skills 分类，点击分类封面展开；同类重点项目优先，其余按最近更新时间排列。'
+    introduction = ('按精选项目、知识文档、Skills 分类；代表作品直接展示，其余点击“更多”展开。'
+                    if featured else
+                    '按精选项目、知识文档、Skills 分类，点击分类封面展开；同类重点项目优先，其余按最近更新时间排列。'
                     if collapsible else
                     '按产品、Skills、文档与其他排列；同类重点项目优先，其余按最近更新时间排列。'
                     if grouped and compact else
@@ -349,7 +389,8 @@ def generate(config, projects, root=ROOT):
     catalogue = ['# 全部项目', '', introduction, '',
                  f'[返回主页](https://github.com/{config["owner"]}) · [个人网站](https://{config["owner"]}.github.io/) · [所有公开仓库](https://github.com/{config["owner"]}?tab=repositories)', '']
     if grouped or compact or collapsible:
-        catalogue_rows = (collapsible_cards(projects, cards, category_images) if collapsible else
+        catalogue_rows = (featured_cards(projects, cards, preview_counts) if featured else
+                          collapsible_cards(projects, cards, category_images) if collapsible else
                           grouped_cards(projects, cards) if grouped and not compact else card_grid(projects, cards))
         catalogue += ['\n\n'.join(catalogue_rows)]
     else:

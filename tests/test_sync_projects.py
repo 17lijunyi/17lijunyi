@@ -34,9 +34,14 @@ class DisclosureParser(HTMLParser):
         self.closures = 0
         self.cells = []
         self.current_cell = None
+        self.previews = []
+        self.anchors = []
+        self.card_links = []
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == 'a':
+            self.anchors.append(attrs.get('href'))
         if tag == 'td':
             self.cells.append(attrs)
             self.current_cell = len(self.cells) - 1
@@ -64,8 +69,15 @@ class DisclosureParser(HTMLParser):
                         group['rows'][-1] += 1
             elif tag == 'p' and not self.in_summary:
                 group['rows'].append(0)
+        if tag == 'img' and not self.in_summary:
+            if self.anchors:
+                self.card_links.append(self.anchors[-1])
+            if not self.stack:
+                self.previews.append((attrs, self.current_cell))
 
     def handle_endtag(self, tag):
+        if tag == 'a' and self.anchors:
+            self.anchors.pop()
         if tag == 'summary':
             self.in_summary = False
         elif tag == 'picture':
@@ -628,6 +640,74 @@ class ProjectCardsTest(unittest.TestCase):
                     sync.generate(config, projects, self.root)
                 self.assertEqual((self.root / 'README.md').read_text(), self.readme)
                 self.assertFalse((self.root / 'PROJECTS.md').exists())
+
+    def test_featured_layout_keeps_four_one_one_previews_and_folds_every_remainder_once(self):
+        self.config.update(collapsible_categories=True, category_layout='featured', limit=1,
+                           category_preview_counts={'product': 4, 'document': 1, 'skill': 1})
+        repositories = []
+        for category, amount in [('product', 6), ('document', 3), ('skill', 3)]:
+            for index in range(amount):
+                name = f'{category}-{index}'
+                repositories.append(repo(name))
+                self.config['overrides']['repo:' + name] = {'category': category}
+        self.config['featured'] = ['repo:' + item['name'] for item in repositories]
+        projects = sync.collect_projects(self.config, repositories, self.root)
+        sync.generate(self.config, projects, self.root)
+        for name in ('README.md', 'PROJECTS.md'):
+            markup = (self.root / name).read_text()
+            parser = DisclosureParser(); parser.feed(markup)
+            self.assertEqual(parser.errors, [])
+            self.assertEqual(parser.stack, [])
+            self.assertEqual([cell for _, cell in parser.previews], [None] * 4 + [0, 1])
+            self.assertEqual([image['width'] for image, _ in parser.previews], ['49%'] * 4 + ['100%'] * 2)
+            self.assertEqual([image['alt'].split('：')[0] for image, _ in parser.previews],
+                             ['product-0', 'product-1', 'product-2', 'product-3', 'document-0', 'skill-0'])
+            self.assertEqual([len(group['cards']) for group in parser.groups], [2, 2, 2])
+            self.assertEqual([''.join(group['summary']) for group in parser.groups],
+                             ['更多精选项目', '更多知识文档', '更多 Skills'])
+            self.assertTrue(all(not group['covers'] and not group['summary_links'] for group in parser.groups))
+            self.assertTrue(all('open' not in group['attrs'] and 'name' not in group['attrs'] for group in parser.groups))
+            self.assertEqual(parser.card_links, [project['url'] for project in projects])
+            self.assertEqual(len(parser.card_links), len(set(parser.card_links)))
+            self.assertNotIn('category-', markup)
+            self.assertNotIn('个项目', markup)
+            self.assertNotIn('style=', markup)
+            self.assertNotIn('<script', markup)
+
+    def test_featured_layout_handles_short_categories_and_unclassified_projects_without_empty_folds(self):
+        self.config.update(collapsible_categories=True, category_layout='featured')
+        projects = sync.collect_projects(self.config, [repo('new-project')], self.root)
+        self.assertEqual(projects[0]['category'], 'document')
+        sync.generate(self.config, projects, self.root)
+        for name in ('README.md', 'PROJECTS.md'):
+            markup = (self.root / name).read_text()
+            parser = DisclosureParser(); parser.feed(markup)
+            self.assertEqual(parser.card_links, ['https://github.com/owner/new-project'])
+            self.assertEqual(len(parser.previews), 1)
+            self.assertEqual(parser.previews[0][1], 0)
+            self.assertEqual(parser.groups, [])
+            self.assertNotIn('<summary>', markup)
+            self.assertIn('⭐ 精选项目', markup)
+            self.assertIn('📚 知识文档', markup)
+            self.assertIn('🧰 Skills', markup)
+
+    def test_invalid_featured_layout_configuration_preserves_previous_output(self):
+        projects = sync.collect_projects(self.config, [repo('priority')], self.root)
+        invalid = [None, [], {}, {'product': 4}, {'product': 4, 'document': 1, 'skill': True},
+                   {'product': 0, 'document': 1, 'skill': 1}, {'product': 4, 'document': 1, 'skill': -1},
+                   {'product': 4, 'document': 13, 'skill': 1},
+                   {'product': 4, 'document': 1, 'skill': 1, 'repository': 1}]
+        for counts in invalid:
+            with self.subTest(counts=counts):
+                config = dict(self.config, collapsible_categories=True, category_layout='featured',
+                              category_preview_counts=counts)
+                with self.assertRaisesRegex(ValueError, 'category_preview_counts must provide'):
+                    sync.generate(config, projects, self.root)
+                self.assertEqual((self.root / 'README.md').read_text(), self.readme)
+                self.assertFalse((self.root / 'PROJECTS.md').exists())
+        config = dict(self.config, collapsible_categories=True, category_layout='unknown')
+        with self.assertRaisesRegex(ValueError, 'category_layout must be'):
+            sync.generate(config, projects, self.root)
 
     def test_missing_markers_or_empty_result_preserves_previous_output(self):
         with self.assertRaises(ValueError): sync.generate(self.config, [], self.root)
