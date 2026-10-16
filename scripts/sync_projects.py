@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 START = '<!-- PROJECTS:START -->'
 END = '<!-- PROJECTS:END -->'
 CATEGORIES = (('product', '产品'), ('skill', 'Skills'), ('document', '文档'), ('repository', '其他仓库'))
-COLLAPSIBLE_CATEGORIES = (('product', '产品'), ('document', '文档'), ('skill', 'Skills'))
+COLLAPSIBLE_CATEGORIES = (('product', '⭐ 精选项目'), ('document', '📚 知识文档'), ('skill', '🧰 Skills'))
 COLORS = {'Swift': '#f05138', 'Python': '#3572A5', 'HTML': '#e34c26',
           'JavaScript': '#f1e05a', 'TypeScript': '#3178c6', 'CSS': '#663399',
           'Go': '#00ADD8', 'Rust': '#dea584', 'Shell': '#89e051'}
@@ -294,14 +294,12 @@ def collapsible_cards(projects, cards, category_images):
     sections = []
     for category, title in COLLAPSIBLE_CATEGORIES:
         group = groups[category]
-        label = f'{title} · {len(group)} 个项目'
         # GitHub wraps a bare summary image in a link that opens the image.
         # A picture keeps the cover itself part of the native disclosure control.
-        summary = (f'<summary><div align="center"><picture><img width="540" src="{category_images[category]}" '
-                   f'alt="{html.escape(title, quote=True)} · 点击展开或收起"></picture><br>'
-                   f'<strong>{html.escape(label)}</strong> · 点击展开 / 收起</div></summary>')
+        summary = (f'<summary><picture><img width="100%" src="{category_images[category]}" '
+                   f'alt="{html.escape(title, quote=True)} · 点击展开或收起"></picture></summary>')
         content = '\n\n'.join(card_grid(group, cards)) if group else '<p>暂无项目。</p>'
-        sections.append('<details>\n' + summary + '\n\n' + content + '\n\n</details>')
+        sections.append('## ' + title + '\n\n<details>\n' + summary + '\n\n' + content + '\n\n</details>')
     return sections
 
 
@@ -330,7 +328,7 @@ def generate(config, projects, root=ROOT):
         if any(p['id'] == 'repo:OvO' for p in chosen):
             rows += ['<sub>OvO 应用免费；第三方 API 按服务商规则计费。</sub>']
     files['README.md'] = replace_section((root / 'README.md').read_text(), '\n\n'.join(rows))
-    introduction = ('按产品、文档、Skills 分类，点击分类封面展开；同类重点项目优先，其余按最近更新时间排列。'
+    introduction = ('按精选项目、知识文档、Skills 分类，点击分类封面展开；同类重点项目优先，其余按最近更新时间排列。'
                     if collapsible else
                     '按产品、Skills、文档与其他排列；同类重点项目优先，其余按最近更新时间排列。'
                     if grouped and compact else

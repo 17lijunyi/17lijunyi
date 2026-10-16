@@ -134,8 +134,8 @@
   "compact_cards": true,
   "collapsible_categories": true,
   "category_covers": {
-    "product": "assets/project-covers/category-products-window.webp",
-    "document": "assets/project-covers/category-documents-window.webp",
-    "skill": "assets/project-covers/category-skills-window.webp"
+    "product": "assets/project-covers/category-products-window.png",
+    "document": "assets/project-covers/category-documents-window.png",
+    "skill": "assets/project-covers/category-skills-window.png"
   }
 }

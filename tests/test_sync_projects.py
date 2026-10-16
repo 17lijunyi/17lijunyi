@@ -519,16 +519,20 @@ class ProjectCardsTest(unittest.TestCase):
             self.assertEqual(parser.stack, [])
             self.assertEqual(parser.closures, 3)
             self.assertEqual(len(parser.groups), 3)
+            headings = ['## ⭐ 精选项目', '## 📚 知识文档', '## 🧰 Skills']
+            self.assertEqual(re.findall(r'^## .+$', markup, re.M), headings)
+            for heading, section in zip(headings, markup.split('<details>')[:-1]):
+                self.assertTrue(section.rstrip().endswith(heading))
             for group, (category, title), size in zip(parser.groups, sync.COLLAPSIBLE_CATEGORIES, [3, 3, 2]):
                 self.assertNotIn('open', group['attrs'])
                 self.assertNotIn('name', group['attrs'])
-                self.assertIn(f'{title} · {size} 个项目', ''.join(group['summary']))
-                self.assertIn('点击展开 / 收起', ''.join(group['summary']))
+                self.assertEqual(''.join(group['summary']).strip(), '')
                 self.assertEqual(group['summary_links'], [])
                 self.assertEqual(len(group['covers']), 1)
                 cover, picture_depth = group['covers'][0]
                 self.assertEqual(picture_depth, 1, 'summary cover must avoid GitHub image-link wrapping')
-                self.assertEqual(cover['width'], '540')
+                self.assertEqual(cover['width'], '100%')
+                self.assertEqual(cover['alt'], title + ' · 点击展开或收起')
                 self.assertIn(f'category-{category}-window.webp?v=', cover['src'])
                 self.assertEqual(len(group['cards']), size)
                 self.assertTrue(all(image['width'] == '49%' for image in group['cards']))
@@ -538,6 +542,9 @@ class ProjectCardsTest(unittest.TestCase):
             self.assertEqual(len(links), len(set(links)))
             self.assertNotIn(' · Product', markup)
             self.assertNotIn(' · Repository', markup)
+            self.assertNotIn('个项目', markup)
+            self.assertNotIn('点击展开 / 收起', markup)
+            self.assertNotIn('<div align="center">', markup)
             self.assertNotIn('### ', markup)
             self.assertNotIn('style=', markup)
             self.assertNotIn('<script', markup)

@@ -14,11 +14,11 @@
 
 ---
 
-## 产品 · 文档 · Skills
-
 <!-- PROJECTS:START -->
+## ⭐ 精选项目
+
 <details>
-<summary><div align="center"><picture><img width="540" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/category-products-window.webp?v=be8987f0978e" alt="产品 · 点击展开或收起"></picture><br><strong>产品 · 7 个项目</strong> · 点击展开 / 收起</div></summary>
+<summary><picture><img width="100%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/category-products-window.png?v=31408a935156" alt="⭐ 精选项目 · 点击展开或收起"></picture></summary>
 
 <p>
   <a href="https://github.com/17lijunyi/Foundry"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/foundry-window.png?v=9fbdd1cdf409" alt="Foundry：Foundry：面向产品经理的 AI 桌面工作台，原生玻璃界面、本地文件协作与模型对比。"></picture></a>
@@ -41,8 +41,10 @@
 
 </details>
 
+## 📚 知识文档
+
 <details>
-<summary><div align="center"><picture><img width="540" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/category-documents-window.webp?v=25501f6d56f8" alt="文档 · 点击展开或收起"></picture><br><strong>文档 · 4 个项目</strong> · 点击展开 / 收起</div></summary>
+<summary><picture><img width="100%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/category-documents-window.png?v=a6e84c451f9d" alt="📚 知识文档 · 点击展开或收起"></picture></summary>
 
 <p>
   <a href="https://github.com/17lijunyi/product-blueprint"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/product-blueprint-window.png?v=ccaa25ee1971" alt="产品蓝图：从想法、PRD 或已有代码生成 Agent 产品方案，提供需求拆解、架构选型、差距分析和项目骨架。"></picture></a>
@@ -56,8 +58,10 @@
 
 </details>
 
+## 🧰 Skills
+
 <details>
-<summary><div align="center"><picture><img width="540" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/category-skills-window.webp?v=0fa738dd055c" alt="Skills · 点击展开或收起"></picture><br><strong>Skills · 4 个项目</strong> · 点击展开 / 收起</div></summary>
+<summary><picture><img width="100%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/category-skills-window.png?v=6ba306509f39" alt="🧰 Skills · 点击展开或收起"></picture></summary>
 
 <p>
   <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/ai-product-resume-edit"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/ai-product-resume-edit-window.png?v=e096e77509fd" alt="AI 产品简历修改：面向 AI 产品经理、FDE 与转型求职者，在已有简历上修改表达、数据与排版"></picture></a>
