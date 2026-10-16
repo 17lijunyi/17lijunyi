@@ -5,7 +5,7 @@
 [返回主页](https://github.com/17lijunyi) · [个人网站](https://17lijunyi.github.io/) · [所有公开仓库](https://github.com/17lijunyi?tab=repositories)
 
 <p>
-  <a href="https://github.com/17lijunyi/Foundry"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/foundry-window.png?v=9fbdd1cdf409" alt="Foundry：Foundry：面向产品经理的 AI 桌面工作台，原生玻璃界面、文件协作与模型对比。基于 Product Manager Workbench、AionUi 和 AionCore。"></picture></a>
+  <a href="https://github.com/17lijunyi/Foundry"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/foundry-window.png?v=9fbdd1cdf409" alt="Foundry：Foundry：面向产品经理的 AI 桌面工作台，原生玻璃界面、本地文件协作与模型对比。"></picture></a>
   <a href="https://github.com/17lijunyi/pe-studio"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/pe-studio-window.png?v=61027e48952a" alt="PE Studio · macOS 提示词专家：macOS 提示词工作台，支持三模型并行优化、A/B/C 随机盲测、Jev 评审与本地 Agent 接入。"></picture></a>
 </p>
 
@@ -30,7 +30,7 @@
 </p>
 
 <p>
-  <a href="https://github.com/17lijunyi/chaichai"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/chaichai/main/docs/assets/cover.png?v=1c2b246bfcc4" alt="拆拆 ChaiChai：交给 AI 助手的本地软件拆解技能，支持应用结构、代码与运行行为分析，并通过 CLI 和 MCP 返回可追溯的证据。"></picture></a>
+  <a href="https://github.com/17lijunyi/chaichai"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/chaichai/main/docs/assets/cover.png?v=ee43a552b763" alt="拆拆 ChaiChai：交给 AI 助手的本地软件拆解技能，支持应用结构、代码与运行行为分析，并通过 CLI 和 MCP 返回可追溯的证据。"></picture></a>
   <a href="https://github.com/17lijunyi/kanshan-kb"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/kanshan-kb-window.png?v=729789d64fd5" alt="Kanshan KB · 内容创作知识库：面向知乎创作者的知识库：10 个模块的实用方法、案例与一手资料，支持文档检索与来源引用。"></picture></a>
 </p>
 
