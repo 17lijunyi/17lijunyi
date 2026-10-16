@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 START = '<!-- PROJECTS:START -->'
 END = '<!-- PROJECTS:END -->'
 CATEGORIES = (('product', '产品'), ('skill', 'Skills'), ('document', '文档'), ('repository', '其他仓库'))
+COLLAPSIBLE_CATEGORIES = (('product', '产品'), ('document', '文档'), ('skill', 'Skills'))
 COLORS = {'Swift': '#f05138', 'Python': '#3572A5', 'HTML': '#e34c26',
           'JavaScript': '#f1e05a', 'TypeScript': '#3178c6', 'CSS': '#663399',
           'Go': '#00ADD8', 'Rust': '#dea584', 'Shell': '#89e051'}
@@ -93,11 +94,14 @@ def collect_projects(config, repositories, root=ROOT):
             if overrides['category'] not in dict(CATEGORIES):
                 raise ValueError(f'Invalid repository category for {item["id"]}: {overrides["category"]}')
             item['category'] = overrides['category']
+        if config.get('collapsible_categories', False) and item['category'] == 'repository':
+            item['category'] = 'document'
     featured = {key: rank for rank, key in enumerate(config['featured'])}
     projects.sort(key=lambda p: (p['updated'], p['id']), reverse=True)
     projects.sort(key=lambda p: featured.get(p['id'], len(featured)))
-    if config.get('group_by_category', False):
-        categories = {key: rank for rank, (key, _) in enumerate(CATEGORIES)}
+    if config.get('group_by_category', False) or config.get('collapsible_categories', False):
+        order = COLLAPSIBLE_CATEGORIES if config.get('collapsible_categories', False) else CATEGORIES
+        categories = {key: rank for rank, (key, _) in enumerate(order)}
         projects.sort(key=lambda p: categories[p['category']])
     return projects
 
@@ -188,10 +192,14 @@ def cover_image(cover, root):
 
 
 def validate_config(config):
-    for flag in ('show_all', 'group_by_category', 'compact_cards'):
+    for flag in ('show_all', 'group_by_category', 'compact_cards', 'collapsible_categories'):
         if flag in config and not isinstance(config[flag], bool):
             raise ValueError(f'{flag} must be a boolean')
-    if not config.get('show_all', False):
+    if config.get('collapsible_categories', False):
+        covers = config.get('category_covers')
+        if not isinstance(covers, dict) or set(covers) != dict(COLLAPSIBLE_CATEGORIES).keys():
+            raise ValueError('category_covers must provide product, document and skill covers')
+    if not config.get('show_all', False) and not config.get('collapsible_categories', False):
         limit = config.get('limit')
         if type(limit) is not int or not 1 <= limit <= 12:
             raise ValueError('Card limit must be between 1 and 12')
@@ -273,34 +281,66 @@ def grouped_cards(projects, cards):
     return rows
 
 
+def collapsed_category(project):
+    category = project_category(project)
+    return 'document' if category == 'repository' else category
+
+
+def collapsible_cards(projects, cards, category_images):
+    """Native GitHub disclosures; each category opens independently."""
+    groups = {category: [] for category, _ in COLLAPSIBLE_CATEGORIES}
+    for project in projects:
+        groups[collapsed_category(project)].append(project)
+    sections = []
+    for category, title in COLLAPSIBLE_CATEGORIES:
+        group = groups[category]
+        label = f'{title} · {len(group)} 个项目'
+        # GitHub wraps a bare summary image in a link that opens the image.
+        # A picture keeps the cover itself part of the native disclosure control.
+        summary = (f'<summary><div align="center"><picture><img width="540" src="{category_images[category]}" '
+                   f'alt="{html.escape(title, quote=True)} · 点击展开或收起"></picture><br>'
+                   f'<strong>{html.escape(label)}</strong> · 点击展开 / 收起</div></summary>')
+        content = '\n\n'.join(card_grid(group, cards)) if group else '<p>暂无项目。</p>'
+        sections.append('<details>\n' + summary + '\n\n' + content + '\n\n</details>')
+    return sections
+
+
 def generate(config, projects, root=ROOT):
     validate_config(config)
     if not projects:
         raise ValueError('No projects returned; keeping existing cards')
-    chosen = projects if config.get('show_all', False) else projects[:config['limit']]
+    collapsible = config.get('collapsible_categories', False)
+    chosen = projects if config.get('show_all', False) or collapsible else projects[:config['limit']]
     grouped = config.get('group_by_category', False)
     compact = config.get('compact_cards', False)
-    if grouped or compact:
+    if grouped or compact or collapsible:
         for project in projects:
             project_category(project)
     files = {}
     base = f'https://raw.githubusercontent.com/{config["owner"]}/{config["profile_repo"]}/main/'
-    rendered = projects if grouped or compact else chosen
+    # Check all category covers before rendering or writing any generated asset.
+    category_images = {category: base + cover_image(config['category_covers'][category], root)
+                       for category, _ in COLLAPSIBLE_CATEGORIES} if collapsible else {}
+    rendered = projects if grouped or compact or collapsible else chosen
     cards = {project['id']: card_markup(project, base, root, files) for project in rendered}
-    rows = grouped_cards(chosen, cards) if grouped and not compact else card_grid(chosen, cards)
-    if not compact:
+    rows = (collapsible_cards(chosen, cards, category_images) if collapsible else
+            grouped_cards(chosen, cards) if grouped and not compact else card_grid(chosen, cards))
+    if not compact and not collapsible:
         rows += ['[查看全部项目 →](./PROJECTS.md) · [下载 OvO →](https://github.com/17lijunyi/OvO/releases/latest)']
         if any(p['id'] == 'repo:OvO' for p in chosen):
             rows += ['<sub>OvO 应用免费；第三方 API 按服务商规则计费。</sub>']
     files['README.md'] = replace_section((root / 'README.md').read_text(), '\n\n'.join(rows))
-    introduction = ('按产品、Skills、文档与其他排列；同类重点项目优先，其余按最近更新时间排列。'
+    introduction = ('按产品、文档、Skills 分类，点击分类封面展开；同类重点项目优先，其余按最近更新时间排列。'
+                    if collapsible else
+                    '按产品、Skills、文档与其他排列；同类重点项目优先，其余按最近更新时间排列。'
                     if grouped and compact else
                     '产品、Skills、文档与其他仓库分类展示；同类重点项目优先，其余按最近更新时间排列。'
                     if grouped else '重点项目优先，其余按最近更新时间排列。')
     catalogue = ['# 全部项目', '', introduction, '',
                  f'[返回主页](https://github.com/{config["owner"]}) · [个人网站](https://{config["owner"]}.github.io/) · [所有公开仓库](https://github.com/{config["owner"]}?tab=repositories)', '']
-    if grouped or compact:
-        catalogue_rows = grouped_cards(projects, cards) if grouped and not compact else card_grid(projects, cards)
+    if grouped or compact or collapsible:
+        catalogue_rows = (collapsible_cards(projects, cards, category_images) if collapsible else
+                          grouped_cards(projects, cards) if grouped and not compact else card_grid(projects, cards))
         catalogue += ['\n\n'.join(catalogue_rows)]
     else:
         for p in projects:

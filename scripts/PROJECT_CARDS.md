@@ -4,9 +4,12 @@
 
 ## 展示规则
 
-- 当前配置 `show_all: true`，主页和 `PROJECTS.md` 都展示全部符合条件的项目，新增项目会继续向下排。关闭时首页使用 `limit`，项目目录仍展示全部。
-- `group_by_category: true` 按产品 → Skills → 文档 → 其他排序；同类中 `featured` 固定优先，其余按 GitHub `updated_at`（技能按目录最后提交时间）倒序排列。仓库的 `overrides.category` 可为 `product`、`skill`、`document`、`repository`；独立技能仓库需显式设置为 `skill`，本仓库技能目录自动归为 Skills。
-- `compact_cards: true` 使用连续双列图片墙，分类切换不另起一行，不显示外部分组标题或图下说明。整张封面可点击，分类由窗口顶栏显示。
+- 当前配置 `collapsible_categories: true`，主页和 `PROJECTS.md` 均按产品 → 文档 → Skills 显示三个独立折叠栏目，默认全部收起。点击分类封面或提示文字可展开、收起，各栏目互不影响；展开后保留可点击的双列项目封面，不加图下说明。
+- 折叠栏目始终收录全部符合条件的项目，不受 `limit` 限制。原来的 `repository`（其他）统一并入文档；未来未指定分类的新仓库也归入文档，不会丢失。
+- `category_covers` 必须提供 `product`、`document`、`skill` 三张分类封面，路径限制为仓库内 `assets/project-covers/` 的 PNG、JPEG 或 WebP；缺图、路径越界或配置错误时，保留之前全部生成文件。分类封面显示宽度为 540，随容器缩小，文件内容变化会刷新缓存。
+- 栏目使用 GitHub 原生 `details` / `summary`，无脚本和自定义 CSS。分类图放在 `picture` 内，避免 GitHub 自动把图片变成打开原图的链接；不要移除这层标签或给分类图额外加链接。`summary` 内的 `div align="center"` 让封面、数量和提示居中；不加 `open` 或共享 `name` 属性，确保默认收起、独立展开。
+- 同类中 `featured` 固定优先，其余按 GitHub `updated_at`（技能按目录最后提交时间）倒序排列。仓库的 `overrides.category` 可为 `product`、`skill`、`document`、`repository`；独立技能仓库需显式设置为 `skill`，本仓库技能目录自动归为 Skills。
+- 关闭 `collapsible_categories` 可恢复原来的展示模式：`group_by_category: true` 按产品 → Skills → 文档 → 其他排序；`compact_cards: true` 显示不另起分类行的连续双列图片墙。旧模式的 `show_all: true` 展示全部，关闭时首页使用 `limit`，项目目录仍展示全部。
 - 只展示账号自己的公开、非 Fork、未归档仓库；主页仓库和已在顶部展示的个人网站仓库默认排除。
 - 本仓库 `skills/*/SKILL.md` 配合 `agents/openai.yaml` 的 `display_name`、`short_description` 自动形成技能卡片；不会把主页仓库的 Star/Fork 数当作技能数据。
 - 新技能需要提交上述两个元数据字段。技能内容只作为文本读取，不执行。

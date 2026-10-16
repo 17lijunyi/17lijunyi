@@ -3,6 +3,7 @@ import base64
 import hashlib
 import importlib.util
 import json
+from html.parser import HTMLParser
 from pathlib import Path
 import re
 import tempfile
@@ -19,6 +20,60 @@ def repo(name, **kw):
     return dict(name=name, owner={'login': 'owner'}, private=False, fork=False, archived=False,
                 description='A project', language='Python', stargazers_count=7, forks_count=2,
                 updated_at='2026-09-01T00:00:00Z', **kw)
+
+
+class DisclosureParser(HTMLParser):
+    """Inspect actual disclosure boundaries and the links they contain."""
+    def __init__(self):
+        super().__init__()
+        self.groups = []
+        self.stack = []
+        self.in_summary = False
+        self.picture_depth = 0
+        self.errors = []
+        self.closures = 0
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == 'details':
+            if self.stack:
+                self.errors.append('nested disclosures')
+            group = dict(attrs=attrs, summary=[], covers=[], links=[], cards=[], summary_links=[], rows=[])
+            self.groups.append(group)
+            self.stack.append(group)
+        elif self.stack:
+            group = self.stack[-1]
+            if tag == 'summary':
+                self.in_summary = True
+            elif tag == 'picture':
+                self.picture_depth += 1
+            elif tag == 'a':
+                group['summary_links' if self.in_summary else 'links'].append(attrs.get('href'))
+            elif tag == 'img':
+                if self.in_summary:
+                    group['covers'].append((attrs, self.picture_depth))
+                else:
+                    group['cards'].append(attrs)
+                    if group['rows']:
+                        group['rows'][-1] += 1
+            elif tag == 'p' and not self.in_summary:
+                group['rows'].append(0)
+
+    def handle_endtag(self, tag):
+        if tag == 'summary':
+            self.in_summary = False
+        elif tag == 'picture':
+            self.picture_depth -= 1
+        elif tag == 'details':
+            if not self.stack:
+                self.errors.append('unmatched closing details')
+            else:
+                self.stack.pop()
+            self.closures += 1
+
+    def handle_data(self, data):
+        if self.stack and self.in_summary:
+            self.stack[-1]['summary'].append(data)
 
 
 class ProjectCardsTest(unittest.TestCase):
@@ -42,6 +97,13 @@ class ProjectCardsTest(unittest.TestCase):
         folder.mkdir(parents=True)
         (folder.parent / 'SKILL.md').write_text('not executed')
         (folder / 'openai.yaml').write_text(f'interface:\n  display_name: "{name}"\n  short_description: "Skill description"\n')
+
+    def collapsible(self):
+        self.config['collapsible_categories'] = True
+        self.config['category_covers'] = {}
+        for category, _ in sync.COLLAPSIBLE_CATEGORIES:
+            path = self.cover(f'category-{category}-window.webp')
+            self.config['category_covers'][category] = path.relative_to(self.root).as_posix()
 
     def test_selects_priority_then_recent_and_excludes_nonpublic_forks_archives(self):
         items = [repo('priority')]
@@ -420,7 +482,7 @@ class ProjectCardsTest(unittest.TestCase):
             sync.collect_projects(self.config, [repo('priority')], self.root)
         self.config['overrides'] = {}
         projects = sync.collect_projects(self.config, [repo('priority')], self.root)
-        for flag in ('show_all', 'group_by_category', 'compact_cards'):
+        for flag in ('show_all', 'group_by_category', 'compact_cards', 'collapsible_categories'):
             with self.subTest(flag=flag):
                 config = dict(self.config, **{flag: 'true'})
                 with self.assertRaisesRegex(ValueError, 'must be a boolean'):
@@ -430,6 +492,125 @@ class ProjectCardsTest(unittest.TestCase):
             sync.generate(dict(self.config, group_by_category=True), projects, self.root)
         self.assertEqual((self.root / 'README.md').read_text(), self.readme)
         self.assertFalse((self.root / 'PROJECTS.md').exists())
+
+    def test_collapsible_categories_are_three_independent_closed_groups_with_every_link(self):
+        self.collapsible()
+        self.config.update(group_by_category=True, compact_cards=True, limit=1)
+        self.skill('local-skill')
+        self.config['featured'] = ['repo:plain', 'repo:older-document', 'repo:product-0']
+        self.config['overrides'] = {
+            **{f'repo:product-{i}': {'category': 'product'} for i in range(3)},
+            'repo:older-document': {'category': 'document'},
+            'repo:repository-skill': {'category': 'skill'},
+        }
+        repositories = [repo('plain'), repo('older-document'), repo('new-document'),
+                        repo('repository-skill')] + [repo(f'product-{i}') for i in range(3)]
+        repositories[2]['updated_at'] = '2026-10-10T00:00:00Z'
+        with patch.object(sync.subprocess, 'check_output', return_value='2026-09-20T00:00:00+00:00\n'):
+            projects = sync.collect_projects(self.config, repositories, self.root)
+        self.assertEqual([p['category'] for p in projects], ['product'] * 3 + ['document'] * 3 + ['skill'] * 2)
+        self.assertEqual([p['id'] for p in projects[3:6]], ['repo:plain', 'repo:older-document', 'repo:new-document'])
+        sync.generate(self.config, projects, self.root)
+        for filename in ('README.md', 'PROJECTS.md'):
+            markup = (self.root / filename).read_text()
+            parser = DisclosureParser()
+            parser.feed(markup)
+            self.assertEqual(parser.errors, [])
+            self.assertEqual(parser.stack, [])
+            self.assertEqual(parser.closures, 3)
+            self.assertEqual(len(parser.groups), 3)
+            for group, (category, title), size in zip(parser.groups, sync.COLLAPSIBLE_CATEGORIES, [3, 3, 2]):
+                self.assertNotIn('open', group['attrs'])
+                self.assertNotIn('name', group['attrs'])
+                self.assertIn(f'{title} · {size} 个项目', ''.join(group['summary']))
+                self.assertIn('点击展开 / 收起', ''.join(group['summary']))
+                self.assertEqual(group['summary_links'], [])
+                self.assertEqual(len(group['covers']), 1)
+                cover, picture_depth = group['covers'][0]
+                self.assertEqual(picture_depth, 1, 'summary cover must avoid GitHub image-link wrapping')
+                self.assertEqual(cover['width'], '540')
+                self.assertIn(f'category-{category}-window.webp?v=', cover['src'])
+                self.assertEqual(len(group['cards']), size)
+                self.assertTrue(all(image['width'] == '49%' for image in group['cards']))
+                self.assertEqual(group['rows'], [2, 1] if size == 3 else [2])
+            links = [url for group in parser.groups for url in group['links']]
+            self.assertCountEqual(links, [project['url'] for project in projects])
+            self.assertEqual(len(links), len(set(links)))
+            self.assertNotIn(' · Product', markup)
+            self.assertNotIn(' · Repository', markup)
+            self.assertNotIn('### ', markup)
+            self.assertNotIn('style=', markup)
+            self.assertNotIn('<script', markup)
+            self.assertNotIn('[查看全部项目 →]', markup)
+        readme = (self.root / 'README.md').read_text()
+        self.assertTrue(readme.startswith('Personal website\n'))
+        self.assertTrue(readme.endswith('\nArticles remain here\n'))
+
+    def test_collapsible_mode_maps_unclassified_projects_and_keeps_empty_categories(self):
+        self.collapsible()
+        self.config.pop('limit')
+        # Generate also accepts a previously collected legacy record without dropping it.
+        legacy_config = dict(self.config, collapsible_categories=False, limit=6)
+        projects = sync.collect_projects(legacy_config, [repo('new-project')], self.root)
+        self.assertEqual(projects[0]['category'], 'repository')
+        sync.generate(self.config, projects, self.root)
+        self.assertEqual(projects[0]['category'], 'repository', 'rendering must not mutate API records')
+        for filename in ('README.md', 'PROJECTS.md'):
+            parser = DisclosureParser()
+            parser.feed((self.root / filename).read_text())
+            self.assertEqual([len(group['cards']) for group in parser.groups], [0, 1, 0])
+            self.assertEqual(parser.groups[1]['links'], ['https://github.com/owner/new-project'])
+            self.assertEqual(len(list((self.root / 'assets/projects').glob('*.svg'))), 2)
+
+    def test_category_cover_versions_change_with_bytes_and_not_project_metadata(self):
+        self.collapsible()
+        projects = sync.collect_projects(self.config, [repo('priority')], self.root)
+        def cover_urls():
+            parser = DisclosureParser()
+            parser.feed((self.root / 'README.md').read_text())
+            return [group['covers'][0][0]['src'] for group in parser.groups]
+        sync.generate(self.config, projects, self.root)
+        before = cover_urls()
+        projects[0]['description'] = 'Changed project description'
+        sync.generate(self.config, projects, self.root)
+        self.assertEqual(before, cover_urls())
+        cover = self.root / self.config['category_covers']['document']
+        cover.write_bytes(cover.read_bytes() + b'new cover')
+        sync.generate(self.config, projects, self.root)
+        after = cover_urls()
+        self.assertEqual(before[0], after[0])
+        self.assertNotEqual(before[1], after[1])
+        self.assertEqual(before[2], after[2])
+        self.assertTrue(after[1].endswith(hashlib.sha256(cover.read_bytes()).hexdigest()[:12]))
+
+    def test_missing_or_unsafe_category_cover_preserves_all_generated_files(self):
+        self.collapsible()
+        projects = sync.collect_projects(self.config, [repo('priority')], self.root)
+        sync.generate(self.config, projects, self.root)
+        outside = self.root / 'outside.webp'
+        outside.write_bytes(b'outside')
+        (self.root / 'assets/project-covers/escape.webp').symlink_to(outside)
+        before = {p.relative_to(self.root): p.read_bytes() for p in self.root.rglob('*') if p.is_file()}
+        for path in ('assets/project-covers/missing.webp', '../outside.webp',
+                     'assets/project-covers/escape.webp', 'https://example.com/cover.png', None):
+            with self.subTest(path=path):
+                config = copy.deepcopy(self.config)
+                config['category_covers']['skill'] = path
+                with self.assertRaises(ValueError):
+                    sync.generate(config, projects, self.root)
+                after = {p.relative_to(self.root): p.read_bytes() for p in self.root.rglob('*') if p.is_file()}
+                self.assertEqual(before, after)
+
+    def test_invalid_category_cover_configuration_fails_before_output(self):
+        projects = sync.collect_projects(self.config, [repo('priority')], self.root)
+        for covers in (None, [], {}, {'product': 'assets/project-covers/a.png'},
+                       {'product': '', 'document': '', 'skill': '', 'repository': ''}):
+            with self.subTest(covers=covers):
+                config = dict(self.config, collapsible_categories=True, category_covers=covers)
+                with self.assertRaisesRegex(ValueError, 'category_covers must provide'):
+                    sync.generate(config, projects, self.root)
+                self.assertEqual((self.root / 'README.md').read_text(), self.readme)
+                self.assertFalse((self.root / 'PROJECTS.md').exists())
 
     def test_missing_markers_or_empty_result_preserves_previous_output(self):
         with self.assertRaises(ValueError): sync.generate(self.config, [], self.root)

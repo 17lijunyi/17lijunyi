@@ -1,0 +1,139 @@
+{
+  "mode": "built-in image_gen",
+  "created_on": "2026-10-16",
+  "intent": "Category overview covers for the collapsible GitHub profile portfolio",
+  "reference_images": [
+    "用户灰白 IP 形象",
+    "现有技术栈手册封面风格"
+  ],
+  "prompts": [
+    {
+      "category": "products",
+      "title": "产品",
+      "subtitle": "把想法做成产品",
+      "prompt": "Use case: stylized-concept / ads-marketing. Asset type: category overview cover interior for a Chinese GitHub portfolio. Create ONE extra-wide 3:1 horizontal banner, ideally 2172 x 724 pixels. Image 1 is the exact mascot identity reference; Image 2 is only the 3D material/rounded typography/border visual language. Do not reuse its pose or copy its title.\nComposition: warm near-white background; thin charcoal rounded inner rectangle border; generous safe margins. LEFT 44% title/subtitle in heavy rounded black typography, RIGHT 56% one mascot and colorful props. No outer desktop window, NO window titlebar, no category header outside border; code will add these. Do not write repository, other, project names, watermark or extra labels.\nMascot identity: grayscale chibi 3D collectible with swept spiky white hair and high tied topknot, gray face, glowing white eyes, white face mask, gray hoodie, gray trousers and gray sneakers. Same silhouette/identity as Image 1. No colored skin, no colored hair/clothes, no additional character. Exactly two arms and two legs, distinct hands/feet, coherent anatomy with no merged joints.\nPolished friendly 3D clay/vinyl render, matte sculpted mascot, soft studio light and contact shadows, legible silhouettes. Props stay colorful. Do not crop hands, feet or hair. High polish but simple balanced composition.\nExact LEFT text, verbatim and clear: large title “产品”; subtitle “把想法做成产品”. Broad smooth accent underline beneath title in lavender. Tiny restrained colorful accent strokes around title. Color palette: lavender, sky blue, peach and lemon.\nUnique interaction: Mascot stands to the right of the title in a lively three-quarter left-facing pose, leaning forward slightly with both hands pressing against a colorful oversized desktop app window on small wheels, pushing it to the right. The app is a layered soft blue and lavender rounded dashboard with a few chunky colorful application icons (chat bubble, pink planet, translation tiles) securely arranged on the platform. Both knees are slightly bent in a clear natural walking stance, two separate legs, both sneakers visible, a convincing push action; exactly two hands pressing the side edge of the app. No text on the app icons, no real logos."
+    },
+    {
+      "category": "documents",
+      "title": "文档",
+      "subtitle": "把方法写成路线",
+      "prompt": "Use case: stylized-concept / ads-marketing. Asset type: category overview cover interior for a Chinese GitHub portfolio. Create ONE extra-wide 3:1 horizontal banner, ideally 2172 x 724 pixels. Image 1 is the exact mascot identity reference; Image 2 is only the 3D material/rounded typography/border visual language. Do not reuse its pose or copy its title.\nComposition: warm near-white background; thin charcoal rounded inner rectangle border; generous safe margins. LEFT 44% title/subtitle in heavy rounded black typography, RIGHT 56% one mascot and colorful props. No outer desktop window, NO window titlebar, no category header outside border; code will add these. Do not write repository, other, project names, watermark or extra labels.\nMascot identity: grayscale chibi 3D collectible with swept spiky white hair and high tied topknot, gray face, glowing white eyes, white face mask, gray hoodie, gray trousers and gray sneakers. Same silhouette/identity as Image 1. No colored skin, no colored hair/clothes, no additional character. Exactly two arms and two legs, distinct hands/feet, coherent anatomy with no merged joints.\nPolished friendly 3D clay/vinyl render, matte sculpted mascot, soft studio light and contact shadows, legible silhouettes. Props stay colorful. Do not crop hands, feet or hair. High polish but simple balanced composition.\nExact LEFT text, verbatim and clear: large title “文档”; subtitle “把方法写成路线”. Broad smooth accent underline beneath title in sky blue. Tiny restrained colorful accent strokes around title. Color palette: blue, cyan, lavender and pale yellow.\nUnique interaction: Mascot kneels naturally on one gray knee while the other shoe is flat and fully visible, holding open a huge accordion-fold technical route map with both hands. The map is a colorful paper foldout extending from waist to the right, displaying a clear winding blue route between colorful simple browser, database and cloud nodes with no text. One hand grips each end of the foldout, two visible forearms. Head tilted toward map, intent curiosity. A small blue rolled blueprint and a neat lavender/cyan book stack on the ground beside the map. This is an explorer unfolding a map, not a character reading an ordinary book."
+    },
+    {
+      "category": "skills",
+      "title": "Skills",
+      "subtitle": "把经验变成能力",
+      "prompt": "Use case: stylized-concept / ads-marketing. Asset type: category overview cover interior for a Chinese GitHub portfolio. Create ONE extra-wide 3:1 horizontal banner, ideally 2172 x 724 pixels. Image 1 is the exact mascot identity reference; Image 2 is only the 3D material/rounded typography/border visual language. Do not reuse its pose or copy its title.\nComposition: warm near-white background; thin charcoal rounded inner rectangle border; generous safe margins. LEFT 44% title/subtitle in heavy rounded black typography, RIGHT 56% one mascot and colorful props. No outer desktop window, NO window titlebar, no category header outside border; code will add these. Do not write repository, other, project names, watermark or extra labels.\nMascot identity: grayscale chibi 3D collectible with swept spiky white hair and high tied topknot, gray face, glowing white eyes, white face mask, gray hoodie, gray trousers and gray sneakers. Same silhouette/identity as Image 1. No colored skin, no colored hair/clothes, no additional character. Exactly two arms and two legs, distinct hands/feet, coherent anatomy with no merged joints.\nPolished friendly 3D clay/vinyl render, matte sculpted mascot, soft studio light and contact shadows, legible silhouettes. Props stay colorful. Do not crop hands, feet or hair. High polish but simple balanced composition.\nExact LEFT text, verbatim and clear: large title “Skills”; subtitle “把经验变成能力”. Broad smooth accent underline beneath title in sage green. Tiny restrained colorful accent strokes around title. Color palette: sage green, mint, orange and yellow.\nUnique interaction: Mascot sits on a low gray stool at right, both feet planted side by side and fully visible, opening a large sage green portable skill toolbox on the floor. One hand holds up an orange colorful module card just extracted from the toolbox, other hand rests naturally on the raised open lid. Toolbox filled with a few tidy colorful cube modules and simple workflow cards (a checkmark, puzzle piece, small gear, without text). Character turns toward the lifted module with curiosity. Distinct action from pushing an app or unfolding a map. No desk or drawers."
+    }
+  ],
+  "window_builder": "github-profile-zh-20260918/scripts/build_cover_windows.mjs",
+  "validation": {
+    "exact_text_visually_checked": true,
+    "distinct_interactions": [
+      "推 app 组件",
+      "展开折叠路线图",
+      "打开技能箱举起模块"
+    ],
+    "grayscale_ip_colorful_props": true,
+    "window_builder_unchanged": true,
+    "artwork_pixels_preserved": true,
+    "native_headers_verified": [
+      "产品:lavender",
+      "文档:blue",
+      "Skills:sage + cube + linked workflow icons"
+    ],
+    "anatomy_checked": "Product: two separate natural legs and hands pushing app; document: natural kneeling stance and two hands holding map; Skills: seated pose partly occluded by toolbox, visible limbs coherent, no deformation."
+  },
+  "assets": [
+    {
+      "category": "products",
+      "files": [
+        {
+          "name": "category-products.png",
+          "width": 2171,
+          "height": 724,
+          "bytes": 1352664,
+          "sha256": "c95bbbda4c4436757a0bf1b9ba24245c02b8df1ff4776a798df4e69634baf69b"
+        },
+        {
+          "name": "category-products-window.png",
+          "width": 2251,
+          "height": 906,
+          "bytes": 1401372,
+          "sha256": "31408a9351562808873d6552f0fea297a90f77939c23512503369cce283f267d"
+        },
+        {
+          "name": "category-products-window.webp",
+          "width": 700,
+          "height": 282,
+          "bytes": 14956,
+          "sha256": "be8987f0978ea6eb06274bf557c29775e51da79b11d6fbd28c243d212101d645"
+        }
+      ]
+    },
+    {
+      "category": "documents",
+      "files": [
+        {
+          "name": "category-documents.png",
+          "width": 2170,
+          "height": 725,
+          "bytes": 1391442,
+          "sha256": "77f3911682d34585c341f41cc0c6c52c8e8f7c94dbcd49b4ef96b8f73b5ae667"
+        },
+        {
+          "name": "category-documents-window.png",
+          "width": 2250,
+          "height": 907,
+          "bytes": 1448881,
+          "sha256": "a6e84c451f9d1f3fb66ba19d52820b51d83ef01c69442098286bfe0f801c1dac"
+        },
+        {
+          "name": "category-documents-window.webp",
+          "width": 700,
+          "height": 282,
+          "bytes": 15736,
+          "sha256": "25501f6d56f84ad3559fb6e894a7a6ccea4d86bd2390531f84cfb40b07432215"
+        }
+      ]
+    },
+    {
+      "category": "skills",
+      "files": [
+        {
+          "name": "category-skills.png",
+          "width": 2171,
+          "height": 724,
+          "bytes": 1371248,
+          "sha256": "41dba4f376cf9d635fa092a2671ddb0d6679ca53731f18184a61846e16a4d937"
+        },
+        {
+          "name": "category-skills-window.png",
+          "width": 2251,
+          "height": 906,
+          "bytes": 1430963,
+          "sha256": "6ba306509f39105332626c7c0e7af7022a3a3242ff7d1674477af0d06854be70"
+        },
+        {
+          "name": "category-skills-window.webp",
+          "width": 700,
+          "height": 282,
+          "bytes": 15358,
+          "sha256": "0fa738dd055c282cc69c9908234cab4a0c5f201c995d5e7594533da100f2a0f7"
+        }
+      ]
+    }
+  ],
+  "window_builder_sha256": "bd7c063c4cd0ba7cc37f7270c5a245882b99695c17bb1175ad3e98eb6d48d455",
+  "usage": {
+    "order": [
+      "product",
+      "document",
+      "skill"
+    ],
+    "default_state": "collapsed",
+    "summary_image_width": 540,
+    "display_format": "WebP",
+    "source_artwork_preserved": true
+  }
+}

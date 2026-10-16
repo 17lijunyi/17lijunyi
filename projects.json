@@ -102,9 +102,9 @@
       "title": "每日 AI 新闻",
       "description": "每天精选 5 条 AI 新闻，提供中文摘要与原文链接。",
       "cover": "assets/project-covers/daily-ai-news-window.png",
-      "category": "repository",
+      "category": "document",
       "artwork": "assets/project-covers/daily-ai-news.png",
-      "window_theme": "amber"
+      "window_theme": "blue"
     },
     "repo:chaichai": {
       "title": "拆拆 ChaiChai",
@@ -131,5 +131,11 @@
   },
   "show_all": true,
   "group_by_category": true,
-  "compact_cards": true
+  "compact_cards": true,
+  "collapsible_categories": true,
+  "category_covers": {
+    "product": "assets/project-covers/category-products-window.webp",
+    "document": "assets/project-covers/category-documents-window.webp",
+    "skill": "assets/project-covers/category-skills-window.webp"
+  }
 }
