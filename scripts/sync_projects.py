@@ -232,16 +232,16 @@ def project_category(project):
     return category
 
 
-def card_markup(project, base, root, files):
+def card_markup(project, base, root, files, width='49%'):
     alt = html.escape(project['title'] + '：' + project['description'], quote=True)
     if 'cover' in project and 'cover_url' in project:
         raise ValueError(f'Project must use one cover source: {project["id"]}')
     if 'cover_url' in project:
         image = remote_cover_image(project['cover_url'], project)
-        picture = f'<picture><img width="49%" src="{image}" alt="{alt}"></picture>'
+        picture = f'<picture><img width="{width}" src="{image}" alt="{alt}"></picture>'
     elif 'cover' in project:
         image = base + cover_image(project['cover'], root)
-        picture = f'<picture><img width="49%" src="{image}" alt="{alt}"></picture>'
+        picture = f'<picture><img width="{width}" src="{image}" alt="{alt}"></picture>'
     else:
         key = hashlib.sha256(project['id'].encode()).hexdigest()[:12]
         images = {}
@@ -250,14 +250,14 @@ def card_markup(project, base, root, files):
             content = svg_card(project, theme == 'dark')
             files[path] = content
             images[theme] = base + path + '?v=' + hashlib.sha256(content.encode()).hexdigest()[:12]
-        picture = f'<picture><source media="(prefers-color-scheme: dark)" srcset="{images["dark"]}"><img width="49%" src="{images["light"]}" alt="{alt}"></picture>'
+        picture = f'<picture><source media="(prefers-color-scheme: dark)" srcset="{images["dark"]}"><img width="{width}" src="{images["light"]}" alt="{alt}"></picture>'
     return f'  <a href="{html.escape(project["url"], quote=True)}">{picture}</a>'
 
 
-def card_grid(projects, cards, labels=False):
+def card_grid(projects, cards, labels=False, columns=2):
     rows = []
-    for index in range(0, len(projects), 2):
-        pair = projects[index:index + 2]
+    for index in range(0, len(projects), columns):
+        pair = projects[index:index + columns]
         content = '\n'.join(cards[project['id']] for project in pair)
         if labels:
             captions = []
@@ -287,20 +287,30 @@ def collapsed_category(project):
 
 
 def collapsible_cards(projects, cards, category_images):
-    """Native GitHub disclosures; each category opens independently."""
+    """A centered lead cover above two independent native GitHub disclosures."""
     groups = {category: [] for category, _ in COLLAPSIBLE_CATEGORIES}
     for project in projects:
         groups[collapsed_category(project)].append(project)
-    sections = []
+    sections = {}
     for category, title in COLLAPSIBLE_CATEGORIES:
         group = groups[category]
         # GitHub wraps a bare summary image in a link that opens the image.
         # A picture keeps the cover itself part of the native disclosure control.
-        summary = (f'<summary><picture><img width="100%" src="{category_images[category]}" '
-                   f'alt="{html.escape(title, quote=True)} · 点击展开或收起"></picture></summary>')
-        content = '\n\n'.join(card_grid(group, cards)) if group else '<p>暂无项目。</p>'
-        sections.append('## ' + title + '\n\n<details>\n' + summary + '\n\n' + content + '\n\n</details>')
-    return sections
+        width = '75%' if category == 'product' else '100%'
+        picture = (f'<picture><img width="{width}" src="{category_images[category]}" '
+                   f'alt="{html.escape(title, quote=True)} · 点击展开或收起"></picture>')
+        if category == 'product':
+            picture = '<div align="center">' + picture + '</div>'
+        summary = '<summary>' + picture + '</summary>'
+        columns = 2 if category == 'product' else 1
+        content = '\n\n'.join(card_grid(group, cards, columns=columns)) if group else '<p>暂无项目。</p>'
+        heading = '## ' + title if category == 'product' else '<h2>' + title + '</h2>'
+        sections[category] = heading + '\n\n<details>\n' + summary + '\n\n' + content + '\n\n</details>'
+    # GitHub strips custom layout CSS; an HTML table preserves the lower pair.
+    secondary = ('<table width="100%">\n<tr>\n<td width="50%" valign="top">\n\n'
+                 + sections['document'] + '\n\n</td>\n<td width="50%" valign="top">\n\n'
+                 + sections['skill'] + '\n\n</td>\n</tr>\n</table>')
+    return [sections['product'], secondary]
 
 
 def generate(config, projects, root=ROOT):
@@ -320,7 +330,9 @@ def generate(config, projects, root=ROOT):
     category_images = {category: base + cover_image(config['category_covers'][category], root)
                        for category, _ in COLLAPSIBLE_CATEGORIES} if collapsible else {}
     rendered = projects if grouped or compact or collapsible else chosen
-    cards = {project['id']: card_markup(project, base, root, files) for project in rendered}
+    cards = {project['id']: card_markup(project, base, root, files,
+             width='100%' if collapsible and collapsed_category(project) != 'product' else '49%')
+             for project in rendered}
     rows = (collapsible_cards(chosen, cards, category_images) if collapsible else
             grouped_cards(chosen, cards) if grouped and not compact else card_grid(chosen, cards))
     if not compact and not collapsible:

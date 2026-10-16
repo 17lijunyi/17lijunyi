@@ -32,13 +32,19 @@ class DisclosureParser(HTMLParser):
         self.picture_depth = 0
         self.errors = []
         self.closures = 0
+        self.cells = []
+        self.current_cell = None
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == 'td':
+            self.cells.append(attrs)
+            self.current_cell = len(self.cells) - 1
         if tag == 'details':
             if self.stack:
                 self.errors.append('nested disclosures')
-            group = dict(attrs=attrs, summary=[], covers=[], links=[], cards=[], summary_links=[], rows=[])
+            group = dict(attrs=attrs, summary=[], covers=[], links=[], cards=[], summary_links=[], rows=[],
+                         cell=self.current_cell)
             self.groups.append(group)
             self.stack.append(group)
         elif self.stack:
@@ -70,6 +76,8 @@ class DisclosureParser(HTMLParser):
             else:
                 self.stack.pop()
             self.closures += 1
+        elif tag == 'td':
+            self.current_cell = None
 
     def handle_data(self, data):
         if self.stack and self.in_summary:
@@ -519,10 +527,11 @@ class ProjectCardsTest(unittest.TestCase):
             self.assertEqual(parser.stack, [])
             self.assertEqual(parser.closures, 3)
             self.assertEqual(len(parser.groups), 3)
-            headings = ['## ⭐ 精选项目', '## 📚 知识文档', '## 🧰 Skills']
-            self.assertEqual(re.findall(r'^## .+$', markup, re.M), headings)
-            for heading, section in zip(headings, markup.split('<details>')[:-1]):
-                self.assertTrue(section.rstrip().endswith(heading))
+            self.assertEqual(re.findall(r'^## .+$', markup, re.M), ['## ⭐ 精选项目'])
+            self.assertEqual(re.findall(r'<h2>(.+?)</h2>', markup), ['📚 知识文档', '🧰 Skills'])
+            self.assertEqual([group['cell'] for group in parser.groups], [None, 0, 1])
+            self.assertEqual(parser.cells, [{'width': '50%', 'valign': 'top'}] * 2)
+            self.assertEqual(markup.count('<table width="100%">'), 1)
             for group, (category, title), size in zip(parser.groups, sync.COLLAPSIBLE_CATEGORIES, [3, 3, 2]):
                 self.assertNotIn('open', group['attrs'])
                 self.assertNotIn('name', group['attrs'])
@@ -531,12 +540,13 @@ class ProjectCardsTest(unittest.TestCase):
                 self.assertEqual(len(group['covers']), 1)
                 cover, picture_depth = group['covers'][0]
                 self.assertEqual(picture_depth, 1, 'summary cover must avoid GitHub image-link wrapping')
-                self.assertEqual(cover['width'], '100%')
+                self.assertEqual(cover['width'], '75%' if category == 'product' else '100%')
                 self.assertEqual(cover['alt'], title + ' · 点击展开或收起')
                 self.assertIn(f'category-{category}-window.webp?v=', cover['src'])
                 self.assertEqual(len(group['cards']), size)
-                self.assertTrue(all(image['width'] == '49%' for image in group['cards']))
-                self.assertEqual(group['rows'], [2, 1] if size == 3 else [2])
+                self.assertTrue(all(image['width'] == ('49%' if category == 'product' else '100%')
+                                    for image in group['cards']))
+                self.assertEqual(group['rows'], [2, 1] if category == 'product' else [1] * size)
             links = [url for group in parser.groups for url in group['links']]
             self.assertCountEqual(links, [project['url'] for project in projects])
             self.assertEqual(len(links), len(set(links)))
@@ -544,7 +554,7 @@ class ProjectCardsTest(unittest.TestCase):
             self.assertNotIn(' · Repository', markup)
             self.assertNotIn('个项目', markup)
             self.assertNotIn('点击展开 / 收起', markup)
-            self.assertNotIn('<div align="center">', markup)
+            self.assertEqual(markup.count('<div align="center">'), 1)
             self.assertNotIn('### ', markup)
             self.assertNotIn('style=', markup)
             self.assertNotIn('<script', markup)
