@@ -641,9 +641,9 @@ class ProjectCardsTest(unittest.TestCase):
                 self.assertEqual((self.root / 'README.md').read_text(), self.readme)
                 self.assertFalse((self.root / 'PROJECTS.md').exists())
 
-    def test_featured_layout_keeps_four_one_one_previews_and_folds_every_remainder_once(self):
+    def test_featured_layout_keeps_four_two_two_previews_and_folds_every_remainder_once(self):
         self.config.update(collapsible_categories=True, category_layout='featured', limit=1,
-                           category_preview_counts={'product': 4, 'document': 1, 'skill': 1})
+                           category_preview_counts={'product': 4, 'document': 2, 'skill': 2})
         repositories = []
         for category, amount in [('product', 6), ('document', 3), ('skill', 3)]:
             for index in range(amount):
@@ -658,11 +658,17 @@ class ProjectCardsTest(unittest.TestCase):
             parser = DisclosureParser(); parser.feed(markup)
             self.assertEqual(parser.errors, [])
             self.assertEqual(parser.stack, [])
-            self.assertEqual([cell for _, cell in parser.previews], [None] * 4 + [0, 1])
-            self.assertEqual([image['width'] for image, _ in parser.previews], ['49%'] * 4 + ['100%'] * 2)
+            self.assertEqual([cell for _, cell in parser.previews], [None] * 8)
+            self.assertEqual([image['width'] for image, _ in parser.previews], ['49%'] * 8)
             self.assertEqual([image['alt'].split('：')[0] for image, _ in parser.previews],
-                             ['product-0', 'product-1', 'product-2', 'product-3', 'document-0', 'skill-0'])
-            self.assertEqual([len(group['cards']) for group in parser.groups], [2, 2, 2])
+                             ['product-0', 'product-1', 'product-2', 'product-3',
+                              'document-0', 'document-1', 'skill-0', 'skill-1'])
+            self.assertEqual([len(group['cards']) for group in parser.groups], [2, 1, 1])
+            self.assertTrue(all(image['width'] == '49%' for group in parser.groups for image in group['cards']))
+            self.assertEqual(re.findall(r'^## .+$', markup, re.M),
+                             ['## ⭐ 精选项目', '## 📚 知识文档', '## 🧰 Skills'])
+            self.assertEqual(parser.cells, [])
+            self.assertNotIn('<table', markup)
             self.assertEqual([''.join(group['summary']) for group in parser.groups],
                              ['更多精选项目', '更多知识文档', '更多 Skills'])
             self.assertTrue(all(not group['covers'] and not group['summary_links'] for group in parser.groups))
@@ -684,7 +690,7 @@ class ProjectCardsTest(unittest.TestCase):
             parser = DisclosureParser(); parser.feed(markup)
             self.assertEqual(parser.card_links, ['https://github.com/owner/new-project'])
             self.assertEqual(len(parser.previews), 1)
-            self.assertEqual(parser.previews[0][1], 0)
+            self.assertIsNone(parser.previews[0][1])
             self.assertEqual(parser.groups, [])
             self.assertNotIn('<summary>', markup)
             self.assertIn('⭐ 精选项目', markup)

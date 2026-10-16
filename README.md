@@ -41,62 +41,39 @@
 
 </details>
 
-<table width="100%">
-<tr>
-<td width="50%" valign="top">
-
-<p><strong>📚 知识文档</strong></p>
+## 📚 知识文档
 
 <p>
-  <a href="https://github.com/17lijunyi/product-blueprint"><picture><img width="100%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/product-blueprint-window.png?v=ccaa25ee1971" alt="产品蓝图：从想法、PRD 或已有代码生成 Agent 产品方案，提供需求拆解、架构选型、差距分析和项目骨架。"></picture></a>
+  <a href="https://github.com/17lijunyi/product-blueprint"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/product-blueprint-window.png?v=ccaa25ee1971" alt="产品蓝图：从想法、PRD 或已有代码生成 Agent 产品方案，提供需求拆解、架构选型、差距分析和项目骨架。"></picture></a>
+  <a href="https://github.com/17lijunyi/tech-stack-handbook"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/tech-stack-handbook-window.png?v=1f010d42602a" alt="技术栈手册：面向产品经理和学生的 AI 产品开发文档工具包，包含前端、后端、部署手册与六阶段验收流程。"></picture></a>
 </p>
 
 <details>
 <summary><strong>更多知识文档</strong></summary>
 
 <p>
-  <a href="https://github.com/17lijunyi/tech-stack-handbook"><picture><img width="100%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/tech-stack-handbook-window.png?v=1f010d42602a" alt="技术栈手册：面向产品经理和学生的 AI 产品开发文档工具包，包含前端、后端、部署手册与六阶段验收流程。"></picture></a>
-</p>
-
-<p>
-  <a href="https://github.com/17lijunyi/kanshan-kb"><picture><img width="100%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/kanshan-kb-window.png?v=729789d64fd5" alt="Kanshan KB · 内容创作知识库：面向知乎创作者的知识库：10 个模块的实用方法、案例与一手资料，支持文档检索与来源引用。"></picture></a>
-</p>
-
-<p>
-  <a href="https://github.com/17lijunyi/daily-ai-news"><picture><img width="100%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/daily-ai-news-window.png?v=89414f6d76e3" alt="每日 AI 新闻：每天精选 5 条 AI 新闻，提供中文摘要与原文链接。"></picture></a>
+  <a href="https://github.com/17lijunyi/kanshan-kb"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/kanshan-kb-window.png?v=729789d64fd5" alt="Kanshan KB · 内容创作知识库：面向知乎创作者的知识库：10 个模块的实用方法、案例与一手资料，支持文档检索与来源引用。"></picture></a>
+  <a href="https://github.com/17lijunyi/daily-ai-news"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/daily-ai-news-window.png?v=89414f6d76e3" alt="每日 AI 新闻：每天精选 5 条 AI 新闻，提供中文摘要与原文链接。"></picture></a>
 </p>
 
 </details>
 
-</td>
-<td width="50%" valign="top">
-
-<p><strong>🧰 Skills</strong></p>
+## 🧰 Skills
 
 <p>
-  <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/ai-product-resume-edit"><picture><img width="100%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/ai-product-resume-edit-window.png?v=e096e77509fd" alt="AI 产品简历修改：面向 AI 产品经理、FDE 与转型求职者，在已有简历上修改表达、数据与排版"></picture></a>
+  <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/ai-product-resume-edit"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/ai-product-resume-edit-window.png?v=e096e77509fd" alt="AI 产品简历修改：面向 AI 产品经理、FDE 与转型求职者，在已有简历上修改表达、数据与排版"></picture></a>
+  <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/product-evidence-deconstruction"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/product-evidence-deconstruction-window.png?v=ab5191a769fb" alt="产品证据拆解：基于真实证据，按用户、技术、模型、数据四层拆解数字产品"></picture></a>
 </p>
 
 <details>
 <summary><strong>更多 Skills</strong></summary>
 
 <p>
-  <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/product-evidence-deconstruction"><picture><img width="100%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/product-evidence-deconstruction-window.png?v=ab5191a769fb" alt="产品证据拆解：基于真实证据，按用户、技术、模型、数据四层拆解数字产品"></picture></a>
-</p>
-
-<p>
-  <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/muse10-nail-visuals"><picture><img width="100%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/muse10-nail-visuals-window.png?v=065ce2417f1e" alt="Muse10 款式生成：按真实双手十指比例与固定背景模板制作美甲款式、上手图和交互预览"></picture></a>
-</p>
-
-<p>
-  <a href="https://github.com/17lijunyi/chaichai"><picture><img width="100%" src="https://raw.githubusercontent.com/17lijunyi/chaichai/main/docs/assets/cover.png?v=ee43a552b763" alt="拆拆 ChaiChai：交给 AI 助手的本地软件拆解技能，支持应用结构、代码与运行行为分析，并通过 CLI 和 MCP 返回可追溯的证据。"></picture></a>
+  <a href="https://github.com/17lijunyi/17lijunyi/tree/main/skills/muse10-nail-visuals"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/muse10-nail-visuals-window.png?v=065ce2417f1e" alt="Muse10 款式生成：按真实双手十指比例与固定背景模板制作美甲款式、上手图和交互预览"></picture></a>
+  <a href="https://github.com/17lijunyi/chaichai"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/chaichai/main/docs/assets/cover.png?v=ee43a552b763" alt="拆拆 ChaiChai：交给 AI 助手的本地软件拆解技能，支持应用结构、代码与运行行为分析，并通过 CLI 和 MCP 返回可追溯的证据。"></picture></a>
 </p>
 
 </details>
-
-</td>
-</tr>
-</table>
 <!-- PROJECTS:END -->
 
 ---

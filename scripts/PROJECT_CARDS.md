@@ -4,10 +4,10 @@
 
 ## 展示规则
 
-- 当前配置 `collapsible_categories: true`、`category_layout: "featured"`，主页和 `PROJECTS.md` 均采用代表作优先布局。⭐ 精选项目常显前四张作品封面，双列排列；📚 知识文档与 🧰 Skills 在下方等宽并排，各常显第一张作品封面。其余内容分别放入“更多精选项目”“更多知识文档”“更多 Skills”，默认收起、独立展开；不显示数量，也不展示分类大封面。
-- `category_preview_counts` 按 `product`、`document`、`skill` 设置常显上限，当前为 4、1、1，各值须为 1–12 的整数。顺序由 `featured` 决定，未指定的按最近更新排序；分类不足常显上限时全部直接展示，没有剩余内容就不显示“更多”入口。代表作模式不依赖分类总封面，既有封面保留作维护素材。
+- 当前配置 `collapsible_categories: true`、`category_layout: "featured"`，主页和 `PROJECTS.md` 均采用代表作优先布局。⭐ 精选项目常显前四张作品封面，📚 知识文档与 🧰 Skills 各常显前两张。三个栏目依次纵向排列，各有独立标题，所有作品封面均为双列。其余内容分别放入“更多精选项目”“更多知识文档”“更多 Skills”，默认收起、独立展开；不显示数量，也不展示分类大封面。
+- `category_preview_counts` 按 `product`、`document`、`skill` 设置常显上限，当前为 4、2、2，各值须为 1–12 的整数。顺序由 `featured` 决定，未指定的按最近更新排序；分类不足常显上限时全部直接展示，没有剩余内容就不显示“更多”入口。代表作模式不依赖分类总封面，既有封面保留作维护素材。
 - 折叠栏目始终收录全部符合条件的项目，不受 `limit` 限制。原来的 `repository`（其他）统一并入文档；未来未指定分类的新仓库也归入文档，不会丢失。
-- “更多”入口使用 GitHub 原生 `details` / `summary`，摘要仅保留短文字，让小三角紧贴文字。下方并排由原生 HTML 表格的两个 50% 顶部对齐单元格实现，无脚本和自定义 CSS。不加 `open` 或共享 `name` 属性，确保默认收起、独立展开。精选项目常显区与展开区均为双列；下方两栏均在各自单元格内单列展示作品，图片直接链接到项目。
+- “更多”入口使用 GitHub 原生 `details` / `summary`，摘要仅保留短文字，让小三角紧贴文字。代表作模式不使用并排表格、脚本或自定义 CSS。不加 `open` 或共享 `name` 属性，确保默认收起、独立展开。三个栏目的常显区与展开区均为双列，图片直接链接到项目。
 - `category_layout: "covers"`（或省略该字段）可恢复旧的分类封面布局。此模式下 `category_covers` 必须提供 `product`、`document`、`skill` 三张分类封面，路径限制为仓库内 `assets/project-covers/` 的 PNG、JPEG 或 WebP；缺图或路径错误时保留之前全部生成文件。分类图须放在 `summary` 的 `picture` 内，避免 GitHub 自动加图片链接。
 - 同类中 `featured` 固定优先，其余按 GitHub `updated_at`（技能按目录最后提交时间）倒序排列。仓库的 `overrides.category` 可为 `product`、`skill`、`document`、`repository`；独立技能仓库需显式设置为 `skill`，本仓库技能目录自动归为 Skills。
 - 关闭 `collapsible_categories` 可恢复原来的展示模式：`group_by_category: true` 按产品 → Skills → 文档 → 其他排序；`compact_cards: true` 显示不另起分类行的连续双列图片墙。旧模式的 `show_all: true` 展示全部，关闭时首页使用 `limit`，项目目录仍展示全部。

@@ -17,7 +17,7 @@ START = '<!-- PROJECTS:START -->'
 END = '<!-- PROJECTS:END -->'
 CATEGORIES = (('product', '产品'), ('skill', 'Skills'), ('document', '文档'), ('repository', '其他仓库'))
 COLLAPSIBLE_CATEGORIES = (('product', '⭐ 精选项目'), ('document', '📚 知识文档'), ('skill', '🧰 Skills'))
-FEATURED_PREVIEW_COUNTS = {'product': 4, 'document': 1, 'skill': 1}
+FEATURED_PREVIEW_COUNTS = {'product': 4, 'document': 2, 'skill': 2}
 COLORS = {'Swift': '#f05138', 'Python': '#3572A5', 'HTML': '#e34c26',
           'JavaScript': '#f1e05a', 'TypeScript': '#3178c6', 'CSS': '#663399',
           'Go': '#00ADD8', 'Rust': '#dea584', 'Shell': '#89e051'}
@@ -308,21 +308,18 @@ def featured_cards(projects, cards, counts):
     groups = {category: [] for category, _ in COLLAPSIBLE_CATEGORIES}
     for project in projects:
         groups[collapsed_category(project)].append(project)
-    sections = {}
+    sections = []
     more = {'product': '更多精选项目', 'document': '更多知识文档', 'skill': '更多 Skills'}
     for category, title in COLLAPSIBLE_CATEGORIES:
         group = groups[category]
         preview, remaining = group[:counts[category]], group[counts[category]:]
-        columns = 2 if category == 'product' else 1
-        # Plain bold headings avoid GitHub's large h2 margins inside table cells.
-        heading = '## ' + title if category == 'product' else '<p><strong>' + title + '</strong></p>'
-        parts = [heading]
-        parts += card_grid(preview, cards, columns=columns) if preview else ['<p>暂无项目。</p>']
+        parts = ['## ' + title]
+        parts += card_grid(preview, cards) if preview else ['<p>暂无项目。</p>']
         if remaining:
             parts.append('<details>\n<summary><strong>' + more[category] + '</strong></summary>\n\n'
-                         + '\n\n'.join(card_grid(remaining, cards, columns=columns)) + '\n\n</details>')
-        sections[category] = '\n\n'.join(parts)
-    return [sections['product'], secondary_columns(sections)]
+                         + '\n\n'.join(card_grid(remaining, cards)) + '\n\n</details>')
+        sections.append('\n\n'.join(parts))
+    return sections
 
 
 def collapsible_cards(projects, cards, category_images):
@@ -367,7 +364,7 @@ def generate(config, projects, root=ROOT):
                        for category, _ in COLLAPSIBLE_CATEGORIES} if collapsible and not featured else {}
     rendered = projects if grouped or compact or collapsible else chosen
     cards = {project['id']: card_markup(project, base, root, files,
-             width='100%' if collapsible and collapsed_category(project) != 'product' else '49%')
+             width='100%' if collapsible and not featured and collapsed_category(project) != 'product' else '49%')
              for project in rendered}
     preview_counts = config.get('category_preview_counts', FEATURED_PREVIEW_COUNTS)
     rows = (featured_cards(chosen, cards, preview_counts) if featured else
