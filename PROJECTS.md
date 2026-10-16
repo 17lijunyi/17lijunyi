@@ -31,6 +31,11 @@
 
 <p>
   <a href="https://github.com/17lijunyi/chaichai"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/chaichai/main/docs/assets/cover.png?v=ee43a552b763" alt="拆拆 ChaiChai：交给 AI 助手的本地软件拆解技能，支持应用结构、代码与运行行为分析，并通过 CLI 和 MCP 返回可追溯的证据。"></picture></a>
+  <a href="https://github.com/17lijunyi/product-blueprint"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/product-blueprint-window.png?v=ccaa25ee1971" alt="产品蓝图：从想法、PRD 或已有代码生成 Agent 产品方案，提供需求拆解、架构选型、差距分析和项目骨架。"></picture></a>
+</p>
+
+<p>
+  <a href="https://github.com/17lijunyi/tech-stack-handbook"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/tech-stack-handbook-window.png?v=1f010d42602a" alt="技术栈手册：面向产品经理和学生的 AI 产品开发文档工具包，包含前端、后端、部署手册与六阶段验收流程。"></picture></a>
   <a href="https://github.com/17lijunyi/kanshan-kb"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/kanshan-kb-window.png?v=729789d64fd5" alt="Kanshan KB · 内容创作知识库：面向知乎创作者的知识库：10 个模块的实用方法、案例与一手资料，支持文档检索与来源引用。"></picture></a>
 </p>
 

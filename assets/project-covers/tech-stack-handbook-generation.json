@@ -1,0 +1,38 @@
+{
+  "mode": "built-in image_gen",
+  "intent": "reference-based cover artwork generation",
+  "created_on": "2026-10-16",
+  "project_name": "技术栈手册",
+  "category": "document",
+  "prompt": "Use case: stylized-concept / ads-marketing.\nAsset type: interior artwork for a GitHub documentation project named “技术栈手册”.\nCreate a new project cover matching the supplied portfolio cover style. Image 1 is the exact mascot identity reference. Image 2 is ONLY the matching 3D materials, layout, rounded heavy typography and inner border reference, not its ladder pose or blueprint subject.\nComposition: extra wide 3:1 horizontal banner, ideally 2172 x 724 pixels. Warm near-white paper background, a single thin charcoal rounded rectangle inner border, generous safe margins. LEFT 48% clean bold text and RIGHT 52% one mascot interacting with technical books. Do NOT draw any desktop window titlebar, category header, outer window frame, or category text; the standard native blue document window is added afterward.\nExact LEFT text, render every Chinese character clearly and verbatim:\n“技术栈手册”\nSecond line:\n“从想法到上线”\nSmaller third line:\n“前端 · 后端 · 部署”\nLarge chunky rounded black title, black subtitle, confident smooth bright blue underline under title. Restrained cyan and lavender accent strokes.\nMascot identity: grayscale chibi 3D collectible, wild swept spiky white hair with a high tied topknot, gray face, glowing white eyes, white face mask, gray hoodie, gray trousers, gray sneakers. Same character as Image 1, no skin colors, no colored hair or clothing.\nUnique action: mascot stands securely on the ground in a lively three-quarter pose, BOTH feet fully visible and flat on the ground, reading a huge open blue technical handbook cradled naturally with BOTH hands at chest height. Each hand clearly supports one outer bottom corner of the open book; elbows bend naturally and do not merge. The head is tilted toward the book with intent and curiosity. Exactly two arms and two legs. Knees and ankles connect naturally, feet distinctly separate. A tall tidy stack of three thick colorful technical manuals in cobalt blue, cyan and soft lavender stands beside the mascot. A few chunky floating colorful technical modules surround the book and stack: a browser-panel tile, a small database cylinder and a cloud/server module, linked with subtle dotted arcs. The props are colorful while mascot stays gray-white. Grounded books with soft contact shadows; no ladder, blueprint board, desk, filing drawer, magnifying glass or tool box.\nPolished friendly 3D clay/vinyl render with matte gray sculpted mascot, soft studio light, gentle shadows, clear silhouette, attractive colorful technical props, crisp uncluttered composition.\nConstraints: no extra text, labels, app brands, watermark or extra characters. No malformed limbs, crossed/intertwined legs, hovering feet, dislocated knees, extra hands, oversized fingers, body hidden by furniture, or cropped shoes. Keep the exact project name readable even in a thumbnail.",
+  "reference_images": [
+    "用户提供的灰白 IP 形象",
+    "现有文档分类封面风格"
+  ],
+  "generated_source": "built-in image_gen output; project copy is tech-stack-handbook.png",
+  "artwork": "tech-stack-handbook.png",
+  "cover": "tech-stack-handbook-window.png",
+  "window_builder": "github-profile-zh-20260918/scripts/build_cover_windows.mjs",
+  "window_theme": "blue",
+  "artwork_dimensions": {
+    "width": 2171,
+    "height": 724
+  },
+  "cover_dimensions": {
+    "width": 2251,
+    "height": 906
+  },
+  "window_builder_sha256": "bd7c063c4cd0ba7cc37f7270c5a245882b99695c17bb1175ad3e98eb6d48d455",
+  "sha256": {
+    "artwork": "18452130cfb2059a558451108324293f4fe87c70014f538a1beb143281996b44",
+    "cover": "1f010d42602a5f0946275f481e64d238e1d192a38acc235056cee47adaf79298"
+  },
+  "validation": {
+    "window_builder_unchanged": true,
+    "artwork_pixels_preserved": true,
+    "exact_text_visually_checked": true,
+    "document_header_verified": true,
+    "grayscale_ip_and_colored_props": true,
+    "anatomy_checked": "Two separate natural legs and grounded shoes; two hands hold opposite sides of an open handbook."
+  }
+}

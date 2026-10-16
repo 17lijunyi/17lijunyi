@@ -1,0 +1,38 @@
+{
+  "mode": "built-in image_gen",
+  "intent": "reference-based cover artwork generation",
+  "created_on": "2026-10-16",
+  "project_name": "产品蓝图",
+  "category": "document",
+  "prompt": "Use case: stylized-concept / ads-marketing.\nAsset type: interior artwork for the GitHub documentation project “产品蓝图”.\nTransform the supplied portfolio cover reference into a matching new project cover. Image 1 is the exact character identity reference; image 2 is the matching layout, 3D rendering, typography and material style reference. Preserve the gray-white chibi identity: spiky white hair in a swept high tied topknot, gray face with glowing white eyes, white face mask, gray hoodie, gray trousers and gray sneakers.\nComposition: extra wide 3:1 landscape, ideally 2172 x 724 pixels. Warm near-white background with a single thin charcoal rounded rectangle inner border and generous safe margins. Bold text at LEFT 48%, character and colorful props at RIGHT 52%. Do not draw any window title bar or outer category frame; a native blue “文档” window frame will be added afterward.\nExact left-side text in bold rounded chunky black Chinese typography:\n“产品蓝图”\nBelow it:\n“从想法到可落地方案”\nSmaller third line:\n“需求拆解 · 架构选型 · 代码骨架”\nUse a confident smooth blue underline under the large title and a few restrained cyan / lavender accent strokes. Render all Chinese characters exactly and cleanly, with no extra labels.\nIllustration: a unique lively but anatomically natural action. The grayscale mascot is stepping on a stable low two-step pale-gray ladder, body in three-quarter side view, reaching with one hand to insert the last lavender module into an unfolded upright blue blueprint / architecture diagram. The other hand steadies the board. Both feet are visibly planted on the wide ladder steps, knees connected naturally and entirely visible, exactly two arms and two legs. The character looks toward the module being inserted. The large blue blueprint scroll has curled paper edges, crisp white grid lines and a few chunky connected cyan / lavender / cobalt architecture modules. A rolled blueprint and two closed technical books rest on the ground beside the ladder. No human faces or extra characters.\nMaterials: the IP remains purely grayscale; props stay colorful in soft blue, cyan and lavender. High quality friendly 3D clay/vinyl collectible render, polished forms, soft studio lighting and gentle contact shadows, visually consistent with the reference.\nConstraints: preserve IP design, generous uncluttered whitespace, both leg/shoe anatomy clean, clear contact between hand and module, balance text and image. Avoid identical pose to reference, standing behind desk holding a card, skin-colored face, colored hair/clothes, extra limbs or fingers, disconnected legs, distorted feet, hovering feet, dense tiny UI, any extra words, unrelated app logos, watermark, and full desktop-window frame.",
+  "reference_images": [
+    "用户提供的灰白 IP 形象",
+    "现有作品集窗口封面风格"
+  ],
+  "generated_source": "built-in image_gen output; project copy is product-blueprint.png",
+  "artwork": "product-blueprint.png",
+  "cover": "product-blueprint-window.png",
+  "window_builder": "github-profile-zh-20260918/scripts/build_cover_windows.mjs",
+  "window_theme": "blue",
+  "artwork_dimensions": {
+    "width": 2171,
+    "height": 724
+  },
+  "cover_dimensions": {
+    "width": 2251,
+    "height": 906
+  },
+  "window_builder_sha256": "bd7c063c4cd0ba7cc37f7270c5a245882b99695c17bb1175ad3e98eb6d48d455",
+  "sha256": {
+    "artwork": "a54a4a7161cfd7ddc8873b564dbe8a806507020a704d515417c539bcc9bc8367",
+    "cover": "ccaa25ee1971c0581542ea2411288a1a9695b4ab81f9c0058619955a3282f242"
+  },
+  "validation": {
+    "window_builder_unchanged": true,
+    "artwork_pixels_preserved": true,
+    "exact_text_visually_checked": true,
+    "document_header_verified": true,
+    "grayscale_ip_and_colored_props": true,
+    "anatomy_checked": "Two natural legs; feet supported on separate wide ladder steps."
+  }
+}

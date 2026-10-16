@@ -28,6 +28,8 @@
 
 ## 文档
 
+- [产品蓝图](product-blueprint-window.png)：灰白 IP 踏在双层梯台上，将架构模块拼入蓝图；突出需求拆解、架构选型与代码骨架。[生成提示词与记录](product-blueprint-generation.json)。
+- [技术栈手册](tech-stack-handbook-window.png)：灰白 IP 双手捧读蓝色手册，旁边配有彩色书堆与前端、数据库和云端模块，展示从想法到上线的开发流程。[生成提示词与记录](tech-stack-handbook-generation.json)。
 - [看山 KB](kanshan-kb.png)：半躺在巨大的书页上阅读，窗口顶栏标明文档。
 
 ## 其他
