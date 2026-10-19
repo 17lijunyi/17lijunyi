@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc" xml:space="preserve">
   <title id="title">李俊祎 · LJY OS 个人网站启动终端与 GitHub 贡献记录</title>
-  <desc id="desc">用终端动画介绍 AI 产品、智能体与知识库。右侧显示 2026-07-19 至 2026-10-19，累计 145 次贡献。点击访问李俊祎的个人网站。</desc>
+  <desc id="desc">用终端动画介绍 AI 产品、智能体与知识库。右侧显示 2026-07-20 至 2026-10-20，累计 145 次贡献。点击访问李俊祎的个人网站。</desc>
   <style>
     :root { color-scheme: light; }
     .window { fill: #f8fafb; stroke: #d8e0e7; stroke-width: 2; }
@@ -74,7 +74,7 @@
 
 <g id="contributions-panel" role="img" aria-labelledby="contrib-title contrib-desc">
 <title id="contrib-title">GitHub 贡献记录</title>
-<desc id="contrib-desc">2026-07-19 至 2026-10-19，累计 145 次贡献。每列一周，周日为第一行。</desc>
+<desc id="contrib-desc">2026-07-20 至 2026-10-20，累计 145 次贡献。每列一周，周日为第一行。</desc>
 <rect class="contrib-surface" x="574" y="100" width="374" height="317.57" rx="12"/>
 <path class="bar" d="M587 100h348a12 12 0 0 1 12 12v16H575v-16a12 12 0 0 1 12-12z"/>
 <line class="divider" x1="575" y1="129" x2="947" y2="129"/>
@@ -84,7 +84,7 @@
 <text class="mono contrib-meta" x="761" y="119" text-anchor="middle">contributions</text>
 <text class="mono contrib-heading" x="594" y="155">GitHub 贡献记录</text>
 <text class="mono contrib-total" x="928" y="155" text-anchor="end">累计 145</text>
-<text class="mono contrib-label" x="594" y="175">2026-07-19 — 2026-10-19</text>
+<text class="mono contrib-label" x="594" y="175">2026-07-20 — 2026-10-20</text>
 <g class="contrib-period" data-period="2026-H2" data-step="22.1429">
 <text class="mono contrib-month" data-month="2026-07" x="622.21" y="196.00">7月</text>
 <text class="mono contrib-month" data-month="2026-08" x="644.36" y="210.00">8月</text>
@@ -93,7 +93,6 @@
 <text class="mono contrib-weekday" x="609.21" y="258.00" text-anchor="end">一</text>
 <text class="mono contrib-weekday" x="609.21" y="302.29" text-anchor="end">三</text>
 <text class="mono contrib-weekday" x="609.21" y="346.57" text-anchor="end">五</text>
-<rect class="contrib-day" x="622.21" y="223.00" width="17.71" height="17.71" rx="2.83" fill="#e2e8e9" data-date="2026-07-19" data-count="0" data-level="0" aria-label="2026-07-19 · 0 次贡献"><title>2026-07-19 · 0 次贡献</title></rect>
 <rect class="contrib-day" x="622.21" y="245.14" width="17.71" height="17.71" rx="2.83" fill="#e2e8e9" data-date="2026-07-20" data-count="0" data-level="0" aria-label="2026-07-20 · 0 次贡献"><title>2026-07-20 · 0 次贡献</title></rect>
 <rect class="contrib-day" x="622.21" y="267.29" width="17.71" height="17.71" rx="2.83" fill="#e2e8e9" data-date="2026-07-21" data-count="0" data-level="0" aria-label="2026-07-21 · 0 次贡献"><title>2026-07-21 · 0 次贡献</title></rect>
 <rect class="contrib-day" x="622.21" y="289.43" width="17.71" height="17.71" rx="2.83" fill="#e2e8e9" data-date="2026-07-22" data-count="0" data-level="0" aria-label="2026-07-22 · 0 次贡献"><title>2026-07-22 · 0 次贡献</title></rect>
@@ -186,6 +185,7 @@
 <rect class="contrib-day" x="887.93" y="355.86" width="17.71" height="17.71" rx="2.83" fill="#c4e5cb" data-date="2026-10-17" data-count="1" data-level="1" aria-label="2026-10-17 · 1 次贡献"><title>2026-10-17 · 1 次贡献</title></rect>
 <rect class="contrib-day" x="910.07" y="223.00" width="17.71" height="17.71" rx="2.83" fill="#c4e5cb" data-date="2026-10-18" data-count="1" data-level="1" aria-label="2026-10-18 · 1 次贡献"><title>2026-10-18 · 1 次贡献</title></rect>
 <rect class="contrib-day" x="910.07" y="245.14" width="17.71" height="17.71" rx="2.83" fill="#c4e5cb" data-date="2026-10-19" data-count="1" data-level="1" aria-label="2026-10-19 · 1 次贡献"><title>2026-10-19 · 1 次贡献</title></rect>
+<rect class="contrib-day" x="910.07" y="267.29" width="17.71" height="17.71" rx="2.83" fill="#e2e8e9" data-date="2026-10-20" data-count="0" data-level="0" aria-label="2026-10-20 · 0 次贡献"><title>2026-10-20 · 0 次贡献</title></rect>
 </g>
 <circle cx="598" cy="396.57" r="2.5" fill="#4aa176"/>
 <text class="mono contrib-meta" x="608" y="400.57">自动同步</text>
