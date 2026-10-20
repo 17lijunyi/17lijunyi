@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="644" viewBox="0 0 1000 644" role="img" aria-labelledby="title desc">
 <title id="title">李俊祎 · GitHub 贡献记录</title>
-<desc id="desc">2026-07-20 — 2026-10-20，累计 145 次贡献。日期与 GitHub 日历一致，每列一周，周日为第一行；空白处不代表贡献日期。</desc>
+<desc id="desc">2026-07-20 — 2026-10-20，累计 147 次贡献。日期与 GitHub 日历一致，每列一周，周日为第一行；空白处不代表贡献日期。</desc>
 <style>
 :root { color-scheme: light; }
 .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Arial Unicode MS", "PingFang SC", "Microsoft YaHei", monospace; }
@@ -22,7 +22,7 @@
 <circle cx="70" cy="25" r="7" fill="#55b96f"/>
 <text class="mono meta" x="500" y="29" text-anchor="middle">lijunyi@ljy-mac — contributions</text>
 <text class="mono heading" x="54" y="87">GitHub 贡献记录</text>
-<text class="mono heading" x="946" y="87" text-anchor="end">累计贡献 · 145</text>
+<text class="mono heading" x="946" y="87" text-anchor="end">累计贡献 · 147</text>
 <text class="mono body" x="54" y="111">2026-07-20 — 2026-10-20</text>
 <g class="period" data-period="2026-H2" data-step="56" data-cell="46">
 <text class="mono body" x="54" y="142">2026年</text>
@@ -130,7 +130,7 @@
 <rect class="day" x="785" y="536" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-17" data-count="1" data-level="1" aria-label="2026-10-17 · 1 次贡献"><title>2026-10-17 · 1 次贡献</title></rect>
 <rect class="day" x="841" y="200" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-18" data-count="1" data-level="1" aria-label="2026-10-18 · 1 次贡献"><title>2026-10-18 · 1 次贡献</title></rect>
 <rect class="day" x="841" y="256" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-19" data-count="1" data-level="1" aria-label="2026-10-19 · 1 次贡献"><title>2026-10-19 · 1 次贡献</title></rect>
-<rect class="day" x="841" y="312" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-10-20" data-count="0" data-level="0" aria-label="2026-10-20 · 0 次贡献"><title>2026-10-20 · 0 次贡献</title></rect>
+<rect class="day" x="841" y="312" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-20" data-count="2" data-level="1" aria-label="2026-10-20 · 2 次贡献"><title>2026-10-20 · 2 次贡献</title></rect>
 </g>
 <text class="mono body" x="54" y="617">GitHub 贡献记录 · 自动同步</text>
 <text class="mono body" x="782" y="617">少</text>
