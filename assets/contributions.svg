@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="644" viewBox="0 0 1000 644" role="img" aria-labelledby="title desc">
 <title id="title">李俊祎 · GitHub 贡献记录</title>
-<desc id="desc">2026-07-24 — 2026-10-24，累计 153 次贡献。日期与 GitHub 日历一致，每列一周，周日为第一行；空白处不代表贡献日期。</desc>
+<desc id="desc">2026-07-25 — 2026-10-25，累计 153 次贡献。日期与 GitHub 日历一致，每列一周，周日为第一行；空白处不代表贡献日期。</desc>
 <style>
 :root { color-scheme: light; }
 .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Arial Unicode MS", "PingFang SC", "Microsoft YaHei", monospace; }
@@ -23,114 +23,114 @@
 <text class="mono meta" x="500" y="29" text-anchor="middle">lijunyi@ljy-mac — contributions</text>
 <text class="mono heading" x="54" y="87">GitHub 贡献记录</text>
 <text class="mono heading" x="946" y="87" text-anchor="end">累计贡献 · 153</text>
-<text class="mono body" x="54" y="111">2026-07-24 — 2026-10-24</text>
+<text class="mono body" x="54" y="111">2026-07-25 — 2026-10-25</text>
 <g class="period" data-period="2026-H2" data-step="56" data-cell="46">
 <text class="mono body" x="54" y="142">2026年</text>
-<text class="mono body" x="946" y="142" text-anchor="end">7月24日 — 10月24日</text>
-<text class="mono month" data-month="2026-07" x="113" y="166">7月</text>
-<text class="mono month" data-month="2026-08" x="169" y="166">8月</text>
-<text class="mono month" data-month="2026-09" x="449" y="166">9月</text>
-<text class="mono month" data-month="2026-10" x="673" y="166">10月</text>
-<text class="mono weekday" x="96" y="227" text-anchor="end">日</text>
-<text class="mono weekday" x="96" y="283" text-anchor="end">一</text>
-<text class="mono weekday" x="96" y="339" text-anchor="end">二</text>
-<text class="mono weekday" x="96" y="395" text-anchor="end">三</text>
-<text class="mono weekday" x="96" y="451" text-anchor="end">四</text>
-<text class="mono weekday" x="96" y="507" text-anchor="end">五</text>
-<text class="mono weekday" x="96" y="563" text-anchor="end">六</text>
-<rect class="day" x="113" y="480" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-07-24" data-count="0" data-level="0" aria-label="2026-07-24 · 0 次贡献"><title>2026-07-24 · 0 次贡献</title></rect>
-<rect class="day" x="113" y="536" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-07-25" data-count="0" data-level="0" aria-label="2026-07-25 · 0 次贡献"><title>2026-07-25 · 0 次贡献</title></rect>
-<rect class="day" x="169" y="200" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-07-26" data-count="0" data-level="0" aria-label="2026-07-26 · 0 次贡献"><title>2026-07-26 · 0 次贡献</title></rect>
-<rect class="day" x="169" y="256" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-07-27" data-count="0" data-level="0" aria-label="2026-07-27 · 0 次贡献"><title>2026-07-27 · 0 次贡献</title></rect>
-<rect class="day" x="169" y="312" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-07-28" data-count="0" data-level="0" aria-label="2026-07-28 · 0 次贡献"><title>2026-07-28 · 0 次贡献</title></rect>
-<rect class="day" x="169" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-07-29" data-count="0" data-level="0" aria-label="2026-07-29 · 0 次贡献"><title>2026-07-29 · 0 次贡献</title></rect>
-<rect class="day" x="169" y="424" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-07-30" data-count="0" data-level="0" aria-label="2026-07-30 · 0 次贡献"><title>2026-07-30 · 0 次贡献</title></rect>
-<rect class="day" x="169" y="480" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-07-31" data-count="0" data-level="0" aria-label="2026-07-31 · 0 次贡献"><title>2026-07-31 · 0 次贡献</title></rect>
-<rect class="day" x="169" y="536" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-01" data-count="0" data-level="0" aria-label="2026-08-01 · 0 次贡献"><title>2026-08-01 · 0 次贡献</title></rect>
-<rect class="day" x="225" y="200" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-02" data-count="0" data-level="0" aria-label="2026-08-02 · 0 次贡献"><title>2026-08-02 · 0 次贡献</title></rect>
-<rect class="day" x="225" y="256" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-03" data-count="0" data-level="0" aria-label="2026-08-03 · 0 次贡献"><title>2026-08-03 · 0 次贡献</title></rect>
-<rect class="day" x="225" y="312" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-04" data-count="0" data-level="0" aria-label="2026-08-04 · 0 次贡献"><title>2026-08-04 · 0 次贡献</title></rect>
-<rect class="day" x="225" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-05" data-count="0" data-level="0" aria-label="2026-08-05 · 0 次贡献"><title>2026-08-05 · 0 次贡献</title></rect>
-<rect class="day" x="225" y="424" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-06" data-count="0" data-level="0" aria-label="2026-08-06 · 0 次贡献"><title>2026-08-06 · 0 次贡献</title></rect>
-<rect class="day" x="225" y="480" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-07" data-count="0" data-level="0" aria-label="2026-08-07 · 0 次贡献"><title>2026-08-07 · 0 次贡献</title></rect>
-<rect class="day" x="225" y="536" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-08" data-count="0" data-level="0" aria-label="2026-08-08 · 0 次贡献"><title>2026-08-08 · 0 次贡献</title></rect>
-<rect class="day" x="281" y="200" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-09" data-count="0" data-level="0" aria-label="2026-08-09 · 0 次贡献"><title>2026-08-09 · 0 次贡献</title></rect>
-<rect class="day" x="281" y="256" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-10" data-count="0" data-level="0" aria-label="2026-08-10 · 0 次贡献"><title>2026-08-10 · 0 次贡献</title></rect>
-<rect class="day" x="281" y="312" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-11" data-count="0" data-level="0" aria-label="2026-08-11 · 0 次贡献"><title>2026-08-11 · 0 次贡献</title></rect>
-<rect class="day" x="281" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-12" data-count="0" data-level="0" aria-label="2026-08-12 · 0 次贡献"><title>2026-08-12 · 0 次贡献</title></rect>
-<rect class="day" x="281" y="424" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-13" data-count="0" data-level="0" aria-label="2026-08-13 · 0 次贡献"><title>2026-08-13 · 0 次贡献</title></rect>
-<rect class="day" x="281" y="480" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-14" data-count="0" data-level="0" aria-label="2026-08-14 · 0 次贡献"><title>2026-08-14 · 0 次贡献</title></rect>
-<rect class="day" x="281" y="536" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-15" data-count="0" data-level="0" aria-label="2026-08-15 · 0 次贡献"><title>2026-08-15 · 0 次贡献</title></rect>
-<rect class="day" x="337" y="200" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-16" data-count="0" data-level="0" aria-label="2026-08-16 · 0 次贡献"><title>2026-08-16 · 0 次贡献</title></rect>
-<rect class="day" x="337" y="256" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-17" data-count="0" data-level="0" aria-label="2026-08-17 · 0 次贡献"><title>2026-08-17 · 0 次贡献</title></rect>
-<rect class="day" x="337" y="312" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-18" data-count="0" data-level="0" aria-label="2026-08-18 · 0 次贡献"><title>2026-08-18 · 0 次贡献</title></rect>
-<rect class="day" x="337" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-19" data-count="0" data-level="0" aria-label="2026-08-19 · 0 次贡献"><title>2026-08-19 · 0 次贡献</title></rect>
-<rect class="day" x="337" y="424" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-20" data-count="0" data-level="0" aria-label="2026-08-20 · 0 次贡献"><title>2026-08-20 · 0 次贡献</title></rect>
-<rect class="day" x="337" y="480" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-21" data-count="0" data-level="0" aria-label="2026-08-21 · 0 次贡献"><title>2026-08-21 · 0 次贡献</title></rect>
-<rect class="day" x="337" y="536" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-22" data-count="0" data-level="0" aria-label="2026-08-22 · 0 次贡献"><title>2026-08-22 · 0 次贡献</title></rect>
-<rect class="day" x="393" y="200" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-23" data-count="0" data-level="0" aria-label="2026-08-23 · 0 次贡献"><title>2026-08-23 · 0 次贡献</title></rect>
-<rect class="day" x="393" y="256" width="46" height="46" rx="4" fill="#8dcc9d" data-date="2026-08-24" data-count="5" data-level="2" aria-label="2026-08-24 · 5 次贡献"><title>2026-08-24 · 5 次贡献</title></rect>
-<rect class="day" x="393" y="312" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-25" data-count="0" data-level="0" aria-label="2026-08-25 · 0 次贡献"><title>2026-08-25 · 0 次贡献</title></rect>
-<rect class="day" x="393" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-26" data-count="0" data-level="0" aria-label="2026-08-26 · 0 次贡献"><title>2026-08-26 · 0 次贡献</title></rect>
-<rect class="day" x="393" y="424" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-27" data-count="0" data-level="0" aria-label="2026-08-27 · 0 次贡献"><title>2026-08-27 · 0 次贡献</title></rect>
-<rect class="day" x="393" y="480" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-28" data-count="0" data-level="0" aria-label="2026-08-28 · 0 次贡献"><title>2026-08-28 · 0 次贡献</title></rect>
-<rect class="day" x="393" y="536" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-29" data-count="0" data-level="0" aria-label="2026-08-29 · 0 次贡献"><title>2026-08-29 · 0 次贡献</title></rect>
-<rect class="day" x="449" y="200" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-30" data-count="0" data-level="0" aria-label="2026-08-30 · 0 次贡献"><title>2026-08-30 · 0 次贡献</title></rect>
-<rect class="day" x="449" y="256" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-08-31" data-count="1" data-level="1" aria-label="2026-08-31 · 1 次贡献"><title>2026-08-31 · 1 次贡献</title></rect>
-<rect class="day" x="449" y="312" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-01" data-count="0" data-level="0" aria-label="2026-09-01 · 0 次贡献"><title>2026-09-01 · 0 次贡献</title></rect>
-<rect class="day" x="449" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-02" data-count="0" data-level="0" aria-label="2026-09-02 · 0 次贡献"><title>2026-09-02 · 0 次贡献</title></rect>
-<rect class="day" x="449" y="424" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-09-03" data-count="1" data-level="1" aria-label="2026-09-03 · 1 次贡献"><title>2026-09-03 · 1 次贡献</title></rect>
-<rect class="day" x="449" y="480" width="46" height="46" rx="4" fill="#277e4b" data-date="2026-09-04" data-count="10" data-level="4" aria-label="2026-09-04 · 10 次贡献"><title>2026-09-04 · 10 次贡献</title></rect>
-<rect class="day" x="449" y="536" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-05" data-count="0" data-level="0" aria-label="2026-09-05 · 0 次贡献"><title>2026-09-05 · 0 次贡献</title></rect>
-<rect class="day" x="505" y="200" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-06" data-count="0" data-level="0" aria-label="2026-09-06 · 0 次贡献"><title>2026-09-06 · 0 次贡献</title></rect>
-<rect class="day" x="505" y="256" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-07" data-count="0" data-level="0" aria-label="2026-09-07 · 0 次贡献"><title>2026-09-07 · 0 次贡献</title></rect>
-<rect class="day" x="505" y="312" width="46" height="46" rx="4" fill="#8dcc9d" data-date="2026-09-08" data-count="5" data-level="2" aria-label="2026-09-08 · 5 次贡献"><title>2026-09-08 · 5 次贡献</title></rect>
-<rect class="day" x="505" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-09" data-count="0" data-level="0" aria-label="2026-09-09 · 0 次贡献"><title>2026-09-09 · 0 次贡献</title></rect>
-<rect class="day" x="505" y="424" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-10" data-count="0" data-level="0" aria-label="2026-09-10 · 0 次贡献"><title>2026-09-10 · 0 次贡献</title></rect>
-<rect class="day" x="505" y="480" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-11" data-count="0" data-level="0" aria-label="2026-09-11 · 0 次贡献"><title>2026-09-11 · 0 次贡献</title></rect>
-<rect class="day" x="505" y="536" width="46" height="46" rx="4" fill="#277e4b" data-date="2026-09-12" data-count="19" data-level="4" aria-label="2026-09-12 · 19 次贡献"><title>2026-09-12 · 19 次贡献</title></rect>
-<rect class="day" x="561" y="200" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-13" data-count="0" data-level="0" aria-label="2026-09-13 · 0 次贡献"><title>2026-09-13 · 0 次贡献</title></rect>
-<rect class="day" x="561" y="256" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-09-14" data-count="1" data-level="1" aria-label="2026-09-14 · 1 次贡献"><title>2026-09-14 · 1 次贡献</title></rect>
-<rect class="day" x="561" y="312" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-15" data-count="0" data-level="0" aria-label="2026-09-15 · 0 次贡献"><title>2026-09-15 · 0 次贡献</title></rect>
-<rect class="day" x="561" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-16" data-count="0" data-level="0" aria-label="2026-09-16 · 0 次贡献"><title>2026-09-16 · 0 次贡献</title></rect>
-<rect class="day" x="561" y="424" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-17" data-count="0" data-level="0" aria-label="2026-09-17 · 0 次贡献"><title>2026-09-17 · 0 次贡献</title></rect>
-<rect class="day" x="561" y="480" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-09-18" data-count="3" data-level="1" aria-label="2026-09-18 · 3 次贡献"><title>2026-09-18 · 3 次贡献</title></rect>
-<rect class="day" x="561" y="536" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-19" data-count="0" data-level="0" aria-label="2026-09-19 · 0 次贡献"><title>2026-09-19 · 0 次贡献</title></rect>
-<rect class="day" x="617" y="200" width="46" height="46" rx="4" fill="#4eaa71" data-date="2026-09-20" data-count="9" data-level="3" aria-label="2026-09-20 · 9 次贡献"><title>2026-09-20 · 9 次贡献</title></rect>
-<rect class="day" x="617" y="256" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-21" data-count="0" data-level="0" aria-label="2026-09-21 · 0 次贡献"><title>2026-09-21 · 0 次贡献</title></rect>
-<rect class="day" x="617" y="312" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-09-22" data-count="1" data-level="1" aria-label="2026-09-22 · 1 次贡献"><title>2026-09-22 · 1 次贡献</title></rect>
-<rect class="day" x="617" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-23" data-count="0" data-level="0" aria-label="2026-09-23 · 0 次贡献"><title>2026-09-23 · 0 次贡献</title></rect>
-<rect class="day" x="617" y="424" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-09-24" data-count="1" data-level="1" aria-label="2026-09-24 · 1 次贡献"><title>2026-09-24 · 1 次贡献</title></rect>
-<rect class="day" x="617" y="480" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-25" data-count="0" data-level="0" aria-label="2026-09-25 · 0 次贡献"><title>2026-09-25 · 0 次贡献</title></rect>
-<rect class="day" x="617" y="536" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-26" data-count="0" data-level="0" aria-label="2026-09-26 · 0 次贡献"><title>2026-09-26 · 0 次贡献</title></rect>
-<rect class="day" x="673" y="200" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-27" data-count="0" data-level="0" aria-label="2026-09-27 · 0 次贡献"><title>2026-09-27 · 0 次贡献</title></rect>
-<rect class="day" x="673" y="256" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-28" data-count="0" data-level="0" aria-label="2026-09-28 · 0 次贡献"><title>2026-09-28 · 0 次贡献</title></rect>
-<rect class="day" x="673" y="312" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-09-29" data-count="2" data-level="1" aria-label="2026-09-29 · 2 次贡献"><title>2026-09-29 · 2 次贡献</title></rect>
-<rect class="day" x="673" y="368" width="46" height="46" rx="4" fill="#4eaa71" data-date="2026-09-30" data-count="7" data-level="3" aria-label="2026-09-30 · 7 次贡献"><title>2026-09-30 · 7 次贡献</title></rect>
-<rect class="day" x="673" y="424" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-01" data-count="1" data-level="1" aria-label="2026-10-01 · 1 次贡献"><title>2026-10-01 · 1 次贡献</title></rect>
-<rect class="day" x="673" y="480" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-10-02" data-count="0" data-level="0" aria-label="2026-10-02 · 0 次贡献"><title>2026-10-02 · 0 次贡献</title></rect>
-<rect class="day" x="673" y="536" width="46" height="46" rx="4" fill="#4eaa71" data-date="2026-10-03" data-count="7" data-level="3" aria-label="2026-10-03 · 7 次贡献"><title>2026-10-03 · 7 次贡献</title></rect>
-<rect class="day" x="729" y="200" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-04" data-count="3" data-level="1" aria-label="2026-10-04 · 3 次贡献"><title>2026-10-04 · 3 次贡献</title></rect>
-<rect class="day" x="729" y="256" width="46" height="46" rx="4" fill="#277e4b" data-date="2026-10-05" data-count="12" data-level="4" aria-label="2026-10-05 · 12 次贡献"><title>2026-10-05 · 12 次贡献</title></rect>
-<rect class="day" x="729" y="312" width="46" height="46" rx="4" fill="#8dcc9d" data-date="2026-10-06" data-count="6" data-level="2" aria-label="2026-10-06 · 6 次贡献"><title>2026-10-06 · 6 次贡献</title></rect>
-<rect class="day" x="729" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-10-07" data-count="0" data-level="0" aria-label="2026-10-07 · 0 次贡献"><title>2026-10-07 · 0 次贡献</title></rect>
-<rect class="day" x="729" y="424" width="46" height="46" rx="4" fill="#8dcc9d" data-date="2026-10-08" data-count="4" data-level="2" aria-label="2026-10-08 · 4 次贡献"><title>2026-10-08 · 4 次贡献</title></rect>
-<rect class="day" x="729" y="480" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-09" data-count="2" data-level="1" aria-label="2026-10-09 · 2 次贡献"><title>2026-10-09 · 2 次贡献</title></rect>
-<rect class="day" x="729" y="536" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-10" data-count="1" data-level="1" aria-label="2026-10-10 · 1 次贡献"><title>2026-10-10 · 1 次贡献</title></rect>
-<rect class="day" x="785" y="200" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-11" data-count="3" data-level="1" aria-label="2026-10-11 · 3 次贡献"><title>2026-10-11 · 3 次贡献</title></rect>
-<rect class="day" x="785" y="256" width="46" height="46" rx="4" fill="#4eaa71" data-date="2026-10-12" data-count="7" data-level="3" aria-label="2026-10-12 · 7 次贡献"><title>2026-10-12 · 7 次贡献</title></rect>
-<rect class="day" x="785" y="312" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-13" data-count="3" data-level="1" aria-label="2026-10-13 · 3 次贡献"><title>2026-10-13 · 3 次贡献</title></rect>
-<rect class="day" x="785" y="368" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-14" data-count="3" data-level="1" aria-label="2026-10-14 · 3 次贡献"><title>2026-10-14 · 3 次贡献</title></rect>
-<rect class="day" x="785" y="424" width="46" height="46" rx="4" fill="#4eaa71" data-date="2026-10-15" data-count="7" data-level="3" aria-label="2026-10-15 · 7 次贡献"><title>2026-10-15 · 7 次贡献</title></rect>
-<rect class="day" x="785" y="480" width="46" height="46" rx="4" fill="#277e4b" data-date="2026-10-16" data-count="18" data-level="4" aria-label="2026-10-16 · 18 次贡献"><title>2026-10-16 · 18 次贡献</title></rect>
-<rect class="day" x="785" y="536" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-17" data-count="1" data-level="1" aria-label="2026-10-17 · 1 次贡献"><title>2026-10-17 · 1 次贡献</title></rect>
-<rect class="day" x="841" y="200" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-18" data-count="1" data-level="1" aria-label="2026-10-18 · 1 次贡献"><title>2026-10-18 · 1 次贡献</title></rect>
-<rect class="day" x="841" y="256" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-19" data-count="1" data-level="1" aria-label="2026-10-19 · 1 次贡献"><title>2026-10-19 · 1 次贡献</title></rect>
-<rect class="day" x="841" y="312" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-20" data-count="2" data-level="1" aria-label="2026-10-20 · 2 次贡献"><title>2026-10-20 · 2 次贡献</title></rect>
-<rect class="day" x="841" y="368" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-21" data-count="1" data-level="1" aria-label="2026-10-21 · 1 次贡献"><title>2026-10-21 · 1 次贡献</title></rect>
-<rect class="day" x="841" y="424" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-22" data-count="3" data-level="1" aria-label="2026-10-22 · 3 次贡献"><title>2026-10-22 · 3 次贡献</title></rect>
-<rect class="day" x="841" y="480" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-23" data-count="1" data-level="1" aria-label="2026-10-23 · 1 次贡献"><title>2026-10-23 · 1 次贡献</title></rect>
-<rect class="day" x="841" y="536" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-24" data-count="1" data-level="1" aria-label="2026-10-24 · 1 次贡献"><title>2026-10-24 · 1 次贡献</title></rect>
+<text class="mono body" x="946" y="142" text-anchor="end">7月25日 — 10月25日</text>
+<text class="mono month" data-month="2026-07" x="85" y="166">7月</text>
+<text class="mono month" data-month="2026-08" x="141" y="166">8月</text>
+<text class="mono month" data-month="2026-09" x="421" y="166">9月</text>
+<text class="mono month" data-month="2026-10" x="645" y="166">10月</text>
+<text class="mono weekday" x="68" y="227" text-anchor="end">日</text>
+<text class="mono weekday" x="68" y="283" text-anchor="end">一</text>
+<text class="mono weekday" x="68" y="339" text-anchor="end">二</text>
+<text class="mono weekday" x="68" y="395" text-anchor="end">三</text>
+<text class="mono weekday" x="68" y="451" text-anchor="end">四</text>
+<text class="mono weekday" x="68" y="507" text-anchor="end">五</text>
+<text class="mono weekday" x="68" y="563" text-anchor="end">六</text>
+<rect class="day" x="85" y="536" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-07-25" data-count="0" data-level="0" aria-label="2026-07-25 · 0 次贡献"><title>2026-07-25 · 0 次贡献</title></rect>
+<rect class="day" x="141" y="200" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-07-26" data-count="0" data-level="0" aria-label="2026-07-26 · 0 次贡献"><title>2026-07-26 · 0 次贡献</title></rect>
+<rect class="day" x="141" y="256" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-07-27" data-count="0" data-level="0" aria-label="2026-07-27 · 0 次贡献"><title>2026-07-27 · 0 次贡献</title></rect>
+<rect class="day" x="141" y="312" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-07-28" data-count="0" data-level="0" aria-label="2026-07-28 · 0 次贡献"><title>2026-07-28 · 0 次贡献</title></rect>
+<rect class="day" x="141" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-07-29" data-count="0" data-level="0" aria-label="2026-07-29 · 0 次贡献"><title>2026-07-29 · 0 次贡献</title></rect>
+<rect class="day" x="141" y="424" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-07-30" data-count="0" data-level="0" aria-label="2026-07-30 · 0 次贡献"><title>2026-07-30 · 0 次贡献</title></rect>
+<rect class="day" x="141" y="480" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-07-31" data-count="0" data-level="0" aria-label="2026-07-31 · 0 次贡献"><title>2026-07-31 · 0 次贡献</title></rect>
+<rect class="day" x="141" y="536" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-01" data-count="0" data-level="0" aria-label="2026-08-01 · 0 次贡献"><title>2026-08-01 · 0 次贡献</title></rect>
+<rect class="day" x="197" y="200" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-02" data-count="0" data-level="0" aria-label="2026-08-02 · 0 次贡献"><title>2026-08-02 · 0 次贡献</title></rect>
+<rect class="day" x="197" y="256" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-03" data-count="0" data-level="0" aria-label="2026-08-03 · 0 次贡献"><title>2026-08-03 · 0 次贡献</title></rect>
+<rect class="day" x="197" y="312" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-04" data-count="0" data-level="0" aria-label="2026-08-04 · 0 次贡献"><title>2026-08-04 · 0 次贡献</title></rect>
+<rect class="day" x="197" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-05" data-count="0" data-level="0" aria-label="2026-08-05 · 0 次贡献"><title>2026-08-05 · 0 次贡献</title></rect>
+<rect class="day" x="197" y="424" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-06" data-count="0" data-level="0" aria-label="2026-08-06 · 0 次贡献"><title>2026-08-06 · 0 次贡献</title></rect>
+<rect class="day" x="197" y="480" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-07" data-count="0" data-level="0" aria-label="2026-08-07 · 0 次贡献"><title>2026-08-07 · 0 次贡献</title></rect>
+<rect class="day" x="197" y="536" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-08" data-count="0" data-level="0" aria-label="2026-08-08 · 0 次贡献"><title>2026-08-08 · 0 次贡献</title></rect>
+<rect class="day" x="253" y="200" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-09" data-count="0" data-level="0" aria-label="2026-08-09 · 0 次贡献"><title>2026-08-09 · 0 次贡献</title></rect>
+<rect class="day" x="253" y="256" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-10" data-count="0" data-level="0" aria-label="2026-08-10 · 0 次贡献"><title>2026-08-10 · 0 次贡献</title></rect>
+<rect class="day" x="253" y="312" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-11" data-count="0" data-level="0" aria-label="2026-08-11 · 0 次贡献"><title>2026-08-11 · 0 次贡献</title></rect>
+<rect class="day" x="253" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-12" data-count="0" data-level="0" aria-label="2026-08-12 · 0 次贡献"><title>2026-08-12 · 0 次贡献</title></rect>
+<rect class="day" x="253" y="424" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-13" data-count="0" data-level="0" aria-label="2026-08-13 · 0 次贡献"><title>2026-08-13 · 0 次贡献</title></rect>
+<rect class="day" x="253" y="480" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-14" data-count="0" data-level="0" aria-label="2026-08-14 · 0 次贡献"><title>2026-08-14 · 0 次贡献</title></rect>
+<rect class="day" x="253" y="536" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-15" data-count="0" data-level="0" aria-label="2026-08-15 · 0 次贡献"><title>2026-08-15 · 0 次贡献</title></rect>
+<rect class="day" x="309" y="200" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-16" data-count="0" data-level="0" aria-label="2026-08-16 · 0 次贡献"><title>2026-08-16 · 0 次贡献</title></rect>
+<rect class="day" x="309" y="256" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-17" data-count="0" data-level="0" aria-label="2026-08-17 · 0 次贡献"><title>2026-08-17 · 0 次贡献</title></rect>
+<rect class="day" x="309" y="312" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-18" data-count="0" data-level="0" aria-label="2026-08-18 · 0 次贡献"><title>2026-08-18 · 0 次贡献</title></rect>
+<rect class="day" x="309" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-19" data-count="0" data-level="0" aria-label="2026-08-19 · 0 次贡献"><title>2026-08-19 · 0 次贡献</title></rect>
+<rect class="day" x="309" y="424" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-20" data-count="0" data-level="0" aria-label="2026-08-20 · 0 次贡献"><title>2026-08-20 · 0 次贡献</title></rect>
+<rect class="day" x="309" y="480" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-21" data-count="0" data-level="0" aria-label="2026-08-21 · 0 次贡献"><title>2026-08-21 · 0 次贡献</title></rect>
+<rect class="day" x="309" y="536" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-22" data-count="0" data-level="0" aria-label="2026-08-22 · 0 次贡献"><title>2026-08-22 · 0 次贡献</title></rect>
+<rect class="day" x="365" y="200" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-23" data-count="0" data-level="0" aria-label="2026-08-23 · 0 次贡献"><title>2026-08-23 · 0 次贡献</title></rect>
+<rect class="day" x="365" y="256" width="46" height="46" rx="4" fill="#8dcc9d" data-date="2026-08-24" data-count="5" data-level="2" aria-label="2026-08-24 · 5 次贡献"><title>2026-08-24 · 5 次贡献</title></rect>
+<rect class="day" x="365" y="312" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-25" data-count="0" data-level="0" aria-label="2026-08-25 · 0 次贡献"><title>2026-08-25 · 0 次贡献</title></rect>
+<rect class="day" x="365" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-26" data-count="0" data-level="0" aria-label="2026-08-26 · 0 次贡献"><title>2026-08-26 · 0 次贡献</title></rect>
+<rect class="day" x="365" y="424" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-27" data-count="0" data-level="0" aria-label="2026-08-27 · 0 次贡献"><title>2026-08-27 · 0 次贡献</title></rect>
+<rect class="day" x="365" y="480" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-28" data-count="0" data-level="0" aria-label="2026-08-28 · 0 次贡献"><title>2026-08-28 · 0 次贡献</title></rect>
+<rect class="day" x="365" y="536" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-29" data-count="0" data-level="0" aria-label="2026-08-29 · 0 次贡献"><title>2026-08-29 · 0 次贡献</title></rect>
+<rect class="day" x="421" y="200" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-30" data-count="0" data-level="0" aria-label="2026-08-30 · 0 次贡献"><title>2026-08-30 · 0 次贡献</title></rect>
+<rect class="day" x="421" y="256" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-08-31" data-count="1" data-level="1" aria-label="2026-08-31 · 1 次贡献"><title>2026-08-31 · 1 次贡献</title></rect>
+<rect class="day" x="421" y="312" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-01" data-count="0" data-level="0" aria-label="2026-09-01 · 0 次贡献"><title>2026-09-01 · 0 次贡献</title></rect>
+<rect class="day" x="421" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-02" data-count="0" data-level="0" aria-label="2026-09-02 · 0 次贡献"><title>2026-09-02 · 0 次贡献</title></rect>
+<rect class="day" x="421" y="424" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-09-03" data-count="1" data-level="1" aria-label="2026-09-03 · 1 次贡献"><title>2026-09-03 · 1 次贡献</title></rect>
+<rect class="day" x="421" y="480" width="46" height="46" rx="4" fill="#277e4b" data-date="2026-09-04" data-count="10" data-level="4" aria-label="2026-09-04 · 10 次贡献"><title>2026-09-04 · 10 次贡献</title></rect>
+<rect class="day" x="421" y="536" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-05" data-count="0" data-level="0" aria-label="2026-09-05 · 0 次贡献"><title>2026-09-05 · 0 次贡献</title></rect>
+<rect class="day" x="477" y="200" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-06" data-count="0" data-level="0" aria-label="2026-09-06 · 0 次贡献"><title>2026-09-06 · 0 次贡献</title></rect>
+<rect class="day" x="477" y="256" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-07" data-count="0" data-level="0" aria-label="2026-09-07 · 0 次贡献"><title>2026-09-07 · 0 次贡献</title></rect>
+<rect class="day" x="477" y="312" width="46" height="46" rx="4" fill="#8dcc9d" data-date="2026-09-08" data-count="5" data-level="2" aria-label="2026-09-08 · 5 次贡献"><title>2026-09-08 · 5 次贡献</title></rect>
+<rect class="day" x="477" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-09" data-count="0" data-level="0" aria-label="2026-09-09 · 0 次贡献"><title>2026-09-09 · 0 次贡献</title></rect>
+<rect class="day" x="477" y="424" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-10" data-count="0" data-level="0" aria-label="2026-09-10 · 0 次贡献"><title>2026-09-10 · 0 次贡献</title></rect>
+<rect class="day" x="477" y="480" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-11" data-count="0" data-level="0" aria-label="2026-09-11 · 0 次贡献"><title>2026-09-11 · 0 次贡献</title></rect>
+<rect class="day" x="477" y="536" width="46" height="46" rx="4" fill="#277e4b" data-date="2026-09-12" data-count="19" data-level="4" aria-label="2026-09-12 · 19 次贡献"><title>2026-09-12 · 19 次贡献</title></rect>
+<rect class="day" x="533" y="200" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-13" data-count="0" data-level="0" aria-label="2026-09-13 · 0 次贡献"><title>2026-09-13 · 0 次贡献</title></rect>
+<rect class="day" x="533" y="256" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-09-14" data-count="1" data-level="1" aria-label="2026-09-14 · 1 次贡献"><title>2026-09-14 · 1 次贡献</title></rect>
+<rect class="day" x="533" y="312" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-15" data-count="0" data-level="0" aria-label="2026-09-15 · 0 次贡献"><title>2026-09-15 · 0 次贡献</title></rect>
+<rect class="day" x="533" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-16" data-count="0" data-level="0" aria-label="2026-09-16 · 0 次贡献"><title>2026-09-16 · 0 次贡献</title></rect>
+<rect class="day" x="533" y="424" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-17" data-count="0" data-level="0" aria-label="2026-09-17 · 0 次贡献"><title>2026-09-17 · 0 次贡献</title></rect>
+<rect class="day" x="533" y="480" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-09-18" data-count="3" data-level="1" aria-label="2026-09-18 · 3 次贡献"><title>2026-09-18 · 3 次贡献</title></rect>
+<rect class="day" x="533" y="536" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-19" data-count="0" data-level="0" aria-label="2026-09-19 · 0 次贡献"><title>2026-09-19 · 0 次贡献</title></rect>
+<rect class="day" x="589" y="200" width="46" height="46" rx="4" fill="#4eaa71" data-date="2026-09-20" data-count="9" data-level="3" aria-label="2026-09-20 · 9 次贡献"><title>2026-09-20 · 9 次贡献</title></rect>
+<rect class="day" x="589" y="256" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-21" data-count="0" data-level="0" aria-label="2026-09-21 · 0 次贡献"><title>2026-09-21 · 0 次贡献</title></rect>
+<rect class="day" x="589" y="312" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-09-22" data-count="1" data-level="1" aria-label="2026-09-22 · 1 次贡献"><title>2026-09-22 · 1 次贡献</title></rect>
+<rect class="day" x="589" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-23" data-count="0" data-level="0" aria-label="2026-09-23 · 0 次贡献"><title>2026-09-23 · 0 次贡献</title></rect>
+<rect class="day" x="589" y="424" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-09-24" data-count="1" data-level="1" aria-label="2026-09-24 · 1 次贡献"><title>2026-09-24 · 1 次贡献</title></rect>
+<rect class="day" x="589" y="480" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-25" data-count="0" data-level="0" aria-label="2026-09-25 · 0 次贡献"><title>2026-09-25 · 0 次贡献</title></rect>
+<rect class="day" x="589" y="536" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-26" data-count="0" data-level="0" aria-label="2026-09-26 · 0 次贡献"><title>2026-09-26 · 0 次贡献</title></rect>
+<rect class="day" x="645" y="200" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-27" data-count="0" data-level="0" aria-label="2026-09-27 · 0 次贡献"><title>2026-09-27 · 0 次贡献</title></rect>
+<rect class="day" x="645" y="256" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-28" data-count="0" data-level="0" aria-label="2026-09-28 · 0 次贡献"><title>2026-09-28 · 0 次贡献</title></rect>
+<rect class="day" x="645" y="312" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-09-29" data-count="2" data-level="1" aria-label="2026-09-29 · 2 次贡献"><title>2026-09-29 · 2 次贡献</title></rect>
+<rect class="day" x="645" y="368" width="46" height="46" rx="4" fill="#4eaa71" data-date="2026-09-30" data-count="7" data-level="3" aria-label="2026-09-30 · 7 次贡献"><title>2026-09-30 · 7 次贡献</title></rect>
+<rect class="day" x="645" y="424" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-01" data-count="1" data-level="1" aria-label="2026-10-01 · 1 次贡献"><title>2026-10-01 · 1 次贡献</title></rect>
+<rect class="day" x="645" y="480" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-10-02" data-count="0" data-level="0" aria-label="2026-10-02 · 0 次贡献"><title>2026-10-02 · 0 次贡献</title></rect>
+<rect class="day" x="645" y="536" width="46" height="46" rx="4" fill="#4eaa71" data-date="2026-10-03" data-count="7" data-level="3" aria-label="2026-10-03 · 7 次贡献"><title>2026-10-03 · 7 次贡献</title></rect>
+<rect class="day" x="701" y="200" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-04" data-count="3" data-level="1" aria-label="2026-10-04 · 3 次贡献"><title>2026-10-04 · 3 次贡献</title></rect>
+<rect class="day" x="701" y="256" width="46" height="46" rx="4" fill="#277e4b" data-date="2026-10-05" data-count="12" data-level="4" aria-label="2026-10-05 · 12 次贡献"><title>2026-10-05 · 12 次贡献</title></rect>
+<rect class="day" x="701" y="312" width="46" height="46" rx="4" fill="#8dcc9d" data-date="2026-10-06" data-count="6" data-level="2" aria-label="2026-10-06 · 6 次贡献"><title>2026-10-06 · 6 次贡献</title></rect>
+<rect class="day" x="701" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-10-07" data-count="0" data-level="0" aria-label="2026-10-07 · 0 次贡献"><title>2026-10-07 · 0 次贡献</title></rect>
+<rect class="day" x="701" y="424" width="46" height="46" rx="4" fill="#8dcc9d" data-date="2026-10-08" data-count="4" data-level="2" aria-label="2026-10-08 · 4 次贡献"><title>2026-10-08 · 4 次贡献</title></rect>
+<rect class="day" x="701" y="480" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-09" data-count="2" data-level="1" aria-label="2026-10-09 · 2 次贡献"><title>2026-10-09 · 2 次贡献</title></rect>
+<rect class="day" x="701" y="536" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-10" data-count="1" data-level="1" aria-label="2026-10-10 · 1 次贡献"><title>2026-10-10 · 1 次贡献</title></rect>
+<rect class="day" x="757" y="200" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-11" data-count="3" data-level="1" aria-label="2026-10-11 · 3 次贡献"><title>2026-10-11 · 3 次贡献</title></rect>
+<rect class="day" x="757" y="256" width="46" height="46" rx="4" fill="#4eaa71" data-date="2026-10-12" data-count="7" data-level="3" aria-label="2026-10-12 · 7 次贡献"><title>2026-10-12 · 7 次贡献</title></rect>
+<rect class="day" x="757" y="312" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-13" data-count="3" data-level="1" aria-label="2026-10-13 · 3 次贡献"><title>2026-10-13 · 3 次贡献</title></rect>
+<rect class="day" x="757" y="368" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-14" data-count="3" data-level="1" aria-label="2026-10-14 · 3 次贡献"><title>2026-10-14 · 3 次贡献</title></rect>
+<rect class="day" x="757" y="424" width="46" height="46" rx="4" fill="#4eaa71" data-date="2026-10-15" data-count="7" data-level="3" aria-label="2026-10-15 · 7 次贡献"><title>2026-10-15 · 7 次贡献</title></rect>
+<rect class="day" x="757" y="480" width="46" height="46" rx="4" fill="#277e4b" data-date="2026-10-16" data-count="18" data-level="4" aria-label="2026-10-16 · 18 次贡献"><title>2026-10-16 · 18 次贡献</title></rect>
+<rect class="day" x="757" y="536" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-17" data-count="1" data-level="1" aria-label="2026-10-17 · 1 次贡献"><title>2026-10-17 · 1 次贡献</title></rect>
+<rect class="day" x="813" y="200" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-18" data-count="1" data-level="1" aria-label="2026-10-18 · 1 次贡献"><title>2026-10-18 · 1 次贡献</title></rect>
+<rect class="day" x="813" y="256" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-19" data-count="1" data-level="1" aria-label="2026-10-19 · 1 次贡献"><title>2026-10-19 · 1 次贡献</title></rect>
+<rect class="day" x="813" y="312" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-20" data-count="2" data-level="1" aria-label="2026-10-20 · 2 次贡献"><title>2026-10-20 · 2 次贡献</title></rect>
+<rect class="day" x="813" y="368" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-21" data-count="1" data-level="1" aria-label="2026-10-21 · 1 次贡献"><title>2026-10-21 · 1 次贡献</title></rect>
+<rect class="day" x="813" y="424" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-22" data-count="3" data-level="1" aria-label="2026-10-22 · 3 次贡献"><title>2026-10-22 · 3 次贡献</title></rect>
+<rect class="day" x="813" y="480" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-23" data-count="1" data-level="1" aria-label="2026-10-23 · 1 次贡献"><title>2026-10-23 · 1 次贡献</title></rect>
+<rect class="day" x="813" y="536" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-24" data-count="1" data-level="1" aria-label="2026-10-24 · 1 次贡献"><title>2026-10-24 · 1 次贡献</title></rect>
+<rect class="day" x="869" y="200" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-10-25" data-count="0" data-level="0" aria-label="2026-10-25 · 0 次贡献"><title>2026-10-25 · 0 次贡献</title></rect>
 </g>
 <text class="mono body" x="54" y="617">GitHub 贡献记录 · 自动同步</text>
 <text class="mono body" x="782" y="617">少</text>
