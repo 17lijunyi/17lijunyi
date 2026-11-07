@@ -18,6 +18,7 @@ const themes = {
   lavender: ['#776287', '#eee7f5', '#62506f'],
   rose: ['#987084', '#f8e7ed', '#815e73'],
   blue: ['#6b80a3', '#e7edf8', '#526d96'],
+  orange: ['#b77c5d', '#f9e7da', '#975637'],
   sage: ['#718a7d', '#e8f1eb', '#557465'],
   teal: ['#658d8c', '#e3f2f0', '#477c79'],
   peach: ['#a47d75', '#f9e9e3', '#8b645c'],
