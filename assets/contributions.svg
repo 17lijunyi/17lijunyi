@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="644" viewBox="0 0 1000 644" role="img" aria-labelledby="title desc">
 <title id="title">李俊祎 · GitHub 贡献记录</title>
-<desc id="desc">2026-08-07 — 2026-11-07，累计 312 次贡献。日期与 GitHub 日历一致，每列一周，周日为第一行；空白处不代表贡献日期。</desc>
+<desc id="desc">2026-08-07 — 2026-11-07，累计 314 次贡献。日期与 GitHub 日历一致，每列一周，周日为第一行；空白处不代表贡献日期。</desc>
 <style>
 :root { color-scheme: light; }
 .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Arial Unicode MS", "PingFang SC", "Microsoft YaHei", monospace; }
@@ -22,7 +22,7 @@
 <circle cx="70" cy="25" r="7" fill="#55b96f"/>
 <text class="mono meta" x="500" y="29" text-anchor="middle">lijunyi@ljy-mac — contributions</text>
 <text class="mono heading" x="54" y="87">GitHub 贡献记录</text>
-<text class="mono heading" x="946" y="87" text-anchor="end">累计贡献 · 312</text>
+<text class="mono heading" x="946" y="87" text-anchor="end">累计贡献 · 314</text>
 <text class="mono body" x="54" y="111">2026-08-07 — 2026-11-07</text>
 <g class="period" data-period="2026-H2" data-step="56" data-cell="46">
 <text class="mono body" x="54" y="142">2026年</text>
@@ -55,7 +55,7 @@
 <rect class="day" x="225" y="480" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-21" data-count="0" data-level="0" aria-label="2026-08-21 · 0 次贡献"><title>2026-08-21 · 0 次贡献</title></rect>
 <rect class="day" x="225" y="536" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-22" data-count="0" data-level="0" aria-label="2026-08-22 · 0 次贡献"><title>2026-08-22 · 0 次贡献</title></rect>
 <rect class="day" x="281" y="200" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-23" data-count="0" data-level="0" aria-label="2026-08-23 · 0 次贡献"><title>2026-08-23 · 0 次贡献</title></rect>
-<rect class="day" x="281" y="256" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-08-24" data-count="5" data-level="1" aria-label="2026-08-24 · 5 次贡献"><title>2026-08-24 · 5 次贡献</title></rect>
+<rect class="day" x="281" y="256" width="46" height="46" rx="4" fill="#8dcc9d" data-date="2026-08-24" data-count="5" data-level="2" aria-label="2026-08-24 · 5 次贡献"><title>2026-08-24 · 5 次贡献</title></rect>
 <rect class="day" x="281" y="312" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-25" data-count="0" data-level="0" aria-label="2026-08-25 · 0 次贡献"><title>2026-08-25 · 0 次贡献</title></rect>
 <rect class="day" x="281" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-26" data-count="0" data-level="0" aria-label="2026-08-26 · 0 次贡献"><title>2026-08-26 · 0 次贡献</title></rect>
 <rect class="day" x="281" y="424" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-08-27" data-count="0" data-level="0" aria-label="2026-08-27 · 0 次贡献"><title>2026-08-27 · 0 次贡献</title></rect>
@@ -66,11 +66,11 @@
 <rect class="day" x="337" y="312" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-01" data-count="0" data-level="0" aria-label="2026-09-01 · 0 次贡献"><title>2026-09-01 · 0 次贡献</title></rect>
 <rect class="day" x="337" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-02" data-count="0" data-level="0" aria-label="2026-09-02 · 0 次贡献"><title>2026-09-02 · 0 次贡献</title></rect>
 <rect class="day" x="337" y="424" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-09-03" data-count="1" data-level="1" aria-label="2026-09-03 · 1 次贡献"><title>2026-09-03 · 1 次贡献</title></rect>
-<rect class="day" x="337" y="480" width="46" height="46" rx="4" fill="#8dcc9d" data-date="2026-09-04" data-count="10" data-level="2" aria-label="2026-09-04 · 10 次贡献"><title>2026-09-04 · 10 次贡献</title></rect>
+<rect class="day" x="337" y="480" width="46" height="46" rx="4" fill="#4eaa71" data-date="2026-09-04" data-count="10" data-level="3" aria-label="2026-09-04 · 10 次贡献"><title>2026-09-04 · 10 次贡献</title></rect>
 <rect class="day" x="337" y="536" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-05" data-count="0" data-level="0" aria-label="2026-09-05 · 0 次贡献"><title>2026-09-05 · 0 次贡献</title></rect>
 <rect class="day" x="393" y="200" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-06" data-count="0" data-level="0" aria-label="2026-09-06 · 0 次贡献"><title>2026-09-06 · 0 次贡献</title></rect>
 <rect class="day" x="393" y="256" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-07" data-count="0" data-level="0" aria-label="2026-09-07 · 0 次贡献"><title>2026-09-07 · 0 次贡献</title></rect>
-<rect class="day" x="393" y="312" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-09-08" data-count="5" data-level="1" aria-label="2026-09-08 · 5 次贡献"><title>2026-09-08 · 5 次贡献</title></rect>
+<rect class="day" x="393" y="312" width="46" height="46" rx="4" fill="#8dcc9d" data-date="2026-09-08" data-count="5" data-level="2" aria-label="2026-09-08 · 5 次贡献"><title>2026-09-08 · 5 次贡献</title></rect>
 <rect class="day" x="393" y="368" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-09" data-count="0" data-level="0" aria-label="2026-09-09 · 0 次贡献"><title>2026-09-09 · 0 次贡献</title></rect>
 <rect class="day" x="393" y="424" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-10" data-count="0" data-level="0" aria-label="2026-09-10 · 0 次贡献"><title>2026-09-10 · 0 次贡献</title></rect>
 <rect class="day" x="393" y="480" width="46" height="46" rx="4" fill="#e2e8e9" data-date="2026-09-11" data-count="0" data-level="0" aria-label="2026-09-11 · 0 次贡献"><title>2026-09-11 · 0 次贡献</title></rect>
@@ -123,14 +123,14 @@
 <rect class="day" x="785" y="368" width="46" height="46" rx="4" fill="#4eaa71" data-date="2026-10-28" data-count="12" data-level="3" aria-label="2026-10-28 · 12 次贡献"><title>2026-10-28 · 12 次贡献</title></rect>
 <rect class="day" x="785" y="424" width="46" height="46" rx="4" fill="#8dcc9d" data-date="2026-10-29" data-count="6" data-level="2" aria-label="2026-10-29 · 6 次贡献"><title>2026-10-29 · 6 次贡献</title></rect>
 <rect class="day" x="785" y="480" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-10-30" data-count="1" data-level="1" aria-label="2026-10-30 · 1 次贡献"><title>2026-10-30 · 1 次贡献</title></rect>
-<rect class="day" x="785" y="536" width="46" height="46" rx="4" fill="#4eaa71" data-date="2026-10-31" data-count="17" data-level="3" aria-label="2026-10-31 · 17 次贡献"><title>2026-10-31 · 17 次贡献</title></rect>
-<rect class="day" x="841" y="200" width="46" height="46" rx="4" fill="#4eaa71" data-date="2026-11-01" data-count="17" data-level="3" aria-label="2026-11-01 · 17 次贡献"><title>2026-11-01 · 17 次贡献</title></rect>
-<rect class="day" x="841" y="256" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-11-02" data-count="5" data-level="1" aria-label="2026-11-02 · 5 次贡献"><title>2026-11-02 · 5 次贡献</title></rect>
+<rect class="day" x="785" y="536" width="46" height="46" rx="4" fill="#277e4b" data-date="2026-10-31" data-count="17" data-level="4" aria-label="2026-10-31 · 17 次贡献"><title>2026-10-31 · 17 次贡献</title></rect>
+<rect class="day" x="841" y="200" width="46" height="46" rx="4" fill="#277e4b" data-date="2026-11-01" data-count="17" data-level="4" aria-label="2026-11-01 · 17 次贡献"><title>2026-11-01 · 17 次贡献</title></rect>
+<rect class="day" x="841" y="256" width="46" height="46" rx="4" fill="#8dcc9d" data-date="2026-11-02" data-count="5" data-level="2" aria-label="2026-11-02 · 5 次贡献"><title>2026-11-02 · 5 次贡献</title></rect>
 <rect class="day" x="841" y="312" width="46" height="46" rx="4" fill="#277e4b" data-date="2026-11-03" data-count="19" data-level="4" aria-label="2026-11-03 · 19 次贡献"><title>2026-11-03 · 19 次贡献</title></rect>
 <rect class="day" x="841" y="368" width="46" height="46" rx="4" fill="#c4e5cb" data-date="2026-11-04" data-count="1" data-level="1" aria-label="2026-11-04 · 1 次贡献"><title>2026-11-04 · 1 次贡献</title></rect>
 <rect class="day" x="841" y="424" width="46" height="46" rx="4" fill="#277e4b" data-date="2026-11-05" data-count="18" data-level="4" aria-label="2026-11-05 · 18 次贡献"><title>2026-11-05 · 18 次贡献</title></rect>
 <rect class="day" x="841" y="480" width="46" height="46" rx="4" fill="#4eaa71" data-date="2026-11-06" data-count="12" data-level="3" aria-label="2026-11-06 · 12 次贡献"><title>2026-11-06 · 12 次贡献</title></rect>
-<rect class="day" x="841" y="536" width="46" height="46" rx="4" fill="#277e4b" data-date="2026-11-07" data-count="23" data-level="4" aria-label="2026-11-07 · 23 次贡献"><title>2026-11-07 · 23 次贡献</title></rect>
+<rect class="day" x="841" y="536" width="46" height="46" rx="4" fill="#277e4b" data-date="2026-11-07" data-count="25" data-level="4" aria-label="2026-11-07 · 25 次贡献"><title>2026-11-07 · 25 次贡献</title></rect>
 </g>
 <text class="mono body" x="54" y="617">GitHub 贡献记录 · 自动同步</text>
 <text class="mono body" x="782" y="617">少</text>
