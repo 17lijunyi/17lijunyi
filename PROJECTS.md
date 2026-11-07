@@ -41,7 +41,7 @@
 <summary><strong>更多知识文档</strong></summary>
 
 <p>
-  <a href="https://github.com/17lijunyi/claude-code-harness-study"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/claude-code-harness-study-window.png?v=39d053b1be45" alt="Claude Code 学习手册：17 个递进章节，配合中英日文档、流程图与 Python 示例，学习 Agent 循环、工具调用、上下文、协作与目标闭环。"></picture></a>
+  <a href="https://github.com/17lijunyi/claude-code-harness-study"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/claude-code-harness-study-window.png?v=39d053b1be45" alt="Claude Code 学习手册：面向 AI 产品经理的 17 章 Agent Harness 课程，提供网页讲解、代码对比、运行回放，以及选型案例、练习和产品判断方法。"></picture></a>
   <a href="https://github.com/17lijunyi/kanshan-kb"><picture><img width="49%" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/project-covers/kanshan-kb-window.png?v=729789d64fd5" alt="Kanshan KB · 内容创作知识库：面向知乎创作者的知识库：10 个模块的实用方法、案例与一手资料，支持文档检索与来源引用。"></picture></a>
 </p>
 
