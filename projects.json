@@ -20,6 +20,7 @@
     "skill:product-evidence-deconstruction",
     "repo:product-blueprint",
     "repo:tech-stack-handbook",
+    "repo:claude-code-harness-study",
     "repo:kanshan-kb",
     "repo:daily-ai-news"
   ],
@@ -126,6 +127,14 @@
       "category": "document",
       "cover": "assets/project-covers/tech-stack-handbook-window.png",
       "artwork": "assets/project-covers/tech-stack-handbook.png",
+      "window_theme": "blue"
+    },
+    "repo:claude-code-harness-study": {
+      "title": "Claude Code 学习手册",
+      "description": "17 个递进章节，配合中英日文档、流程图与 Python 示例，学习 Agent 循环、工具调用、上下文、协作与目标闭环。",
+      "category": "document",
+      "cover": "assets/project-covers/claude-code-harness-study-window.png",
+      "artwork": "assets/project-covers/claude-code-harness-study.png",
       "window_theme": "blue"
     }
   },
