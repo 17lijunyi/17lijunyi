@@ -1,15 +1,10 @@
 {
   "owner": "17lijunyi",
-  "start_date": "2026-08-08",
-  "end_date": "2026-11-08",
+  "start_date": "2026-08-09",
+  "end_date": "2026-11-09",
   "total": 326,
   "source": "GitHub GraphQL contributionCalendar",
   "days": [
-    {
-      "date": "2026-08-08",
-      "count": 0,
-      "level": 0
-    },
     {
       "date": "2026-08-09",
       "count": 0,
@@ -469,6 +464,11 @@
       "date": "2026-11-08",
       "count": 12,
       "level": 2
+    },
+    {
+      "date": "2026-11-09",
+      "count": 0,
+      "level": 0
     }
   ]
 }
