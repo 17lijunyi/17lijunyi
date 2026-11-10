@@ -2,7 +2,7 @@
 
 <!-- CONTRIBUTIONS:START -->
 <p align="center">
-  <a href="https://17lijunyi.github.io/"><img width="1000" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/portfolio-launch.svg?v=7da72dd30d12" alt="个人网站启动终端与贡献记录：2026-08-09 至 2026-11-09，共 332 次贡献"></a>
+  <a href="https://17lijunyi.github.io/"><img width="1000" src="https://raw.githubusercontent.com/17lijunyi/17lijunyi/main/assets/portfolio-launch.svg?v=29e3d307a80f" alt="个人网站启动终端与贡献记录：2026-08-10 至 2026-11-10，共 332 次贡献"></a>
 </p>
 <!-- CONTRIBUTIONS:END -->
 
